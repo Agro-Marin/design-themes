@@ -29,7 +29,13 @@ $o-theme-font-configs: (
 // Website customizations
 //------------------------------------------------------------------------------
 
-$o-website-values-palettes: (
+// append(..., comma) rather than a `((...),)` trailing comma: the two are
+// NOT the same value -- without that one comma this collapses from a list
+// of palettes into a bare map, and the website variable chain then fails
+// with "$map2: (...) is not a map". Formatters strip it (prettier does:
+// prettier/prettier#8002), so state the 1-element list explicitly.
+$o-website-values-palettes: append(
+    (),
     (
         'color-palettes-name': 'base-2',
 
@@ -42,6 +48,7 @@ $o-website-values-palettes: (
         'btn-padding-y-lg': .75rem,
         'btn-padding-x-lg': 1.5rem,
     ),
+    comma
 );
 
 $o-color-palettes-compatibility-indexes: (

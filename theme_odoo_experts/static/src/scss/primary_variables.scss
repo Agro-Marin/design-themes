@@ -69,7 +69,13 @@ $o-theme-font-configs: (
 // Website customizations
 //------------------------------------------------------------------------------
 
-$o-website-values-palettes: (
+// append(..., comma) rather than a `((...),)` trailing comma: the two are
+// NOT the same value -- without that one comma this collapses from a list
+// of palettes into a bare map, and the website variable chain then fails
+// with "$map2: (...) is not a map". Formatters strip it (prettier does:
+// prettier/prettier#8002), so state the 1-element list explicitly.
+$o-website-values-palettes: append(
+    (),
     (
         'color-palettes-name': 'default-11',
         'logo-height': (52 / 16) * 1rem,
@@ -91,6 +97,7 @@ $o-website-values-palettes: (
         'footer-template': 'contact',
         'link-underline': 'never',
     ),
+    comma
 );
 
 $default-11: map-get($o-color-palettes, 'default-11');

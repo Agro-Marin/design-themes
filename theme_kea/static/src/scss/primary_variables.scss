@@ -107,7 +107,13 @@ $o-theme-font-configs: (
     ),
 );
 
-$o-website-values-palettes: (
+// append(..., comma) rather than a `((...),)` trailing comma: the two are
+// NOT the same value -- without that one comma this collapses from a list
+// of palettes into a bare map, and the website variable chain then fails
+// with "$map2: (...) is not a map". Formatters strip it (prettier does:
+// prettier/prettier#8002), so state the 1-element list explicitly.
+$o-website-values-palettes: append(
+    (),
     (
         'color-palettes-name': 'bewise-2',
         // Fonts
@@ -128,6 +134,7 @@ $o-website-values-palettes: (
         'footer-effect': 'slideout_slide_hover',
         'footer-scrolltop': true,
     ),
+    comma
 );
 
 $o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'bewise-2');
