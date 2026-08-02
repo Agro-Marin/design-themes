@@ -1,6 +1,6 @@
 import { BackgroundShapeOptionPlugin } from "@html_builder/plugins/background_option/background_shape_option_plugin";
 import { patch } from "@web/core/utils/patch";
-import { _t } from "@web/core/l10n/translation";
+import { _t } from "@web/core/translation";
 
 patch(BackgroundShapeOptionPlugin.prototype, {
     getBackgroundShapeGroups() {
