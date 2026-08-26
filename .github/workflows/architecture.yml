@@ -1,0 +1,121 @@
+name: Architecture Boundaries (cross-repo)
+
+# The reader for the pins and floors that name this repository.
+#
+# Two ratchet baselines in the core fork are scoped to `design-themes`
+# (`lint_noqa_rationale_design-themes`, `py_shadowed_member_design-themes`), and
+# until this workflow existed nothing read either of them. The core fork's own
+# `architecture.yml` checks that repo out ALONE, so a floor scoped to a sibling
+# is measured against a tree that is not there; `test_every_sibling_scoped_floor_has_a_lane_to_be_read_by`
+# is the assertion that noticed, and it named this repository by name.
+#
+# A floor nobody reads is worse than no floor: `ratchet.py --list` shows it, a
+# reviewer counts it as covered, and the debt it records can grow without a
+# single lane going red.
+#
+# Same topology as enterprise/ and agromarin/'s lanes — core fork checked out
+# beside this repo — because the gates and every floor live in the core fork and
+# are scoped by provenance, so one pin cannot drift out of step with itself.
+# Both gates are stdlib-only Python: no database, no node, no container. Python
+# 3.14 is required — the core tooling uses PEP 758 bracketless `except A, B:`
+# and dies at parse time on anything older.
+
+on:
+  push:
+    branches: ['19.0-marin']
+  pull_request:
+    branches: ['*']
+    paths:
+      # Both floors count Python only. A theme is mostly XML and SCSS, so
+      # without this filter the lane would run on almost every change and
+      # judge nothing.
+      - '**/*.py'
+      - '**/static/src/**/*.js'
+      - '**/static/tests/**/*.js'
+      - '.github/workflows/architecture.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: architecture-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # Core fork supplying the gates and the floors. Public, so the default
+  # GITHUB_TOKEN reads it with no extra secret.
+  ODOO_REPO: Agro-Marin/odoo
+  ODOO_REF: 19.0-marin
+
+jobs:
+  boundaries:
+    name: cross-repo lint ratchets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout this repo
+        # Path `design-themes` on purpose: the core gates identify consumer
+        # checkouts by sibling directory name, and `design-themes` is the
+        # provenance tag both floors carry.
+        uses: actions/checkout@v4
+        with:
+          path: design-themes
+          fetch-depth: 1
+
+      - name: Checkout core fork
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.ODOO_REPO }}
+          ref: ${{ env.ODOO_REF }}
+          path: odoo
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Run JS public-surface ratchet
+        # Environment-honest: with odoo + design-themes present this judges those
+        # two provenance scopes of the pin. Three rows carry this repo's tag and
+        # were judged by nothing before this lane -- odoo's own workflow checks
+        # that repo out alone, so it validated the `odoo` scope and passed over
+        # these. A new import here of a `@web` internal fails as growth in the
+        # `design-themes` scope; shrinking the pin requires the full workspace
+        # (`--update` refuses less).
+        run: |
+          python odoo/tooling/architecture/js_public_surface.py --check
+
+      - name: Run JS extension-surface ratchet
+        # The override points this repo's components take out of `web`. No row
+        # carries the `design-themes` tag today, and that is the state worth
+        # holding: the gate runs so the first one fails as growth rather than
+        # arriving unpinned.
+        if: always()
+        run: |
+          python odoo/tooling/architecture/js_extension_surface.py --check
+
+      - name: Run the Python AST lint ratchets (design-themes)
+        # test_lint's own checkers over THIS repository. They live in an odoo
+        # addon and `lint_case.is_core_path` scoped every one of them to the
+        # community fork, so this repository's Python was checked by nothing.
+        #
+        # `--mode no-increase`, as the other cross-repo ratchets: an exact floor
+        # across a repository boundary would make every fix here red until a
+        # matching commit in `odoo` banked it. Growth still fails, and lowering
+        # the pin is done by hand from a workspace holding all four checkouts.
+        run: |
+          python odoo/tooling/lint/py_lint.py design-themes --check \
+            --scope design-themes --mode no-increase
+
+      - name: Run the shadowed-member ratchet (design-themes)
+        if: always()
+        # A second `def`, nested `class` or assignment of a name already bound in
+        # the same class body (ADR-0062). Python keeps the last, so the earlier
+        # definition never runs and nothing in the file says so. Floored at zero
+        # here: this repository has none, and the floor is what keeps it that way.
+        run: |
+          python odoo/tooling/architecture/py_shadowed_member.py --addon design-themes
+          python odoo/tooling/architecture/py_shadowed_member.py --addon design-themes --count \
+            | xargs python odoo/tooling/ratchet/ratchet.py py_shadowed_member_design-themes --mode no-increase --count
