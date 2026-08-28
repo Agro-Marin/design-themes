@@ -83,6 +83,23 @@ name: Architecture Boundaries (cross-repo)
 # and dies at parse time on anything older.
 
 on:
+  # Daily, because the gates below are CROSS-REPO and nothing else triggers them
+  # when the other repo moves. Each one checks this checkout against a
+  # community-fork checkout, but this workflow fires only on a push or pull
+  # request *here*: a commit in `odoo` that renames a `web` export runs odoo's
+  # own CI, which checks odoo out alone and cannot see an importer in this
+  # repository, and does not run this workflow at all. Both repositories report
+  # green over a broken pair until somebody happens to push to this one.
+  #
+  # Measured 2026-08-27 in enterprise, where the same gap let a renamed `web`
+  # export stop three served bundles compiling on a published branch;
+  # `named_export_coherence` reports it and exits 1 when it is run, and it was
+  # not run, because nothing on that side had changed. A schedule bounds the
+  # window at a day without needing a token to dispatch from the other
+  # repository. `github.ref_name` on a scheduled run is the default branch,
+  # which is what the ref-pairing step below already handles.
+  schedule:
+    - cron: '37 5 * * *'
   push:
     branches: ['19.0-marin']
   pull_request:
