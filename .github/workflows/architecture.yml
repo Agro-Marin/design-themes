@@ -228,3 +228,33 @@ jobs:
           python odoo/tooling/architecture/naming_vocabulary.py --roots design-themes
           python odoo/tooling/architecture/naming_vocabulary.py --roots design-themes --count \
             | xargs python odoo/tooling/ratchet/ratchet.py naming_design-themes --mode no-increase --count
+
+      - name: Run the order-line quantity ratchet (design-themes)
+        if: always()
+        # Appendix A. `product_qty` and `product_uom_qty` carry each other's
+        # upstream meaning on an order line, so a write of `product_uom_qty` is
+        # the wrong field: in a `create` the value is DROPPED and `product_qty`
+        # falls back to its default of 1 -- a line that meant to order 10 orders
+        # 1, and usually still passes -- and in a `write` it lands in the column
+        # while `product_qty` keeps its old value, leaving the two disagreeing
+        # until something recomputes.
+        #
+        # `architecture.yml` in the community fork invokes order_line_qty.py
+        # without `--roots`, so it measures `odoo/` and `addons/` and nothing
+        # else: until this step existed a regression here was caught by nothing
+        # and a fix here credited by nothing. The baseline
+        # `orderlineqty_design-themes` was carried in the fork while no workflow in
+        # any repository drove it.
+        #
+        # The floor lives in the community fork
+        # (`odoo/tooling/ratchet/baselines/orderlineqty_design-themes.json`) because that
+        # is where the gate and every other floor live, scoped by provenance so
+        # this run judges only this repository's own count.
+        #
+        # `--mode no-increase`, as the ratchets above: an exact floor across a
+        # repository boundary would make every fix here red until a matching
+        # commit in `odoo` banked it. Growth still fails.
+        run: |
+          python odoo/tooling/architecture/order_line_qty.py --roots design-themes
+          python odoo/tooling/architecture/order_line_qty.py --roots design-themes --count \
+            | xargs python odoo/tooling/ratchet/ratchet.py orderlineqty_design-themes --mode no-increase --count
