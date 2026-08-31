@@ -64,7 +64,7 @@ def test_02_theme_default_generate_primary_templates(env):
                 assert template_key in template_keys, f"{template_key} should exist"
 
         website = env['website'].search([], limit=1)
-        website.ensure_one()
+        website.check_singleton()
         with MockRequest(env, website=website):
             website.configurator_apply(
                 selected_features=[1, 2, 3, 4],
