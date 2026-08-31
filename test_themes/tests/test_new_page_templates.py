@@ -186,7 +186,7 @@ class TestNewPageTemplates(TransactionCase):
                     try:
                         # TODO: Improve the perfs of the next line
                         #       Doesn't seem to be a way to avoid one RECURSIVE
-                        #       SQL Query from `_get_inheriting_views` per view
+                        #       SQL Query from `_get_views_inheriting` per view
                         html_text = self.env['ir.qweb']._render(view.id)
                         if not html_text:
                             continue
