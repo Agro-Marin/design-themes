@@ -1,11 +1,21 @@
+from odoo.fields import Domain
+
 from . import models
 
 
 def post_init_hook(env):
     ''' Create a new website for each theme and install the theme on it. '''
     IrModule = env['ir.module.module']
-    themes = IrModule.search(IrModule.get_themes_domain(), order='name')
-    assert len(themes) == len(env.ref('base.module_test_themes').dependencies_id)
+    # The themes this module lists, not every theme on the addons path: a
+    # theme from another repository (agromarin ships two) is not this
+    # module's to install, and asserting it away made the module
+    # uninstallable on any tree that carries one.
+    names = env.ref('base.module_test_themes').dependencies_id.mapped('name')
+    themes = IrModule.search(
+        Domain(IrModule.get_themes_domain()) & Domain('name', 'in', names),
+        order='name',
+    )
+    assert len(themes) == len(names), 'a listed theme is not a theme module'
 
     xmlids = []
     for theme in themes:
