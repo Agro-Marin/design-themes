@@ -64,8 +64,8 @@ python tooling/architecture/js_public_surface.py --update      # in odoo/
 python tooling/architecture/js_extension_surface.py --update
 ```
 
-Those gates are green in CI whatever this repo contains — CI checks `odoo` out
-alone, so the scope is simply absent — and red only in a workspace. A drift here
-is caught by nobody but the person running Tier 1 locally.
+Those gates are green from `odoo` alone whatever this repo contains — the scope
+is simply absent — and red only in a workspace. A drift here is caught by nobody
+but the person running Tier 1 from the workspace.
 
 Coding standards are the canonical `doc/coding_guidelines.rst` in the `odoo` repo.
