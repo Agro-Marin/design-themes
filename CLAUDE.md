@@ -29,18 +29,36 @@ entirely Weblate translation refreshes. So sync by rebasing, and keep the
 mirror honest:
 
 ```bash
-git fetch upstream                   # Odoo's
-git branch -f 19.0 upstream/19.0     # pointer only; does not touch a checked-out HEAD
-git push origin 19.0                 # keep the fork's mirror honest too
+git fetch origin                     # origin/19.0 is the mirror; see below
+git branch -f 19.0 origin/19.0       # pointer only; does not touch a checked-out HEAD
 git rebase 19.0                      # from 19.0-marin
+git push --force-with-lease origin 19.0-marin
 ```
 
-## Two remotes, both branches on the fork
+**The rebase rewrites `19.0-marin`, so the push is a force-push**, and every
+other checkout of this repository then sees `+ <old>...<new> (forced update)` on
+its next fetch. Those checkouts cannot fast-forward: the branch must be reset
+onto origin, after confirming with `git cherry origin/19.0-marin HEAD` that every
+local commit is marked `-` (an equivalent patch is upstream) and that the tree is
+clean. Announce it — §12 of the workspace `CLAUDE.md` is why.
 
-Matching the siblings, `origin` is the AgroMarin fork; `upstream` is Odoo's:
+## One remote; both branches on the fork
 
-    origin     github.com/Agro-Marin/design-themes    ← push here
-    upstream   github.com/odoo/design-themes          ← sync from here
+There is **one** remote, and it is the AgroMarin fork:
+
+    origin     github.com/Agro-Marin/design-themes    ← push here, and sync from here
+
+**There is no `upstream` remote in this checkout**, so any recipe spelling
+`git fetch upstream` fails. Odoo's tree arrives through `origin/19.0`, which the
+fork keeps as a mirror of `odoo/design-themes` 19.0 — verified identical on
+2026-09-07, both at `a1818df4ade`. Refresh that mirror by URL when it falls
+behind Odoo's, rather than adding a remote:
+
+```bash
+git fetch https://github.com/odoo/design-themes.git 19.0
+git branch -f 19.0 FETCH_HEAD
+git push origin 19.0                 # keep the fork's mirror honest
+```
 
 The fork carries `19.0` and `19.0-marin`, and both local branches track it. That
 is new as of 2026-08-15: until then the fork held `19.0` alone and the active
