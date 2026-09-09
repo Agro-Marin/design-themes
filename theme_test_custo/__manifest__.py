@@ -1,7 +1,7 @@
 {
     'name': 'Custom Theme (Testing suite)',
     # Remove the `/Hidden` part to make it selectable for tests purpose
-    'category': 'Theme/Hidden',
+    'category': 'Hidden/Tests',
     'depends': ['website'],
     'data': [
         'data/images.xml',
