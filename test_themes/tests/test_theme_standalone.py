@@ -6,7 +6,7 @@ from odoo.tests import standalone
 
 @standalone('website_standalone')
 def test_01_theme_install_generate_primary_templates(env):
-    """ This test ensures the theme `_generate_primary_snippet_templates()`
+    """ This test ensures the theme `_create_primary_snippet_templates()`
     method is correctly called before xml views are generated.
     """
     # 1. Setup
