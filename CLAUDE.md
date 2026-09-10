@@ -18,6 +18,10 @@ The sibling `odoo`/`enterprise` model, now actually adopted rather than deferred
   here**; a local commit breaks the next sync and hides itself, because nothing
   in this repository gates a branch.
 - **`19.0-marin`** — the active line. All local work lands here.
+- **Rebase, never merge.** Syncing is `git pull --rebase`, and the mirror sync
+  below is already a rebase. No merge commits. Rebase before pushing — rewriting
+  an already-pushed branch needs a force-push, a separate confirmed action.
+  Workspace rule: `~/Odoo/CLAUDE.md` §Rebasing.
 
 ## Upstream sync is possible here, unlike odoo/ and enterprise/
 
