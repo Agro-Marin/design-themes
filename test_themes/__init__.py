@@ -12,7 +12,7 @@ def post_init_hook(env):
     # uninstallable on any tree that carries one.
     names = env.ref('base.module_test_themes').dependencies_id.mapped('name')
     themes = IrModule.search(
-        Domain(IrModule.get_themes_domain()) & Domain('name', 'in', names),
+        Domain(IrModule.get_domain_themes()) & Domain('name', 'in', names),
         order='name',
     )
     assert len(themes) == len(names), 'a listed theme is not a theme module'
