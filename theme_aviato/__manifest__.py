@@ -115,8 +115,8 @@
             },
             "background": {
                 "shape": {
-                    "data-oe-shape-data": "{\"shape\":\"web_editor/Connections/20\", \"colors\":{\"c5\":\"o-color-3\"}}",
-                    "element": "<div class=\"o_we_shape o_web_editor_Connections_20\" style=\"background-image: url('/web_editor/shape/web_editor/Connections/20.svg?c5=o-color-3');",
+                    "data-oe-shape-data": '{"shape":"web_editor/Connections/20", "colors":{"c5":"o-color-3"}}',
+                    "element": '<div class="o_we_shape o_web_editor_Connections_20" style="background-image: url(\'/web_editor/shape/web_editor/Connections/20.svg?c5=o-color-3\');',
                 },
             },
             "add_classes": [

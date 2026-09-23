@@ -101,8 +101,8 @@
             },
             "background": {
                 "shape": {
-                    "data-oe-shape-data": "{\"shape\":\"web_editor/Bold/20\", \"colors\":{\"c1\":\"o-color-4\", \"c5\":\"o-color-1\"}}",
-                    "element": "<div class=\"o_we_shape o_web_editor_Bold_20\" style=\"background-image: url('/web_editor/shape/web_editor/Bold/20.svg?c1=o-color-4&c5=o-color-1');",
+                    "data-oe-shape-data": '{"shape":"web_editor/Bold/20", "colors":{"c1":"o-color-4", "c5":"o-color-1"}}',
+                    "element": '<div class="o_we_shape o_web_editor_Bold_20" style="background-image: url(\'/web_editor/shape/web_editor/Bold/20.svg?c1=o-color-4&c5=o-color-1\');',
                 },
             },
             "add_classes": [

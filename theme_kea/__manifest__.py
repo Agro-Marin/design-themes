@@ -124,8 +124,8 @@
             "background": {
                 "color": "o_cc2",
                 "shape": {
-                    "data-oe-shape-data": "{\"shape\":\"web_editor/Grids/04\", \"colors\":{\"c5\":\"o-color-1\"}}",
-                    "element": "<div class=\"o_we_shape o_web_editor_Grids_04\" style=\"background-image: url('/web_editor/shape/web_editor/Grids/04.svg?c5=o-color-1');",
+                    "data-oe-shape-data": '{"shape":"web_editor/Grids/04", "colors":{"c5":"o-color-1"}}',
+                    "element": '<div class="o_we_shape o_web_editor_Grids_04" style="background-image: url(\'/web_editor/shape/web_editor/Grids/04.svg?c5=o-color-1\');',
                 },
             },
             "add_classes": [
