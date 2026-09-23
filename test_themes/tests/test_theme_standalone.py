@@ -55,12 +55,12 @@ def test_02_theme_default_generate_primary_templates(env):
 
     with (
         patch(
-            "odoo.addons.website.models.website.Website._website_api_rpc",
+            "odoo.addons.website.models.website_configurator.Website._website_api_rpc",
             autospec=True,
             side_effect=fake_website_api,
         ),
         patch(
-            "odoo.addons.website.models.website.Website._OLG_api_rpc",
+            "odoo.addons.website.models.website_configurator.Website._OLG_api_rpc",
             autospec=True,
             side_effect=fake_olg_api,
         ),
