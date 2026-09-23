@@ -231,298 +231,19 @@ class TestNewPageTemplates(TransactionCase):
 
     # TODO should handle the fact that grid items can't have padding classes
     def test_render_applied_templates(self):
-        View = self.env["ir.ui.view"]
         errors = []
         classes_inventory = set()
-        view_count = 0
-
-        def check(theme_name, website):
-            with MockRequest(self.env, website=website):
-                views = View.search(
-                    [
-                        "|",
-                        "|",
-                        (
-                            "key",
-                            "in",
-                            [
-                                "website.snippets",
-                                "website.new_page_template_groups",
-                            ],
-                        ),
-                        ("key", "like", escape_psql("website.configurator_")),
-                        (
-                            "key",
-                            "like",
-                            escape_psql("website.new_page_template_sections_"),
-                        ),
-                    ]
-                )
-                for view in views:
-                    try:
-                        # TODO: Improve the perfs of the next line
-                        #       Doesn't seem to be a way to avoid one RECURSIVE
-                        #       SQL Query from `_get_views_inheriting` per view
-                        html_text = self.env["ir.qweb"]._render(view.id)
-                        if not html_text:
-                            continue
-                        html_tree = html.fromstring(f"<wrap>{html_text}</wrap>")
-                        blocks_el = html_tree.xpath("//*[@id='o_scroll']")
-                        if blocks_el:
-                            # Only look at blocks in website.snippets
-                            html_tree = blocks_el[0]
-
-                        for el in html_tree.xpath("//*[@class]"):
-                            classes = el.attrib["class"].split()
-                            classes_inventory.update(classes)
-                            if len(classes) != len(set(classes)):
-                                errors.append(
-                                    "Using %r, view %r contains duplicate classes: %r"
-                                    % (theme_name, view.key, classes)
-                                )
-                            for conflicting_classes in CONFLICTUAL_CLASSES:
-                                conflict = set(classes).intersection(
-                                    conflicting_classes
-                                )
-                                if len(conflict) > 1:
-                                    errors.append(
-                                        "Using %r, view %r contains conflicting classes: %r in %r"
-                                        % (theme_name, view.key, conflict, classes)
-                                    )
-                            for (
-                                conflicting_classes_re,
-                                white_list,
-                            ) in CONFLICTUAL_CLASSES_RE.items():
-                                conflict = set(
-                                    filter(conflicting_classes_re.findall, set(classes))
-                                )
-                                conflict.difference_update(white_list)
-                                if len(conflict) > 1:
-                                    errors.append(
-                                        "Using %r, view %r contains conflicting classes: %r in %r (according to pattern %r)"
-                                        % (
-                                            theme_name,
-                                            view.key,
-                                            conflict,
-                                            classes,
-                                            conflicting_classes_re.pattern,
-                                        )
-                                    )
-
-                            # Special handling for snippet classes following
-                            # naming convention: if classes match the
-                            # 's_snippet_name_*' pattern, they are allowed.
-                            non_whitelisted_s_classes = {
-                                cl
-                                for cl in classes
-                                if cl.startswith("s_") and cl not in S_CLASSES_WHITELIST
-                            }
-                            if non_whitelisted_s_classes:
-                                # Check the element classes itself first: if
-                                # there is a s_XXX class, s_something_XXX is
-                                # automatically accepted as it indicates a
-                                # variant of s_XXX (e.g. s_nice_popup being a
-                                # variant of s_popup).
-                                non_whitelisted_s_classes = {
-                                    cl
-                                    for cl in non_whitelisted_s_classes
-                                    if not any(
-                                        cl != other_cl
-                                        and cl.endswith(f"_{other_cl[2:]}")
-                                        for other_cl in non_whitelisted_s_classes
-                                    )
-                                }
-
-                                # Find all parent elements classes that start
-                                # with 's_' (including on the current element).
-                                # and only accept classes that are prefixed by
-                                # a parent class (+ '_') (e.g. s_table_item
-                                # would be accepted inside a s_table (as it is
-                                # a sub-element of s_table), and s_table_xs
-                                # would be accepted as an option of s_table)).
-                                all_parent_s_classes = set()
-                                parent_el = el
-                                # This also looks for the presence of non-
-                                # whitelisted 's_' classes in non-snippets.
-                                is_in_snippet = view.key.startswith(
-                                    "website.configurator_"
-                                )
-                                while parent_el is not None:
-                                    parent_classes = set(
-                                        parent_el.attrib.get("class", "").split()
-                                    )
-                                    all_parent_s_classes.update(
-                                        {
-                                            cl
-                                            for cl in parent_classes
-                                            if cl.startswith("s_")
-                                        }
-                                    )
-                                    if parent_el.attrib.get("data-snippet"):
-                                        is_in_snippet = True
-                                        break
-                                    parent_el = parent_el.getparent()
-
-                                if is_in_snippet:
-                                    non_whitelisted_s_classes = {
-                                        cl
-                                        for cl in non_whitelisted_s_classes
-                                        if not any(
-                                            cl.startswith(f"{parent_cls}_")
-                                            for parent_cls in all_parent_s_classes
-                                        )
-                                    }
-                                    is_snippet_root = el.attrib.get("data-snippet") or (
-                                        el.getparent().tag == "wrap"
-                                        and view.key.startswith("website.configurator_")
-                                    )
-                                    if len(non_whitelisted_s_classes) > (
-                                        1 if is_snippet_root else 0
-                                    ):
-                                        errors.append(
-                                            "Using %r, view %r contains 's_' classes that do not respect our conventions: %r in %r"
-                                            % (
-                                                theme_name,
-                                                view.key,
-                                                non_whitelisted_s_classes,
-                                                classes,
-                                            )
-                                        )
-                                else:
-                                    errors.append(
-                                        "Using %r, view %r contains 's_' classes (%r) that are not in a snippet"
-                                        % (
-                                            theme_name,
-                                            view.key,
-                                            non_whitelisted_s_classes,
-                                        )
-                                    )
-
-                        for el in html_tree.xpath("//*[@style]"):
-                            styles = el.attrib["style"].split(";")
-                            non_empty_styles = filter(lambda style: style, styles)
-                            property_names = [
-                                style.split(":")[0].strip()
-                                for style in non_empty_styles
-                            ]
-                            if len(property_names) != len(set(property_names)):
-                                errors.append(
-                                    "Using %r, view %r contains duplicate style properties: %r"
-                                    % (theme_name, view.key, el.attrib["style"])
-                                )
-
-                        for grid_el in html_tree.xpath(
-                            "//div[contains(concat(' ', normalize-space(@class), ' '), ' o_grid_mode ')]"
-                        ):
-                            if "data-row-count" not in grid_el.attrib:
-                                errors.append(
-                                    "Using %r, view %r defines a grid mode row without row count"
-                                    % (theme_name, view.key)
-                                )
-                                continue
-                            row_count = int(grid_el.attrib["data-row-count"])
-                            max_row = 0
-                            for item_el in grid_el.xpath(
-                                ".//div[contains(concat(' ', normalize-space(@class), ' '), ' o_grid_item ')]"
-                            ):
-                                classes = item_el.attrib["class"].split()
-                                styles = item_el.attrib["style"].split(";")
-                                grid_area_style = list(
-                                    filter(
-                                        lambda style: style.strip().startswith(
-                                            "grid-area:"
-                                        ),
-                                        styles,
-                                    )
-                                )
-                                if not grid_area_style:
-                                    errors.append(
-                                        "Using %r, view %r does not specify a grid-area for its grid item"
-                                        % (theme_name, view.key)
-                                    )
-                                    continue
-                                grid_area = grid_area_style[0].split(":")[1].strip()
-                                top, left, bottom, right = map(
-                                    int, grid_area.split("/")
-                                )
-                                max_row = max(max_row, bottom)
-                                height_class = f"g-height-{bottom - top}"
-                                if height_class not in classes:
-                                    errors.append(
-                                        "Using %r, view %r does not specify %r for grid item %r (%r)"
-                                        % (
-                                            theme_name,
-                                            view.key,
-                                            height_class,
-                                            grid_area,
-                                            classes,
-                                        )
-                                    )
-                                width_class = f"g-col-lg-{right - left}"
-                                if width_class not in classes:
-                                    errors.append(
-                                        "Using %r, view %r does not specify %r for grid item %r (%r)"
-                                        % (
-                                            theme_name,
-                                            view.key,
-                                            width_class,
-                                            grid_area,
-                                            classes,
-                                        )
-                                    )
-                                non_grid_width_class = f"col-lg-{right - left}"
-                                if non_grid_width_class not in classes:
-                                    errors.append(
-                                        "Using %r, view %r does not specify %r for grid item %r (%r)"
-                                        % (
-                                            theme_name,
-                                            view.key,
-                                            non_grid_width_class,
-                                            grid_area,
-                                            classes,
-                                        )
-                                    )
-                                padding_classes = list(
-                                    filter(
-                                        lambda klass: klass.startswith(("pb", "pt")),
-                                        classes,
-                                    )
-                                )
-                                if padding_classes:
-                                    errors.append(
-                                        "Using %r, view %r specifies unnecessary padding classes on grid item %r"
-                                        % (theme_name, view.key, padding_classes)
-                                    )
-                            if row_count != max_row - 1:
-                                errors.append(
-                                    "Using %r, view %r defines %r as row count while %r is reached"
-                                    % (theme_name, view.key, row_count, max_row)
-                                )
-
-                        for el in html_tree.xpath("//*[@data-row-count]"):
-                            classes = el.attrib["class"].split()
-                            if "o_grid_mode" not in classes:
-                                errors.append(
-                                    "Using %r, view %r defines a row count on a non-grid mode row"
-                                    % (theme_name, view.key)
-                                )
-                    except Exception as e:
-                        _logger.error(
-                            "Using %r, view %r cannot be rendered (%r)",
-                            theme_name,
-                            view.key,
-                            e,
-                        )
-                        errors.append(
-                            "Using %r, view %r cannot be rendered (%r)"
-                            % (theme_name, view.key, e)
-                        )
-                return len(views)
-
-        view_count += check("no theme", self.env.ref("website.default_website"))
+        view_count = self._check_applied_templates(
+            "no theme",
+            self.env.ref("website.default_website"),
+            classes_inventory,
+            errors,
+        )
         websites_themes = self.env["website"].get_test_themes_websites()
         for website in websites_themes:
-            view_count += check(website.name, website)
+            view_count += self._check_applied_templates(
+                website.name, website, classes_inventory, errors
+            )
         _logger.info("Tested %s views", view_count)
         self.assertGreater(view_count, 2900, "Test should have checked many views")
         # Use this information to potentially update known possible conflicts.
@@ -531,11 +252,238 @@ class TestNewPageTemplates(TransactionCase):
         for known_classes in CONFLICTUAL_CLASSES_RE.values():
             classes_inventory.difference_update(known_classes)
         for known_classes_re in CONFLICTUAL_CLASSES_RE:
-            classes_inventory = list(
-                filter(lambda cl: not known_classes_re.findall(cl), classes_inventory)
-            )
+            classes_inventory = {
+                cl for cl in classes_inventory if not known_classes_re.findall(cl)
+            }
         _logger.info("Unknown classes encountered: %r", sorted(classes_inventory))
         self.assertFalse(errors, "No error should have been collected")
+
+    def _check_applied_templates(self, theme_name, website, classes_inventory, errors):
+        with MockRequest(self.env, website=website):
+            views = self.env["ir.ui.view"].search(
+                [
+                    "|",
+                    "|",
+                    (
+                        "key",
+                        "in",
+                        [
+                            "website.snippets",
+                            "website.new_page_template_groups",
+                        ],
+                    ),
+                    ("key", "like", escape_psql("website.configurator_")),
+                    (
+                        "key",
+                        "like",
+                        escape_psql("website.new_page_template_sections_"),
+                    ),
+                ]
+            )
+            for view in views:
+                try:
+                    self._check_applied_view(
+                        theme_name, view, classes_inventory, errors
+                    )
+                except Exception as e:
+                    _logger.error(
+                        "Using %r, view %r cannot be rendered (%r)",
+                        theme_name,
+                        view.key,
+                        e,
+                    )
+                    errors.append(
+                        "Using %r, view %r cannot be rendered (%r)"
+                        % (theme_name, view.key, e)
+                    )
+            return len(views)
+
+    def _check_applied_view(self, theme_name, view, classes_inventory, errors):
+        # TODO: Improve the perfs of the next line
+        #       Doesn't seem to be a way to avoid one RECURSIVE
+        #       SQL Query from `_get_views_inheriting` per view
+        html_text = self.env["ir.qweb"]._render(view.id)
+        if not html_text:
+            return
+        html_tree = html.fromstring(f"<wrap>{html_text}</wrap>")
+        blocks_el = html_tree.xpath("//*[@id='o_scroll']")
+        if blocks_el:
+            # Only look at blocks in website.snippets
+            html_tree = blocks_el[0]
+
+        for el in html_tree.xpath("//*[@class]"):
+            classes = el.attrib["class"].split()
+            classes_inventory.update(classes)
+            self._check_class_conflicts(theme_name, view, classes, errors)
+            self._check_s_classes(theme_name, view, el, classes, errors)
+
+        for el in html_tree.xpath("//*[@style]"):
+            styles = el.attrib["style"].split(";")
+            property_names = [style.split(":")[0].strip() for style in styles if style]
+            if len(property_names) != len(set(property_names)):
+                errors.append(
+                    "Using %r, view %r contains duplicate style properties: %r"
+                    % (theme_name, view.key, el.attrib["style"])
+                )
+
+        for grid_el in html_tree.xpath(
+            "//div[contains(concat(' ', normalize-space(@class), ' '), ' o_grid_mode ')]"
+        ):
+            self._check_grid_row(theme_name, view, grid_el, errors)
+
+        for el in html_tree.xpath("//*[@data-row-count]"):
+            classes = el.attrib["class"].split()
+            if "o_grid_mode" not in classes:
+                errors.append(
+                    "Using %r, view %r defines a row count on a non-grid mode row"
+                    % (theme_name, view.key)
+                )
+
+    def _check_class_conflicts(self, theme_name, view, classes, errors):
+        if len(classes) != len(set(classes)):
+            errors.append(
+                "Using %r, view %r contains duplicate classes: %r"
+                % (theme_name, view.key, classes)
+            )
+        for conflicting_classes in CONFLICTUAL_CLASSES:
+            conflict = set(classes).intersection(conflicting_classes)
+            if len(conflict) > 1:
+                errors.append(
+                    "Using %r, view %r contains conflicting classes: %r in %r"
+                    % (theme_name, view.key, conflict, classes)
+                )
+        for conflicting_classes_re, white_list in CONFLICTUAL_CLASSES_RE.items():
+            conflict = set(filter(conflicting_classes_re.findall, set(classes)))
+            conflict.difference_update(white_list)
+            if len(conflict) > 1:
+                errors.append(
+                    "Using %r, view %r contains conflicting classes: %r in %r (according to pattern %r)"
+                    % (
+                        theme_name,
+                        view.key,
+                        conflict,
+                        classes,
+                        conflicting_classes_re.pattern,
+                    )
+                )
+
+    def _check_s_classes(self, theme_name, view, el, classes, errors):
+        # Special handling for snippet classes following naming convention: if
+        # classes match the 's_snippet_name_*' pattern, they are allowed.
+        non_whitelisted_s_classes = {
+            cl
+            for cl in classes
+            if cl.startswith("s_") and cl not in S_CLASSES_WHITELIST
+        }
+        if not non_whitelisted_s_classes:
+            return
+        # Check the element classes itself first: if there is a s_XXX class,
+        # s_something_XXX is automatically accepted as it indicates a variant
+        # of s_XXX (e.g. s_nice_popup being a variant of s_popup).
+        non_whitelisted_s_classes = {
+            cl
+            for cl in non_whitelisted_s_classes
+            if not any(
+                cl != other_cl and cl.endswith(f"_{other_cl[2:]}")
+                for other_cl in non_whitelisted_s_classes
+            )
+        }
+
+        # Find all parent elements classes that start with 's_' (including on
+        # the current element) and only accept classes that are prefixed by a
+        # parent class (+ '_') (e.g. s_table_item would be accepted inside a
+        # s_table (as it is a sub-element of s_table), and s_table_xs would be
+        # accepted as an option of s_table)).
+        all_parent_s_classes = set()
+        parent_el = el
+        # This also looks for the presence of non-whitelisted 's_' classes in
+        # non-snippets.
+        is_in_snippet = view.key.startswith("website.configurator_")
+        while parent_el is not None:
+            parent_classes = set(parent_el.attrib.get("class", "").split())
+            all_parent_s_classes.update(
+                {cl for cl in parent_classes if cl.startswith("s_")}
+            )
+            if parent_el.attrib.get("data-snippet"):
+                is_in_snippet = True
+                break
+            parent_el = parent_el.getparent()
+
+        if not is_in_snippet:
+            errors.append(
+                "Using %r, view %r contains 's_' classes (%r) that are not in a snippet"
+                % (theme_name, view.key, non_whitelisted_s_classes)
+            )
+            return
+        non_whitelisted_s_classes = {
+            cl
+            for cl in non_whitelisted_s_classes
+            if not any(
+                cl.startswith(f"{parent_cls}_") for parent_cls in all_parent_s_classes
+            )
+        }
+        is_snippet_root = el.attrib.get("data-snippet") or (
+            el.getparent().tag == "wrap"
+            and view.key.startswith("website.configurator_")
+        )
+        if len(non_whitelisted_s_classes) > (1 if is_snippet_root else 0):
+            errors.append(
+                "Using %r, view %r contains 's_' classes that do not respect our conventions: %r in %r"
+                % (theme_name, view.key, non_whitelisted_s_classes, classes)
+            )
+
+    def _check_grid_row(self, theme_name, view, grid_el, errors):
+        if "data-row-count" not in grid_el.attrib:
+            errors.append(
+                "Using %r, view %r defines a grid mode row without row count"
+                % (theme_name, view.key)
+            )
+            return
+        row_count = int(grid_el.attrib["data-row-count"])
+        max_row = 0
+        for item_el in grid_el.xpath(
+            ".//div[contains(concat(' ', normalize-space(@class), ' '), ' o_grid_item ')]"
+        ):
+            max_row = max(
+                max_row, self._check_grid_item(theme_name, view, item_el, errors)
+            )
+        if row_count != max_row - 1:
+            errors.append(
+                "Using %r, view %r defines %r as row count while %r is reached"
+                % (theme_name, view.key, row_count, max_row)
+            )
+
+    def _check_grid_item(self, theme_name, view, item_el, errors):
+        classes = item_el.attrib["class"].split()
+        styles = item_el.attrib["style"].split(";")
+        grid_area_style = [
+            style for style in styles if style.strip().startswith("grid-area:")
+        ]
+        if not grid_area_style:
+            errors.append(
+                "Using %r, view %r does not specify a grid-area for its grid item"
+                % (theme_name, view.key)
+            )
+            return 0
+        grid_area = grid_area_style[0].split(":")[1].strip()
+        top, left, bottom, right = map(int, grid_area.split("/"))
+        for expected_class in (
+            f"g-height-{bottom - top}",
+            f"g-col-lg-{right - left}",
+            f"col-lg-{right - left}",
+        ):
+            if expected_class not in classes:
+                errors.append(
+                    "Using %r, view %r does not specify %r for grid item %r (%r)"
+                    % (theme_name, view.key, expected_class, grid_area, classes)
+                )
+        padding_classes = [klass for klass in classes if klass.startswith(("pb", "pt"))]
+        if padding_classes:
+            errors.append(
+                "Using %r, view %r specifies unnecessary padding classes on grid item %r"
+                % (theme_name, view.key, padding_classes)
+            )
+        return bottom
 
     def test_attribute_separator(self):
         ATTRIBUTE_SEPARATORS = {
