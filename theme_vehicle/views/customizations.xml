@@ -329,7 +329,7 @@
     <!-- Left block -->
     <!-- Icon -->
     <xpath expr="//i" position="attributes">
-        <attribute name="class" add="fa-automobile" remove="fa-paper-plane-o" separator=" "/>
+        <attribute name="class" add="fa-solid fa-car" remove="fa-regular fa-paper-plane" separator=" "/>
     </xpath>
     <!-- Title -->
     <xpath expr="//div[hasclass('row')]/div[1]/div/h3" position="replace" mode="inner">
@@ -338,7 +338,7 @@
     <!-- Center block -->
     <!-- Icon -->
     <xpath expr="(//i)[2]" position="attributes">
-        <attribute name="class" add="fa-battery-full" remove="fa-credit-card" separator=" "/>
+        <attribute name="class" add="fa-solid fa-battery-full" remove="fa-regular fa-credit-card" separator=" "/>
     </xpath>
     <!-- Title -->
     <xpath expr="//div[hasclass('row')]/div[2]/div/h3" position="replace" mode="inner">
@@ -347,7 +347,7 @@
     <!-- Right block -->
     <!-- Icon -->
     <xpath expr="(//i)[3]" position="attributes">
-        <attribute name="class" add="fa-cog" remove="fa-flag-o" separator=" "/>
+        <attribute name="class" add="fa-solid fa-cog" remove="fa-regular fa-flag" separator=" "/>
     </xpath>
     <!-- Title -->
     <xpath expr="//div[hasclass('row')]/div[3]/div/h3" position="replace" mode="inner">
