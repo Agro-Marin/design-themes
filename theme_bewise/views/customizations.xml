@@ -1002,7 +1002,7 @@
     <xpath expr="(//div[hasclass('col-lg-4')])[2]//i[hasclass('fa-github')]" position="attributes">
         <attribute name="class" add="text-o-color-3" separator=" "/>
     </xpath>
-    <xpath expr="(//div[hasclass('col-lg-4')])[2]//i[hasclass('fa-linkedin')]" position="attributes">
+    <xpath expr="(//div[hasclass('col-lg-4')])[2]//i[hasclass('fa-linkedin-in')]" position="attributes">
         <attribute name="class" add="text-o-color-3" separator=" "/>
     </xpath>
     <xpath expr="(//div[hasclass('col-lg-4')])[2]//i[hasclass('fa-instagram')]" position="attributes">
@@ -1031,7 +1031,7 @@
     <xpath expr="(//div[hasclass('col-lg-4')])[4]//i[hasclass('fa-github')]" position="attributes">
         <attribute name="class" add="text-o-color-3" separator=" "/>
     </xpath>
-    <xpath expr="(//div[hasclass('col-lg-4')])[4]//i[hasclass('fa-linkedin')]" position="attributes">
+    <xpath expr="(//div[hasclass('col-lg-4')])[4]//i[hasclass('fa-linkedin-in')]" position="attributes">
         <attribute name="class" add="text-o-color-3" separator=" "/>
     </xpath>
     <xpath expr="(//div[hasclass('col-lg-4')])[4]//i[hasclass('fa-instagram')]" position="attributes">
@@ -1060,7 +1060,7 @@
     <xpath expr="(//div[hasclass('col-lg-4')])[6]//i[hasclass('fa-github')]" position="attributes">
         <attribute name="class" add="text-o-color-3" separator=" "/>
     </xpath>
-    <xpath expr="(//div[hasclass('col-lg-4')])[6]//i[hasclass('fa-linkedin')]" position="attributes">
+    <xpath expr="(//div[hasclass('col-lg-4')])[6]//i[hasclass('fa-linkedin-in')]" position="attributes">
         <attribute name="class" add="text-o-color-3" separator=" "/>
     </xpath>
     <xpath expr="(//div[hasclass('col-lg-4')])[6]//i[hasclass('fa-instagram')]" position="attributes">
