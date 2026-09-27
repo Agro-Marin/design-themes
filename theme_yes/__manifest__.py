@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Personal",
     "sequence": 330,
-    "summary": "Wedding, Love, Photography, Services",
-    "description": "Yes Theme - Wedding",
+    "summary": "Style website pages with the Yes theme",
+    "description": "Apply the Yes colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/yes_description.png",

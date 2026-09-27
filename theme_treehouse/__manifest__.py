@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Environment",
     "sequence": 140,
-    "summary": "Environment, Nature, Ecology, Sustainable Development, Non Profit, NGO, Travels",
-    "description": "Treehouse Theme - Responsive Bootstrap Theme for Odoo CMS",
+    "summary": "Style website pages with the Treehouse theme",
+    "description": "Apply the Treehouse colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/treehouse_cover.webp",
@@ -127,7 +127,7 @@
                 "color": "o_cc2",
                 "shape": {
                     "data-oe-shape-data": '{"shape":"web_editor/Connections/09", "colors":{"c5":"o-color-4"}, "flip":["x"]}',
-                    "element": '<div class="o_we_shape o_web_editor_Connections_09" style="background-image: url(\'/web_editor/shape/web_editor/Connections/09.svg?c5=o-color-4&amp;flip=x\');',
+                    "element": "<div class=\"o_we_shape o_web_editor_Connections_09\" style=\"background-image: url('/web_editor/shape/web_editor/Connections/09.svg?c5=o-color-4&amp;flip=x');",
                 },
             },
             "add_classes": [

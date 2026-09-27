@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Technology",
     "sequence": 200,
-    "summary": "Technology, Tech, IT, Computers, Stores, Virtual Reality",
-    "description": "Kea Theme",
+    "summary": "Style website pages with the Kea theme",
+    "description": "Apply the Kea colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/kea_description.png",
@@ -125,7 +125,7 @@
                 "color": "o_cc2",
                 "shape": {
                     "data-oe-shape-data": '{"shape":"web_editor/Grids/04", "colors":{"c5":"o-color-1"}}',
-                    "element": '<div class="o_we_shape o_web_editor_Grids_04" style="background-image: url(\'/web_editor/shape/web_editor/Grids/04.svg?c5=o-color-1\');',
+                    "element": "<div class=\"o_we_shape o_web_editor_Grids_04\" style=\"background-image: url('/web_editor/shape/web_editor/Grids/04.svg?c5=o-color-1');",
                 },
             },
             "add_classes": [

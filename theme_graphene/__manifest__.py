@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Corporate",
     "sequence": 110,
-    "summary": "Service, Corporate, Design, Technology, Robotics, Computers, IT, Blogs",
-    "description": "Light colours, thin text, clean and sharp design.",
+    "summary": "Style website pages with the Graphene theme",
+    "description": "Apply the Graphene colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/graphene_poster.webp",

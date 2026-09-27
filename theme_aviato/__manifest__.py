@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "category": "Theme/Creative",
     "sequence": 130,
-    "summary": "Travel, Excursion, Plane, Tour, Agency",
-    "description": "Aviato Theme - Responsive Bootstrap Theme for Odoo CMS",
+    "summary": "Style website pages with the Aviato theme",
+    "description": "Apply the Aviato colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/aviato_cover.webp",
@@ -116,7 +116,7 @@
             "background": {
                 "shape": {
                     "data-oe-shape-data": '{"shape":"web_editor/Connections/20", "colors":{"c5":"o-color-3"}}',
-                    "element": '<div class="o_we_shape o_web_editor_Connections_20" style="background-image: url(\'/web_editor/shape/web_editor/Connections/20.svg?c5=o-color-3\');',
+                    "element": "<div class=\"o_we_shape o_web_editor_Connections_20\" style=\"background-image: url('/web_editor/shape/web_editor/Connections/20.svg?c5=o-color-3');",
                 },
             },
             "add_classes": [

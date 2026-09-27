@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Retail",
     "sequence": 250,
-    "summary": "Library, Books, Magazines, Literature, Musics, Media, Store",
-    "description": "Books, Magazines, Music",
+    "summary": "Style website pages with the Bookstore theme",
+    "description": "Apply the Bookstore colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/bookstore_description.webp",

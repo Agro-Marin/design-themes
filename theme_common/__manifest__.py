@@ -1,9 +1,9 @@
 {
-    "name": "Theme Common",
+    "name": "Shared Theme Snippets",
     "version": "1.1",
     "category": "Hidden",
-    "summary": "Snippets Library",
-    "description": "Snippets library containing snippets to be styled in themes.",
+    "summary": "Supply shared snippet templates for website themes",
+    "description": "Provide column and page-header snippet templates used by dependent website themes. The consuming theme supplies their styling.",
     "author": "Odoo S.A.",
     "license": "LGPL-3",
     "depends": [

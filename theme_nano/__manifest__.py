@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Lifestyle",
     "sequence": 270,
-    "summary": "Maker, Agencies, Creative, Design, IT, Services, Fancy",
-    "description": "Nano Theme - Responsive Bootstrap Theme for Odoo CMS",
+    "summary": "Style website pages with the Nano theme",
+    "description": "Apply the Nano colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/nano_cover.gif",

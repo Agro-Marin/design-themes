@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Retail",
     "sequence": 290,
-    "summary": "Nursery, Toys, Games, Kids, Boys, Girls, Stores",
-    "description": "Kiddo theme for Odoo Website",
+    "summary": "Style website pages with the Kiddo theme",
+    "description": "Apply the Kiddo colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/kiddo_description.webp",

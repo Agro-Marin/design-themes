@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Retail",
     "sequence": 180,
-    "summary": "Diversity, Fashions, Trends, Clothes, Shoes, Sports, Fitness, Stores",
-    "description": "Anelusia Fashion Theme",
+    "summary": "Style website pages with the Anelusia theme",
+    "description": "Apply the Anelusia colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/anelusia_description.webp",

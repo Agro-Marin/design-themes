@@ -1,13 +1,10 @@
 {
-    "name": "Themes Testing Module",
+    "name": "Website Theme Preview Tests",
     "version": "1.0",
     "category": "Hidden",
     "sequence": 9877,
-    "summary": "Create a new website for each Odoo theme for an easy preview.",
-    "description": """This module will help you to quickly test all the Odoo
-    themes without having to switch from one theme to another on your website.
-    It will simply create a new website for each Odoo theme and install every
-    theme on one website.""",
+    "summary": "Create a preview website for each theme declared by this test module",
+    "description": "The installation hook creates a website for each theme in this module's dependencies and applies that theme to it. Supplies website switching controls and tests for theme loading, upgrades and page templates.",
     "author": "Odoo S.A.",
     "license": "LGPL-3",
     "depends": [

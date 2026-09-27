@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Services",
     "sequence": 260,
-    "summary": "Event, Restaurants, Bars, Pubs, Cafes, Catering, Food, Drinks, Concerts, Shows, Musics, Dance, Party",
-    "description": "Monglia Catering Theme",
+    "summary": "Style website pages with the Monglia theme",
+    "description": "Apply the Monglia colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/monglia_description.png",

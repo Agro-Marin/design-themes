@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Corporate",
     "sequence": 160,
-    "summary": "Digital, Marketing, Copywriting, Media, Events, Non Profit, NGO, Corporate, Business, Services",
-    "description": "Zap Theme - Corporate, Business, Marketing, Copywriting",
+    "summary": "Style website pages with the Zap theme",
+    "description": "Apply the Zap colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/zap_cover.gif",

@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Retail",
     "sequence": 280,
-    "summary": "Band, Musics, Sound, Concerts, Artists, Records, Event, Food, Stores",
-    "description": "Notes & Play Theme",
+    "summary": "Style website pages with the Notes & Play theme",
+    "description": "Apply the Notes & Play colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/notes_description.webp",

@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Retail",
     "sequence": 130,
-    "summary": "Furniture, Toys, Games, Kids, Boys, Girls, Stores",
-    "description": "Loftspace Fashion Theme",
+    "summary": "Style website pages with the Loftspace theme",
+    "description": "Apply the Loftspace colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/loftspace_description.webp",

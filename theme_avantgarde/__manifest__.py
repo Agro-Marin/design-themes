@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Creative",
     "sequence": 150,
-    "summary": "Design, Fine Art, Artwork, Creative, Creativity, Galleries, Trends, Shows, Magazines, Blogs",
-    "description": "Avantgarde is a sophisticated theme to inspire and impress",
+    "summary": "Style website pages with the Avantgarde theme",
+    "description": "Apply the Avantgarde colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/poster.webp",

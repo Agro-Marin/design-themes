@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Services",
     "sequence": 320,
-    "summary": "Real Estate, Agencies, Construction, Services, Accomodations, Lodging, Hosting, Houses, Appartments, Vacations, Holidays, Travels",
-    "description": "Real Estate Theme - Houses, Appartments, Real Estate Agencies",
+    "summary": "Style website pages with the Real Estate theme",
+    "description": "Apply the Real Estate colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/real_estate_description.png",

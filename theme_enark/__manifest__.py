@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Corporate",
     "sequence": 190,
-    "summary": "Architect, Corporate, Business, Finance, Services",
-    "description": "Enark Theme",
+    "summary": "Style website pages with the Enark theme",
+    "description": "Apply the Enark colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/enark_description.webp",
@@ -156,7 +156,7 @@
             "background": {
                 "shape": {
                     "data-oe-shape-data": '{"shape":"web_editor/Connections/20","flip":["y"],"colors":{"c5":"o-color-5"}}',
-                    "element": '<div class="o_we_shape o_web_editor_Connections_20" style="background-image: url(\'/web_editor/shape/web_editor/Connections/20.svg?c5=o-color-5\'); background-position: 50% 0%;',
+                    "element": "<div class=\"o_we_shape o_web_editor_Connections_20\" style=\"background-image: url('/web_editor/shape/web_editor/Connections/20.svg?c5=o-color-5'); background-position: 50% 0%;",
                 },
             },
             "add_classes": [

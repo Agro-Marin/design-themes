@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "category": "Theme/Corporate",
     "sequence": 140,
-    "summary": "Corporate, Services, Technology, Shapes, Illustrations",
-    "description": "Buzzy Theme - Responsive Bootstrap Theme for Odoo CMS",
+    "summary": "Style website pages with the Buzzy theme",
+    "description": "Apply the Buzzy colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/buzzy_cover.webp",

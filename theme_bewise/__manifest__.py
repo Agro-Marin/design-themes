@@ -3,8 +3,8 @@
     "version": "3.0.0",
     "category": "Theme/Education",
     "sequence": 240,
-    "summary": "University, Education, Schools, Young, Play, Kids",
-    "description": "Be Wise Theme",
+    "summary": "Style website pages with the Be Wise theme",
+    "description": "Apply the Be Wise colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/bewise_description.webp",

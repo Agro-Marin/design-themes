@@ -3,8 +3,8 @@
     "version": "3.0.0",
     "category": "Theme/Retail",
     "sequence": 230,
-    "summary": "Florist, Gardens, Flowers, Nature, Green, Beauty, Stores",
-    "description": "Orchid Theme - Flowers, Beauty",
+    "summary": "Style website pages with the Orchid theme",
+    "description": "Apply the Orchid colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/orchid_description.webp",
@@ -159,7 +159,7 @@
             "background": {
                 "shape": {
                     "data-oe-shape-data": '{"shape":"web_editor/Connections/01", "colors":{"c5":"o-color-3"}, "flip":["x"]}',
-                    "element": '<div class="o_we_shape o_web_editor_Connections_01" style="background-image: url(\'/web_editor/shape/web_editor/Connections/01.svg?c5=o-color-3&amp;flip=x\');',
+                    "element": "<div class=\"o_we_shape o_web_editor_Connections_01\" style=\"background-image: url('/web_editor/shape/web_editor/Connections/01.svg?c5=o-color-3&amp;flip=x');",
                 },
             },
             "add_classes": [

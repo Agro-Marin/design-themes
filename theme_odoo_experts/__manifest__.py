@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Corporate",
     "sequence": 210,
-    "summary": "Advisor, Corporate, Service, Business, Finance, IT",
-    "description": "Experts Business Theme",
+    "summary": "Style website pages with the Experts theme",
+    "description": "Apply the Experts colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/odoo_experts_description.webp",

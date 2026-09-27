@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Creative",
     "sequence": 310,
-    "summary": "Artist, Arts, Galleries, Creative, Paintings, Photography, Shows, Stores",
-    "description": "Artists Theme - Art Galleries, Photography, Painting",
+    "summary": "Style website pages with the Artists theme",
+    "description": "Apply the Artists colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/artists_description.webp",

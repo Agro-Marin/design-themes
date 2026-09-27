@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Services",
     "sequence": 300,
-    "summary": "Vehicle, Cars, Motorbikes, Bikes, Tires, Transports, Repair, Mechanics, Garages, Sports, Services",
-    "description": "Vehicle Theme - Cars, Motorbikes, Bikes, Tires",
+    "summary": "Style website pages with the Vehicle theme",
+    "description": "Apply the Vehicle colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/vehicle_description.png",

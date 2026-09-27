@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Retail",
     "sequence": 170,
-    "summary": "Beauty, Health, Care, Make Up, Cosmetics, Hair Dressers, Stores",
-    "description": "Beauty Theme - Cosmetics, Beauty, Make Up, Hairdresser",
+    "summary": "Style website pages with the Beauty theme",
+    "description": "Apply the Beauty colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/beauty_description.webp",
@@ -118,7 +118,7 @@
                 "color": "o_cc2",
                 "shape": {
                     "data-oe-shape-data": '{"shape":"web_editor/Bold/13", "colors":{"c5":"o-color-4"}}',
-                    "element": '<div class="o_we_shape o_web_editor_Bold_13" style="background-image: url(\'/web_editor/shape/web_editor/Bold/13.svg?c5=o-color-4\');',
+                    "element": "<div class=\"o_we_shape o_web_editor_Bold_13\" style=\"background-image: url('/web_editor/shape/web_editor/Bold/13.svg?c5=o-color-4');",
                 },
             },
             "add_classes": [

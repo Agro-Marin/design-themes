@@ -3,8 +3,8 @@
     "version": "2.0.0",
     "category": "Theme/Food",
     "sequence": 220,
-    "summary": "Bistro, Restaurant, Bar, Pub, Cafe, Food, Catering",
-    "description": "Bistro Theme - Restaurant, Food/Drink, Catering, Food trucks",
+    "summary": "Style website pages with the Bistro theme",
+    "description": "Apply the Bistro colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/bistro_cover.webp",

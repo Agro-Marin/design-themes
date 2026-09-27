@@ -3,8 +3,8 @@
     "version": "2.1.0",
     "category": "Theme/Corporate",
     "sequence": 110,
-    "summary": "Consultancy, Design, Tech, Computers, IT, Blogs",
-    "description": "Clean and sharp design.",
+    "summary": "Style website pages with the Paptic theme",
+    "description": "Apply the Paptic colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
         "static/description/paptic_poster.webp",
