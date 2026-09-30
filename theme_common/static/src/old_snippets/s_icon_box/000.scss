@@ -1,5 +1,5 @@
 #wrapwrap .s_icon_box {
-    .fa {
+    :is(#{$o-icon-selector}) {
         margin: 10px 20px;
         &:hover {
             transition: all 0.3s ease-in-out;

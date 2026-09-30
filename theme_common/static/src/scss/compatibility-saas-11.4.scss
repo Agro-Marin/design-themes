@@ -49,7 +49,7 @@
 }
 
 .s_banner_3 {
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: $s-banner-3-fa-color;
         font-size: 35px;
         transition: all 0.3s ease 0s;
@@ -189,7 +189,7 @@
         width: 10%;
         @include carousel-control(15px, 20px, 3px);
         @include fa-size-generator(15px);
-        .fa {
+        :is(#{$o-icon-selector}) {
             top: auto;
             bottom: 30px;
         }
@@ -460,7 +460,7 @@
 }
 
 #wrapwrap .s_icon_box_square {
-    .fa {
+    :is(#{$o-icon-selector}) {
         margin: 0 20px;
         &:hover {
             transition: all 0.3s ease-in-out;
@@ -474,7 +474,7 @@
 }
 
 #wrapwrap .s_icon_box_circle {
-    .fa {
+    :is(#{$o-icon-selector}) {
         margin: 0 20px;
         &:hover {
             transition: all 0.3s ease-in-out;
@@ -497,7 +497,7 @@
     width: 150px;
     margin: 0 auto;
 
-    .fa {
+    :is(#{$o-icon-selector}) {
         color:white;
         font-size: 40px;
     }
@@ -541,7 +541,7 @@
     width: 150px;
     margin: 0 auto;
 
-    .fa {
+    :is(#{$o-icon-selector}) {
         color:white;
         font-size: 40px;
         @include s-big-icon-circle-fa-hook;
@@ -581,7 +581,7 @@
     .s_color_blocks_slider_content {
         padding: 8% 5%;
         height: auto;
-        .fa {
+        :is(#{$o-icon-selector}) {
             color: white;
         }
         img {
@@ -902,7 +902,7 @@ $s-timeline-company-color: o-color('alpha') !default;
             }
 
             /* Badge */
-            .fa {
+            :is(#{$o-icon-selector}) {
                 margin: -5px 0 0 0;
                 color: #fff;
                 text-align: center;
@@ -934,7 +934,7 @@ $s-timeline-company-color: o-color('alpha') !default;
             float: left;
             padding: 0 45px 0 0;
             text-align: right;
-            .fa {
+            :is(#{$o-icon-selector}) {
                 float: right;
                 margin-left: 10px;
             }
@@ -951,7 +951,7 @@ $s-timeline-company-color: o-color('alpha') !default;
                 left: 30px;
                 right: auto;
             }
-            .fa {
+            :is(#{$o-icon-selector}) {
                 float: left;
                 margin-right: 10px;
             }
@@ -982,7 +982,7 @@ $s-timeline-company-color: o-color('alpha') !default;
                     display: none;
                 }
 
-                .fa {
+                :is(#{$o-icon-selector}) {
                     float: none;
                     margin: 10px 0 0 0;
                 }
@@ -1028,7 +1028,7 @@ $s-timeline-company-color: o-color('alpha') !default;
 
 #wrapwrap .s_team_profile_share {
     margin: 24px 0;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha');
         padding: 0 2px;
     }
@@ -1065,7 +1065,7 @@ $s-timeline-company-color: o-color('alpha') !default;
             margin-bottom: 0;
 
         }
-        .fa {
+        :is(#{$o-icon-selector}) {
             padding: 16px 0 0 0;
             display: block;
         }
@@ -1166,7 +1166,7 @@ $s-timeline-company-color: o-color('alpha') !default;
     }
     .carousel-control {
         @include carousel-control(15px, 0, 2px);
-        .fa {
+        :is(#{$o-icon-selector}) {
             margin-top: -21px;
             @include media-breakpoint-down(lg) {
                 top: 65px;
@@ -1212,7 +1212,7 @@ $s-timeline-company-color: o-color('alpha') !default;
                             display: inline-block;
                         }
                         @include fa-size-generator(10px);
-                        .fa {
+                        :is(#{$o-icon-selector}) {
                             margin-right: 10px;
                         }
                     }
@@ -1223,7 +1223,7 @@ $s-timeline-company-color: o-color('alpha') !default;
 }
 
 #wrapwrap .s_products_carousel {
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: $s-products-carousel-carousel-icon-color;
         font-size: 35px;
         transition: all 0.3s ease 0s;

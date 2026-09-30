@@ -9,7 +9,7 @@
                 h4 {
                     font-size: 20px;
                 }
-                .fa {
+                :is(#{$o-icon-selector}) {
                     margin: 20px 0px;
                 }
             }

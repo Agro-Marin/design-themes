@@ -5,7 +5,7 @@
 /* Big Icon Square */
 
 .s_big_icon_square_box {
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha') !important;
     }
 }
@@ -41,7 +41,7 @@
     h5 {
         color: white !important;
     }
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: white !important;
     }
 }
@@ -50,7 +50,7 @@
     background-color: white !important;
     border-color: o-color('alpha');
     transform: scale(1.1,1.1);
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha') !important;
     }
     h5 {
@@ -72,7 +72,7 @@
     background-color: o-color('alpha') !important;
     border-color: o-color('alpha');
     transform: scale(1.1,1.1);
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: white !important;
     }
     h5 {

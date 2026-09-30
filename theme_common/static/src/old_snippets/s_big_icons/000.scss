@@ -11,7 +11,7 @@
     text-align: center;
     width: 150px;
     margin: 0 auto;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: #fff;
         font-size: 40px;
         @include s-big-icon-circle-fa-hook;

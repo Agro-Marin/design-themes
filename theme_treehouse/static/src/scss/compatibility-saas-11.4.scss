@@ -1,7 +1,7 @@
 #wrapwrap {
 
     // Carousel
-    .carousel-control .fa {
+    .carousel-control :is(#{$o-icon-selector}) {
         border-radius: 50%;
         padding-top: 2px;
         &:hover {
@@ -18,7 +18,7 @@
             width: 10%;
             @include carousel-control(0, 20px, 3px);
             @include fa-size-generator(15px);
-            .fa {
+            :is(#{$o-icon-selector}) {
                 top: auto;
                 bottom: 30px;
             }
@@ -45,7 +45,7 @@
         min-width: 35px;
         @include carousel-control(15px, 0, 2px);
         @include fa-size-generator(15px);
-        .fa {
+        :is(#{$o-icon-selector}) {
             top: auto;
             bottom: 15px;
         }
@@ -84,7 +84,7 @@
         }
         .panel-heading {
             border: 0;
-            .fa {
+            :is(#{$o-icon-selector}) {
                 margin-right: 12px;
             }
         }

@@ -4,7 +4,7 @@
 .s_icon_box_circle_box {
     float: left;
 
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha') !important;
         font-size: 28px;
     }
@@ -27,7 +27,7 @@
     transform: scale(1.1,1.1);
     transition: all 0.3s ease-in-out;
     border-color: o-color('gamma');
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('gamma') !important;
     }
 }
@@ -37,7 +37,7 @@
 .s_icon_box_square_box {
     float: left;
 
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha') !important;
     }
 }
@@ -58,14 +58,14 @@
     transform: scale(1.1,1.1);
     transition: all 0.3s ease-in-out;
     border-color: o-color('gamma');
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('gamma') !important;
     }
 }
 
 /* s_icon_box */
 
-.s_icon_box_box:hover .s_icon_box_icon .fa, .s_icon_box_box:hover .s_icon_box_content h4 {
+.s_icon_box_box:hover .s_icon_box_icon :is(#{$o-icon-selector}), .s_icon_box_box:hover .s_icon_box_content h4 {
     transition: all 0.3s ease-in-out;
     color: o-color('alpha');
 }
@@ -75,7 +75,7 @@
 .s_icon_box_square_box:hover .s_icon_box_square_icon {
     border-color: o-color('alpha');
     background-color: o-color('alpha') !important;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: white !important;
     }
 }
@@ -89,7 +89,7 @@
 .s_icon_box_circle_box:hover .s_icon_box_circle_icon {
     border-color: o-color('alpha');
     background-color: o-color('alpha') !important;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: white !important;
     }
 }
@@ -100,7 +100,7 @@
 
 /* s_icon_box */
 
-.bg-epsilon .s_icon_box_box:hover .s_icon_box_icon .fa, .bg-gamma .s_icon_box_box:hover .s_icon_box_icon .fa  {
+.bg-epsilon .s_icon_box_box:hover .s_icon_box_icon :is(#{$o-icon-selector}), .bg-gamma .s_icon_box_box:hover .s_icon_box_icon :is(#{$o-icon-selector})  {
     transition: all 0.3s ease-in-out;
     color: o-color('delta') !important;
 }
@@ -115,7 +115,7 @@
 .bg-epsilon .s_icon_box_square_icon, .bg-gamma .s_icon_box_square_icon {
     border-color: white !important;
     background-color: o-color('alpha') !important;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: white !important;
     }
     h4 {
@@ -126,7 +126,7 @@
 .bg-epsilon .s_icon_box_square_box:hover .s_icon_box_square_icon, .bg-gamma .s_icon_box_square_box:hover .s_icon_box_square_icon {
     border-color: white !important;
     background-color: white !important;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha') !important;
     }
 }
@@ -140,7 +140,7 @@
 .bg-epsilon .s_icon_box_circle_icon {
     border-color: white !important;
     background-color: o-color('alpha') !important;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: white !important;
     }
     h4 {
@@ -151,7 +151,7 @@
 .bg-epsilon .s_icon_box_circle_box:hover .s_icon_box_circle_icon, .bg-gamma .s_icon_box_circle_box:hover .s_icon_box_circle_icon {
     border-color: white !important;
     background-color: white !important;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: o-color('alpha') !important;
     }
 }

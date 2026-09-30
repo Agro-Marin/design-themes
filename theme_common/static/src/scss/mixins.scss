@@ -1,31 +1,31 @@
 @mixin fa-size-generator($base-size) {
-    .fa {
+    :is(#{$o-icon-selector}) {
         text-align: center;
         display: inline-block;
         vertical-align: middle;
     }
-    .fa,
-    .fa.fa-1x {
+    :is(#{$o-icon-selector}),
+    :is(#{$o-icon-selector}).fa-1x {
         width: ($base-size + 20px);
         height: ($base-size + 20px);
         line-height: ($base-size + 20px);
     }
-    .fa.fa-2x {
+    :is(#{$o-icon-selector}).fa-2x {
         width: ($base-size + 40px);
         height: ($base-size + 40px);
         line-height: ($base-size + 40px);
     }
-    .fa.fa-3x {
+    :is(#{$o-icon-selector}).fa-3x {
         width: ($base-size + 60px);
         height: ($base-size + 60px);
         line-height: ($base-size + 60px);
     }
-    .fa.fa-4x {
+    :is(#{$o-icon-selector}).fa-4x {
         width: ($base-size + 80px);
         height: ($base-size + 80px);
         line-height: ($base-size + 80px);
     }
-    .fa.fa-5x {
+    :is(#{$o-icon-selector}).fa-5x {
         width: ($base-size + 100px);
         height: ($base-size + 100px);
         line-height: ($base-size + 100px);
@@ -38,8 +38,8 @@
         margin: 0 0 12px 0;
         padding: 0;
         border: 0;
-        > .fa,
-        > span .fa {
+        > :is(#{$o-icon-selector}),
+        > span :is(#{$o-icon-selector}) {
             float: left;
         }
         @include fa-size-generator(20px);
@@ -71,7 +71,7 @@
     color: map-get($grays, '900');
     font-size: inherit;
     width: 5%;
-    .fa {
+    :is(#{$o-icon-selector}) {
         top: 50%;
         background-color: #fff;
         &:hover {
@@ -86,7 +86,7 @@
     &.left {
         background-image: none;
         left: $position;
-        .fa {
+        :is(#{$o-icon-selector}) {
             left: $fa-position;
             right: auto;
             padding-right: $fa-padding;
@@ -95,7 +95,7 @@
     &.right {
         background-image: none;
         right: $position;
-        .fa {
+        :is(#{$o-icon-selector}) {
             right: $fa-position;
             left: auto;
             padding-left: $fa-padding;
@@ -596,7 +596,7 @@
             font-size: 22px;
             font-weight: $right-column-font-weight;
         }
-        .fa {
+        :is(#{$o-icon-selector}) {
             padding-right: 5px;
         }
     }
@@ -772,7 +772,7 @@
     background-color: $bg-color !important;
     border-color: $border-color;
     transform: $transform;
-    .fa {
+    :is(#{$o-icon-selector}) {
         color: $fa-color !important;
     }
 }

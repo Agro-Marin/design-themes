@@ -8,7 +8,7 @@ $s-big-icon-circle-icon-size: 120px;
         .s_big_icons_icon {
             border: $border;
             color: #fff;
-            .fa {
+            :is(#{$o-icon-selector}) {
                 color: o-color('alpha') !important;
             }
         }

@@ -17,7 +17,7 @@
         }
     }
 
-    .fa {
+    :is(#{$o-icon-selector}) {
         font-size: 60px;
     }
     .icon-container {

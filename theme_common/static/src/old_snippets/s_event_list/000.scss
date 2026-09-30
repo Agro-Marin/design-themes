@@ -75,7 +75,7 @@
             text-overflow: ellipsis;
             max-height: 2.2em;
             line-height: 1.1em;
-            .fa {
+            :is(#{$o-icon-selector}) {
                 color: white;
             }
         }
@@ -136,7 +136,7 @@
             height: $s-event-list-main-size;
             float: left;
             text-align: center;
-            .fa  {
+            :is(#{$o-icon-selector})  {
                 line-height: $s-event-list-main-size;
             }
         }
