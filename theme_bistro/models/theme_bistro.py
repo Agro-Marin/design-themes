@@ -4,7 +4,7 @@ from odoo import models
 class ThemeUtils(models.AbstractModel):
     _inherit = "theme.utils"
 
-    def _theme_bistro_post_copy(self, mod):
+    def _theme_bistro_post_copy(self, mod) -> None:
         self.enable_view("website.template_header_vertical")
         self.enable_view("website.header_navbar_pills_style")
 
