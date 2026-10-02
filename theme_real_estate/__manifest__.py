@@ -1,6 +1,6 @@
 {
     "name": "Real Estate Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Services",
     "sequence": 320,
     "summary": "Style website pages with the Real Estate theme",

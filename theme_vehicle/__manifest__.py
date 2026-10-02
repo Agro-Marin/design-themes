@@ -1,6 +1,6 @@
 {
     "name": "Vehicle Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Services",
     "sequence": 300,
     "summary": "Style website pages with the Vehicle theme",

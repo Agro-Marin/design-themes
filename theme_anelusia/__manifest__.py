@@ -1,6 +1,6 @@
 {
     "name": "Anelusia Theme",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "category": "Theme/Retail",
     "sequence": 180,
     "summary": "Style website pages with the Anelusia theme",

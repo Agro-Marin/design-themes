@@ -1,6 +1,6 @@
 {
     "name": "Orchid Theme",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "category": "Theme/Retail",
     "sequence": 230,
     "summary": "Style website pages with the Orchid theme",

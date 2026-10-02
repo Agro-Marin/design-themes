@@ -1,6 +1,6 @@
 {
     "name": "Yes Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Personal",
     "sequence": 330,
     "summary": "Style website pages with the Yes theme",

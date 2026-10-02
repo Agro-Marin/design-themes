@@ -1,6 +1,6 @@
 {
     "name": "Kea Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Technology",
     "sequence": 200,
     "summary": "Style website pages with the Kea theme",

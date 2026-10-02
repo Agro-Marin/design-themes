@@ -1,6 +1,6 @@
 {
     "name": "Experts Theme",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "category": "Theme/Corporate",
     "sequence": 210,
     "summary": "Style website pages with the Experts theme",

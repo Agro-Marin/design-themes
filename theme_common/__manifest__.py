@@ -1,6 +1,6 @@
 {
     "name": "Shared Theme Snippets",
-    "version": "1.1",
+    "version": "1.2",
     "category": "Hidden",
     "summary": "Supply shared snippet templates for website themes",
     "description": "Provide column and page-header snippet templates used by dependent website themes. The consuming theme supplies their styling.",

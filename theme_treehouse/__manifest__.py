@@ -1,6 +1,6 @@
 {
     "name": "Treehouse Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Environment",
     "sequence": 140,
     "summary": "Style website pages with the Treehouse theme",

@@ -1,6 +1,6 @@
 {
     "name": "Be Wise Theme",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "category": "Theme/Education",
     "sequence": 240,
     "summary": "Style website pages with the Be Wise theme",

@@ -1,6 +1,6 @@
 {
     "name": "Avantgarde Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Creative",
     "sequence": 150,
     "summary": "Style website pages with the Avantgarde theme",

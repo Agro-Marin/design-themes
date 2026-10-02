@@ -1,6 +1,6 @@
 {
     "name": "Monglia Theme",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "category": "Theme/Services",
     "sequence": 260,
     "summary": "Style website pages with the Monglia theme",

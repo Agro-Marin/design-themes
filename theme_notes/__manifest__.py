@@ -1,6 +1,6 @@
 {
     "name": "Notes & Play Theme",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "category": "Theme/Retail",
     "sequence": 280,
     "summary": "Style website pages with the Notes & Play theme",
