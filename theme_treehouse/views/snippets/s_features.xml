@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="s_features" inherit_id="website.s_features">
+    <!-- Section -->
+    <xpath expr="//section" position="attributes">
+        <attribute name="class" add="pt48 pb48" remove="pt64 pb64" separator=" "/>
+    </xpath>
+    <!-- Icons -->
+    <xpath expr="(//i)[1]" position="attributes">
+        <attribute name="class" add="fa-solid fa-leaf mb-4 rounded-circle" remove="fa-regular fa-paper-plane mb-3 rounded" separator=" "/>
+    </xpath>
+    <xpath expr="(//i)[2]" position="attributes">
+        <attribute name="class" add="fa-solid fa-bolt mb-4 rounded-circle" remove="fa-regular fa-credit-card mb-3 rounded" separator=" "/>
+    </xpath>
+    <xpath expr="(//i)[3]" position="attributes">
+        <attribute name="class" add="fa-solid fa-tint mb-4 rounded-circle" remove="fa-regular fa-flag mb-3 rounded" separator=" "/>
+    </xpath>
+</template>
+
+</odoo>

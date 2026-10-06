@@ -1,0 +1,4 @@
+# Lint and format exactly as the core fork does. Unlike enterprise/ and agromarin/, which
+# carry standalone copies, this repo is rebased onto upstream and has no CI of its own, so
+# it tracks core's rules instead of duplicating them; ruff aborts loudly if ../odoo is absent.
+extend = "../odoo/ruff.toml"
