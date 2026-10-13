@@ -45,21 +45,18 @@ onto origin, after confirming with `git cherry origin/19.0-marin HEAD` that ever
 local commit is marked `-` (an equivalent patch is upstream) and that the tree is
 clean. Announce it — §12 of the workspace `CLAUDE.md` is why.
 
-## One remote; both branches on the fork
-
-There is **one** remote, and it is the AgroMarin fork:
+## Two remotes; both branches on the fork
 
     origin     github.com/Agro-Marin/design-themes    ← push here, and sync from here
+    upstream   github.com/odoo/design-themes          ← fetch only; never push
 
-**There is no `upstream` remote in this checkout**, so any recipe spelling
-`git fetch upstream` fails. Odoo's tree arrives through `origin/19.0`, which the
-fork keeps as a mirror of `odoo/design-themes` 19.0 — verified identical on
-2026-09-07, both at `a1818df4ade`. Refresh that mirror by URL when it falls
-behind Odoo's, rather than adding a remote:
+Odoo's tree arrives through `origin/19.0`, which the fork keeps as a mirror of
+`odoo/design-themes` 19.0 — verified identical on 2026-09-07, both at
+`a1818df4ade`. Refresh that mirror from `upstream` when it falls behind Odoo's:
 
 ```bash
-git fetch https://github.com/odoo/design-themes.git 19.0
-git branch -f 19.0 FETCH_HEAD
+git fetch upstream 19.0
+git branch -f 19.0 upstream/19.0
 git push origin 19.0                 # keep the fork's mirror honest
 ```
 
