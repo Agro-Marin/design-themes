@@ -11,7 +11,7 @@ where the same file forbade them.
 
 ## Branch model
 
-The sibling `odoo`/`enterprise` model, now actually adopted rather than deferred:
+The model the `odoo` checkout started from, adopted here rather than deferred:
 
 - **`19.0`** — pristine mirror of Odoo's `19.0`, tracking the fork's copy of it
   (`origin/19.0`), which is what the siblings do. Read-only. **Never commit
@@ -22,7 +22,7 @@ The sibling `odoo`/`enterprise` model, now actually adopted rather than deferred
   below is already a rebase. No merge commits. Rebase before pushing — rewriting
   an already-pushed branch needs a force-push, a separate confirmed action.
 
-## Upstream sync is possible here, unlike odoo/ and enterprise/
+## Upstream sync is possible here, unlike odoo/
 
 The workspace posture "there is no upstream merge — a useful upstream fix is
 re-implemented by hand" is about repositories that have diverged past the point
