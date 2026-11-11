@@ -18,7 +18,7 @@ _logger = logging.getLogger(__name__)
 LEGACY_THEME_ASSETS = r"static/src/(old_snippets/|scss/compatibility-saas-)"
 
 
-def delete_assets(cr, path_pattern):
+def remove_assets(cr, path_pattern):
     for table, model in (
         ("ir_asset", "ir.asset"),
         ("theme_ir_asset", "theme.ir.asset"),
@@ -43,5 +43,5 @@ def delete_assets(cr, path_pattern):
         _logger.info("Deleted %s %s rows matching %s", len(ids), model, path_pattern)
 
 
-def delete_legacy_theme_assets(cr, module):
-    delete_assets(cr, rf"^/?{module}/{LEGACY_THEME_ASSETS}")
+def remove_legacy_theme_assets(cr, module):
+    remove_assets(cr, rf"^/?{module}/{LEGACY_THEME_ASSETS}")
