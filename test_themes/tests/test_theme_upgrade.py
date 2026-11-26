@@ -25,8 +25,10 @@ def test_01_theme_upgrade_post_copy(env):
         with contextlib.suppress(UserError):
             w.unlink()
 
-    tfd_specific_view = Website.viewref("website.template_footer_descriptive")
-    fls_specific_view = Website.viewref("portal.footer_language_selector")
+    tfd_specific_view = Website._get_template_view(
+        "website.template_footer_descriptive"
+    )
+    fls_specific_view = Website._get_template_view("portal.footer_language_selector")
     theme_nano_module = env.ref("base.module_theme_nano")
 
     def _simulate_user_manual_change():
@@ -41,12 +43,12 @@ def test_01_theme_upgrade_post_copy(env):
     with MockRequest(env, website=website):
         theme_nano_module.with_context(website_id=website.id).button_choose_theme()
 
-    assert Website.viewref("website.template_footer_descriptive").active is True, (
-        "Theme Nano custo should be applied"
-    )
-    assert Website.viewref("portal.footer_language_selector").active is False, (
-        "Theme Nano custo should be applied (2)"
-    )
+    assert (
+        Website._get_template_view("website.template_footer_descriptive").active is True
+    ), "Theme Nano custo should be applied"
+    assert (
+        Website._get_template_view("portal.footer_language_selector").active is False
+    ), "Theme Nano custo should be applied (2)"
 
     # 4. Simulate some website option change made by the user, again
     _simulate_user_manual_change()
@@ -55,9 +57,10 @@ def test_01_theme_upgrade_post_copy(env):
     theme_nano_module.button_immediate_upgrade()
     env.transaction.reset()  # clear the set of environments
 
-    assert Website.viewref("website.template_footer_descriptive").active is False, (
-        "Theme Nano custo should NOT be applied"
-    )
-    assert Website.viewref("portal.footer_language_selector").active is True, (
-        "Theme Nano custo should NOT be applied (2)"
-    )
+    assert (
+        Website._get_template_view("website.template_footer_descriptive").active
+        is False
+    ), "Theme Nano custo should NOT be applied"
+    assert (
+        Website._get_template_view("portal.footer_language_selector").active is True
+    ), "Theme Nano custo should NOT be applied (2)"
