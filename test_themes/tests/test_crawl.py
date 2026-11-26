@@ -4,9 +4,6 @@ from odoo.tests import HttpCase, tagged
 @tagged("post_install", "-at_install")
 class Crawler(HttpCase):
     def test_01_crawl_every_themes(self):
-        """Crawl every website (and so every themes) to ensure all themes can
-        be rendered and do not crash.
-        """
         Website = self.env["website"]
         websites_themes = Website.get_test_themes_websites()
         assert len(websites_themes) == len(
