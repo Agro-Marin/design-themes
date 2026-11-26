@@ -4,15 +4,12 @@ $o-website-values-palettes: append(
     (
         'color-palettes-name':              'default-24',
 
-        // Header
         'logo-height':                      2.75rem,
         'fixed-logo-height':                2rem,
 
-        // Font
         'font':                             'Montserrat',
         'headings-font':                    'Quicksand',
 
-        // Buttons
         'btn-padding-x':                    1rem,
         'btn-padding-y-sm':                 .3rem,
         'btn-padding-x-sm':                 .75rem,
@@ -23,7 +20,6 @@ $o-website-values-palettes: append(
         'btn-border-radius-lg':             10rem,
         'btn-ripple':                       true,
 
-        // Footer
         'footer-template':                  'headline',
         'footer-effect':                    'slideout_slide_hover',
         'footer-scrolltop':                 true,

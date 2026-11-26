@@ -14,7 +14,6 @@ def test_01_theme_install_generate_primary_templates(env):
 
     if theme_buzzy.state == "installed":
         theme_buzzy.button_immediate_uninstall()
-    # those views is needed to replicate the bug: if the configurator views are not generated,
     env["ir.ui.view"].with_context(_force_unlink=True).search(
         [("key", "=", "website.configurator_s_banner")]
     ).unlink()

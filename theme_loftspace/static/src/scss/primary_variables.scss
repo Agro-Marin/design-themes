@@ -1,5 +1,4 @@
 
-// Backgrounds
 $bg-img-01: url("/web/image/theme_common.image_content_11");
 $bg-img-02: url("/web/image/theme_common.image_content_09");
 $bg-img-03: url("/web/image/theme_common.image_content_10");
@@ -8,18 +7,8 @@ $bg-img-05: url("/web/image/theme_common.image_content_02");
 $bg-img-06: url("/web/image/theme_common.image_content_03");
 $bg-img-07: url("/web/image/theme_common.image_content_07");
 
-//------------------------------------------------------------------------------
-// Colors
-//------------------------------------------------------------------------------
 
-// Theme colors
 
-// The system for this theme is particular to support somehow the old version.
-// The alpha color is always white but primary is using beta (instead of alpha)
-// and secondary is using alpha (white) (instead of beta). In the old system,
-// this only applied to buttons though but we extended that to all components.
-// Success, info, warning and error buttons are also customized with epsilon,
-// gamma, delta and ... black colors (see theme.scss).
 $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     (
         'loftspace-1': (
@@ -67,9 +56,6 @@ $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     )
 );
 
-//------------------------------------------------------------------------------
-// Fonts
-//------------------------------------------------------------------------------
 
 $o-theme-h1-font-size-multiplier: (62 / 16);
 $o-theme-h2-font-size-multiplier: (36 / 16);
@@ -115,15 +101,7 @@ $o-theme-font-configs: (
     ),
 );
 
-//------------------------------------------------------------------------------
-// Website customizations
-//------------------------------------------------------------------------------
 
-// append(..., comma) rather than a `((...),)` trailing comma: the two are
-// NOT the same value -- without that one comma this collapses from a list
-// of palettes into a bare map, and the website variable chain then fails
-// with "$map2: (...) is not a map". Formatters strip it (prettier does:
-// prettier/prettier#8002), so state the 1-element list explicitly.
 $o-website-values-palettes: append(
     (),
     (
@@ -178,9 +156,6 @@ $o-color-palettes-compatibility-indexes: (
     23: 'generic-17',
 );
 
-//------------------------------------------------------------------------------
-// Shapes
-//------------------------------------------------------------------------------
 
 $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Airy/13_001', (1: 5, 4: 5));
 $o-bg-shapes: add-footer-shape-colors-mapping('html_builder', 'Airy/13_001', (1: 5, 4: 'footer'));
