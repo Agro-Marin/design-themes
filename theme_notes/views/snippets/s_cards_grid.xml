@@ -2,15 +2,12 @@
 <odoo>
 
     <template id="s_cards_grid" inherit_id="website.s_cards_grid">
-        <!-- Section -->
         <xpath expr="//section" position="attributes">
             <attribute name="class" add="o_cc5" remove="o_cc2" separator=" "/>
         </xpath>
-        <!-- Title -->
         <xpath expr="//h2" position="replace" mode="inner">
             Experience the Best of Our Festival
         </xpath>
-        <!-- Card 1 -->
         <xpath expr="(//div[hasclass('s_card')])[1]" position="attributes">
             <attribute name="class" add="border" separator=" "/>
             <attribute name="style" add="border-width: 0px !important;" separator=";"/>
@@ -21,7 +18,6 @@
         <xpath expr="(//p)[1]" position="replace" mode="inner">
             Connect with fellow festival-goers through a variety of social activities, from interactive games to community art projects, creating memories that last a lifetime.
         </xpath>
-        <!-- Card 2 -->
         <xpath expr="(//div[hasclass('s_card')])[2]" position="attributes">
             <attribute name="class" add="border" separator=" "/>
             <attribute name="style" add="border-width: 0px !important;" separator=";"/>
@@ -32,7 +28,6 @@
         <xpath expr="(//p)[2]" position="replace" mode="inner">
             Enjoy performances from a diverse range of talented artists, bringing you the best in music, dance, and visual arts from around the world.
         </xpath>
-        <!-- Card 3 -->
         <xpath expr="(//div[hasclass('s_card')])[3]" position="attributes">
             <attribute name="class" add="border" separator=" "/>
             <attribute name="style" add="border-width: 0px !important;" separator=";"/>
@@ -43,7 +38,6 @@
         <xpath expr="(//p)[3]" position="replace" mode="inner">
             Grab your exclusive festival merch, from stylish apparel to unique souvenirs, so you can remember your festival experience in style.
         </xpath>
-        <!-- Card 4 -->
         <xpath expr="(//div[hasclass('s_card')])[4]" position="attributes">
             <attribute name="class" add="border" separator=" "/>
             <attribute name="style" add="border-width: 0px !important;" separator=";"/>

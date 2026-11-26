@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_pricelist_cafe" inherit_id="website.s_pricelist_cafe">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc4" separator=" "/>
     </xpath>

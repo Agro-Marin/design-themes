@@ -1,6 +1,3 @@
-//------------------------------------------------------------------------------
-// Fonts
-//------------------------------------------------------------------------------
 $o-theme-h5-font-size-multiplier: (14 / 12);
 
 $o-theme-font-configs: (
@@ -43,15 +40,7 @@ $o-theme-font-configs: (
     ),
 );
 
-//------------------------------------------------------------------------------
-// Default Values Override
-//------------------------------------------------------------------------------
 
-// append(..., comma) rather than a `((...),)` trailing comma: the two are
-// NOT the same value -- without that one comma this collapses from a list
-// of palettes into a bare map, and the website variable chain then fails
-// with "$map2: (...) is not a map". Formatters strip it (prettier does:
-// prettier/prettier#8002), so state the 1-element list explicitly.
 $o-website-values-palettes: append(
     (),
     (
@@ -99,13 +88,7 @@ $o-color-palettes-compatibility-indexes: (
     21: 'generic-17',
 );
 
-//------------------------------------------------------------------------------
-// Bootstrap Overrides
-//------------------------------------------------------------------------------
 $carousel-indicator-width:  10px;
 $border-radius:             4px;
 
-//-----------------------------------------------------------------------------
-// Shapes
-//-----------------------------------------------------------------------------
 $o-bg-shapes: add-extra-shape-colors-mapping('html_builder', 'Origins/14_001', 'second', (3:1, 4:2));

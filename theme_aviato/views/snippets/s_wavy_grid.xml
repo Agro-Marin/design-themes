@@ -2,13 +2,11 @@
 <odoo>
 
 <template id="s_wavy_grid" inherit_id="website.s_wavy_grid">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         What we deliver to our travelers
     </xpath>

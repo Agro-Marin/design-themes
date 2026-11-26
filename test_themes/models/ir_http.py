@@ -8,7 +8,6 @@ class IrHttp(models.AbstractModel):
 
     @classmethod
     def _pre_dispatch(cls, rule, args):
-        # Allow public user to use `fw` query string in test mode to ease tests
         force_website_id = request.httprequest.args.get("fw")
         if get_test_runtime().is_running() and force_website_id:
             request.env["website"]._force_website(force_website_id)

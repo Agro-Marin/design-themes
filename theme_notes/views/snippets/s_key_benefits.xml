@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Custom Setlists
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Performances
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We craft personalized setlists that match the mood and theme of your event, delivering a memorable musical experience.
     </xpath>

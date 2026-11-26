@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_carousel_intro" inherit_id="website.s_carousel_intro">
-    <!-- Layout -->
     <xpath expr="//div[hasclass('carousel-item')]" position="attributes">
         <attribute name="class" add="o_cc2" remove="o_cc1" separator=" "/>
     </xpath>
@@ -13,7 +12,6 @@
         <attribute name="class" add="o_cc2" remove="o_cc1" separator=" "/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h1" position="replace" mode="inner">
         Protecting nature for future generations
     </xpath>

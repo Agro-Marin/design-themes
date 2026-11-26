@@ -1,6 +1,4 @@
 
-// Not used anymore by the editor: files and records kept for back-compatibility.
-// Check also in theme.scss and theme_common's mixins.scss.
 
 $o-theme-bg-img-01: url("/theme_enark/static/src/img/backgrounds/bg_img_01.webp");
 $o-theme-bg-img-02: url("/theme_enark/static/src/img/backgrounds/bg_img_02.webp");
@@ -22,11 +20,7 @@ $o-theme-bg-pattern-04: url("/theme_enark/static/src/img/backgrounds/bg_pattern_
 $o-theme-bg-pattern-05: url("/theme_enark/static/src/img/backgrounds/bg_pattern_05.webp");
 $o-theme-bg-pattern-06: url("/theme_enark/static/src/img/backgrounds/bg_pattern_06.webp");
 
-//------------------------------------------------------------------------------
-// Colors
-//------------------------------------------------------------------------------
 
-// Theme colors
 $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     (
         'enark-1': (
@@ -74,9 +68,6 @@ $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     )
 );
 
-//------------------------------------------------------------------------------
-// Fonts
-//------------------------------------------------------------------------------
 
 $o-theme-h1-font-size-multiplier: (62 / 16);
 $o-theme-h2-font-size-multiplier: (48 / 16);
@@ -137,15 +128,7 @@ $o-theme-font-configs: (
     ),
 );
 
-//------------------------------------------------------------------------------
-// Website customizations
-//------------------------------------------------------------------------------
 
-// append(..., comma) rather than a `((...),)` trailing comma: the two are
-// NOT the same value -- without that one comma this collapses from a list
-// of palettes into a bare map, and the website variable chain then fails
-// with "$map2: (...) is not a map". Formatters strip it (prettier does:
-// prettier/prettier#8002), so state the 1-element list explicitly.
 $o-website-values-palettes: append(
     (),
     (

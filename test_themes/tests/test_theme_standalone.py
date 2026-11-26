@@ -10,15 +10,11 @@ def test_01_theme_install_generate_primary_templates(env):
     """This test ensures the theme `_create_primary_snippet_templates()`
     method is correctly called before xml views are generated.
     """
-    # 1. Setup
     theme_buzzy = env.ref("base.module_theme_clean")
 
     if theme_buzzy.state == "installed":
         theme_buzzy.button_immediate_uninstall()
-    # Ensure those views are deleted to mimic the initial state of theme not installed.
-    # Because "theme_buzzy" was installed before through "test_themes" dependencies, removing
     # those views is needed to replicate the bug: if the configurator views are not generated,
-    # the theme install will fail because some of the imported views inherit them.
     env["ir.ui.view"].with_context(_force_unlink=True).search(
         [("key", "=", "website.configurator_s_banner")]
     ).unlink()
@@ -32,18 +28,14 @@ def test_01_theme_install_generate_primary_templates(env):
 def test_02_theme_default_generate_primary_templates(env):
 
     def fake_website_api(self, path, payload):
-        # Only the configurator custom_resources endpoint is used here
         assert path.startswith("/api/website/2/configurator/custom_resources")
         return {"images": {}}
 
     def fake_olg_api(self, path, payload):
-        # Placeholder generator used by configurator
         assert path == "/api/olg/1/generate_placeholder"
         placeholders = payload.get("placeholders", [])
         return {key: key for key in placeholders}
 
-    # Verify that theme default's configurator templates are created
-    # on website update.
     theme_default = env.ref("base.module_theme_default")
     website_module = env.ref("base.module_website")
 

@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_tabs" inherit_id="website.s_tabs">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc2 pt64 pb64" remove="pt48 pb48" separator=" "/>
     </xpath>
-    <!-- Card -->
     <xpath expr="//*[hasclass('s_tabs_main')]" position="attributes">
         <attribute name="class" add="card" separator=" "/>
     </xpath>

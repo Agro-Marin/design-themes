@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Custom Floral Arrangements
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Designs
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We create personalized flower arrangements that match your style and occasion, ensuring a beautiful and unique presentation.
     </xpath>

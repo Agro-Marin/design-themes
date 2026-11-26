@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- ======== TITLE ======== -->
 <template id="s_title" inherit_id="website.s_title" name="Monglia s_title">
     <xpath expr="//h2" position="replace" mode="inner">
         <h2 style="text-align: center;">MONGLIA 2024</h2>
@@ -20,7 +19,6 @@
     </xpath>
 </template>
 
-<!-- ======== Text ======== -->
 <template id="configurator_s_text_block" inherit_id="website.configurator_s_text_block" name="Monglia s_text_block">
     <xpath expr="//p" position="replace">
         <p style="text-align: center;"><span class="h3-fs">Kori Thill / Chana / Smithwick Cira / Sherard Elfriede / Ogan Mariko / Yonker Bella Maday / Shaneka Wilkerson / Raina Planck / Micaela Labonte / Chadwick Cottman / Emile Hornung / Genevie Mehaffey / Dottie Hinkson / Mariah Nurse / Velda Caster / Rossie Cranfield / Iva Madrid / Flossie Freitas / Tina Gregerson / Quiana Tassin</span></p>
@@ -28,16 +26,13 @@
     <xpath expr="//p[2]" position="replace" />
 </template>
 
-<!-- ======== BANNER ======== -->
 <template id="s_banner" inherit_id="website.s_banner" name="Monglia s_banner">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_full_screen_height" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== COVER ======== -->
  <template id="s_cover" inherit_id="website.s_cover" name="Monglia s_cover">
-    <!-- Customize elements -->
     <xpath expr="//div[hasclass('o_we_bg_filter')]" position="replace">
         <div class="o_we_bg_filter" style="background-image: linear-gradient(135deg, rgba(203, 94, 238, 0.5) 0%, rgba(75, 225, 236, 0.5) 100%);"/>
     </xpath>
@@ -47,7 +42,6 @@
     <xpath expr="//p[hasclass('lead')]" position="replace">
         <h2 style="text-align: center;"><span class="display-5-fs">24-26.06.2025 // Harleem, Netherlands<br/><br/></span></h2>
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[@t-att-href='cta_btn_href']" position="attributes">
         <attribute name="class" add="btn-lg" separator=" "/>
     </xpath>
@@ -57,12 +51,10 @@
     <xpath expr="//a[@href='/contactus']" position="replace"/>
 </template>
 
-<!-- ======== NUMBERS GRID ======== -->
 <template id="s_numbers_grid" inherit_id="website.s_numbers_grid">
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="o_cc2 pt56 pb56" add="o_cc4 pt24 pb24" separator=" "/>
     </xpath>
-    <!-- Card #1-->
     <xpath expr="//div[hasclass('o_grid_item')]" position="replace" mode="inner">
         <h3 style="text-align: center;"><span class="h4-fs">DAYS</span></h3>
         <h3 class="display-4-fs" style="text-align: center;">24</h3>
@@ -71,7 +63,6 @@
         <attribute name="class" remove="border rounded o_cc1" add="o_cc4" separator=" "/>
         <attribute name="style" remove="--grid-item-padding-y: 16px;" add="--grid-item-padding-y: 24px;" separator=";"/>
     </xpath>
-    <!-- Card #2-->
     <xpath expr="(//div[hasclass('o_grid_item')])[2]" position="replace" mode="inner">
         <h3 style="text-align: center;"><span class="h4-fs">ARTISTS</span></h3>
         <h3 class="display-4-fs" style="text-align: center;">30+</h3>
@@ -80,7 +71,6 @@
         <attribute name="class" remove="border rounded o_cc1" add="o_cc4" separator=" "/>
         <attribute name="style" remove="--grid-item-padding-y: 16px;" add="--grid-item-padding-y: 24px;" separator=";"/>
     </xpath>
-    <!-- Card #3-->
     <xpath expr="(//div[hasclass('o_grid_item')])[3]" position="replace" mode="inner">
         <h3 style="text-align: center;"><span class="h4-fs">STAGES</span></h3>
         <h3 class="display-4-fs" style="text-align: center;">5</h3>
@@ -89,7 +79,6 @@
         <attribute name="class" remove="border rounded o_cc1" add="o_cc4" separator=" "/>
         <attribute name="style" remove="--grid-item-padding-y: 16px;" add="--grid-item-padding-y: 24px;" separator=";"/>
     </xpath>
-    <!-- Card #4-->
     <xpath expr="(//div[hasclass('o_grid_item')])[4]" position="replace" mode="inner">
         <h3 style="text-align: center;"><span class="h4-fs">VENDORS</span></h3>
         <h3 class="display-4-fs" style="text-align: center;">120+</h3>
@@ -98,7 +87,6 @@
         <attribute name="class" remove="border rounded o_cc1" add="o_cc4" separator=" "/>
         <attribute name="style" remove="--grid-item-padding-y: 16px;" add="--grid-item-padding-y: 24px;" separator=";"/>
     </xpath>
-    <!-- Delete Row #2 -->
     <xpath expr="//*[@data-row-count]" position="attributes">
         <attribute name="data-row-count">3</attribute>
     </xpath>
@@ -108,17 +96,13 @@
     <xpath expr="(//div[hasclass('o_grid_item')])[5]" position="replace"/>
 </template>
 
-<!-- ======== STRIPED TOP ======== -->
 <template id="s_striped_top" inherit_id="website.s_striped_top">
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_picture_default_image</attribute>
     </xpath>
 </template>
 
-<!-- ======== SIDEGRID ======== -->
 <template id="s_sidegrid" inherit_id="website.s_sidegrid">
-    <!-- Images -->
     <xpath expr="//img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
         <attribute name="src">/web/image/website.s_text_image_default_image</attribute>
@@ -136,7 +120,6 @@
     </xpath>
 </template>
 
-<!-- ======== MEDIA LIST ======== -->
  <template id="s_media_list" inherit_id="website.s_media_list" name="Monglia s_media_list">
     <xpath expr="//div[hasclass('container')]/div/div[1]//h3" position="replace" mode="inner">
         Old Town Road
@@ -158,7 +141,6 @@
     </xpath>
 </template>
 
-<!-- ======== TEXT - IMAGE ======== -->
  <template id="s_text_image" inherit_id="website.s_text_image" name="Monglia s_text_image">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt56 pb40 o_cc o_cc1" remove="pt80 pb80" separator=" "/>
@@ -185,7 +167,6 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE - TEXT ======== -->
 <template id="s_image_text" inherit_id="website.s_image_text" name="Monglia s_image_text">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc2 pt104 pb104" remove="pt80 pb80" separator=" "/>
@@ -206,19 +187,15 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE HEXAGONAL ======== -->
 <template id="s_image_hexagonal" inherit_id="website.s_image_hexagonal">
-    <!-- Section -->
     <xpath expr="section" position="attributes">
         <attribute name="class" add="o_cc o_cc5" separator=" "/>
     </xpath>
-    <!-- Images -->
     <xpath expr="(//img)[2]" position="attributes">
         <attribute name="src">/web/image/website.s_text_cover_default_image</attribute>
     </xpath>
 </template>
 
-<!-- ======== CAROUSEL ======== -->
  <template id="s_carousel" inherit_id="website.s_carousel" name="Monglia s_carousel">
     <xpath expr="//h2" position="replace" mode="inner">
         Martina Clarck
@@ -240,9 +217,7 @@
     </xpath>
 </template>
 
-<!-- ======== CAROUSEL INTRO ======== -->
 <template id="s_carousel_intro" inherit_id="website.s_carousel_intro" name="Monglia s_carousel_intro">
-    <!-- Layout -->
     <xpath expr="//div[hasclass('carousel')]" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Wavy/08_001','colors':{'c5':'o-color-2'},'flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -259,7 +234,6 @@
         <attribute name="class" remove="o_cc o_cc1" separator=" "/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h1" position="replace" mode="inner">
         Celebrating with music and joy
     </xpath>
@@ -280,12 +254,10 @@
     </xpath>
 </template>
 
-<!-- ======== QUOTES ======== -->
  <template id="s_quotes_carousel" inherit_id="website.s_quotes_carousel" name="Monglia s_quotes_carousel">
     <xpath expr="//div[hasclass('s_quotes_carousel')]" position="attributes">
         <attribute name="class" remove="carousel-dark" separator=" "/>
     </xpath>
-    <!-- Assign slide3 as 'active' and move it in first position -->
     <xpath expr="//div[hasclass('carousel-inner')]/div" position="attributes">
         <attribute name="class" remove="active" separator=" "/>
     </xpath>
@@ -297,9 +269,7 @@
     </xpath>
 </template>
 
-<!-- ======== QUOTES MINIMAL ======== -->
 <template id="s_quotes_carousel_minimal" inherit_id="website.s_quotes_carousel_minimal" name="Monglia s_quotes_carousel_minimal">
-    <!-- Layout -->
     <xpath expr="//div[hasclass('carousel')]" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Floats/09','flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0','animated':'true'}</attribute>
     </xpath>
@@ -307,7 +277,6 @@
         <div class="o_we_shape o_html_builder_Floats_09 o_we_animated"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//p[hasclass('s_blockquote_quote')]" position="replace" mode="inner">
         " The festival was unforgettable. <br/>Vibrant, well-organized, and full of energy. "
     </xpath>
@@ -322,7 +291,6 @@
     <xpath expr="//span[hasclass('text-muted')]" position="replace"/>
 </template>
 
-<!-- ======== CALL TO ACTION ======== -->
 <template id="s_call_to_action" inherit_id="website.s_call_to_action" name="Monglia s_call_to_action">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc5" separator=" "/>
@@ -338,26 +306,20 @@
     </xpath>
 </template>
 
-<!-- ======== CTA Box ======== -->
 <template id="s_cta_box" inherit_id="website.s_cta_box">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt48 pb72" remove="pt80 pb80" separator=" "/>
     </xpath>
-    <!-- Card -->
     <xpath expr="//div[hasclass('card')]" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc4" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         GET READY FOR MONGLIA '25
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//p" position="replace" mode="inner">
         Experience an unforgettable weekend of live music, fun, and entertainment with performances from some of the best artists.<br/><br/>
         Explore the schedule to make the most out of every moment.<br/><br/>
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]" position="replace" mode="inner">
         View the schedule
     </xpath>
@@ -372,7 +334,6 @@
     </xpath>
 </template>
 
-<!-- ======== 3-COLUMNS ======== -->
 <template id="s_three_columns" inherit_id="website.s_three_columns">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pb0 o_cc5" remove="pb32 o_cc2" separator=" "/>
@@ -388,25 +349,19 @@
     </xpath>
 </template>
 
-<!-- ======== GALLERY ======== -->
 <template id="s_images_wall" inherit_id="website.s_images_wall">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc5 o_spc-medium" remove="o_spc-small" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== FREE GRID ======== -->
 <template id="s_freegrid" inherit_id="website.s_freegrid">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt24 pb24" remove="pt64 pb64" separator=" "/>
     </xpath>
-    <!-- Container -->
     <xpath expr="//div[hasclass('container-fluid')]" position="attributes">
         <attribute name="class" remove="container-fluid" add="container" separator=" "/>
     </xpath>
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="class" add="rounded" separator=" "/>
     </xpath>
@@ -425,7 +380,6 @@
     <xpath expr="(//img)[6]" position="attributes">
         <attribute name="class" add="rounded" separator=" "/>
     </xpath>
-    <!-- Remove Title / Paragraph / Button -->
     <xpath expr="//*[@data-row-count]" position="attributes">
         <attribute name="data-row-count">10</attribute>
     </xpath>
@@ -433,23 +387,19 @@
     <xpath expr="(//div[hasclass('o_grid_item')])[7]" position="replace"/>
 </template>
 
-<!-- ======== FEATURES WALL======== -->
 <template id="s_features_wall" inherit_id="website.s_features_wall">
-    <!-- Card 1 -->
     <xpath expr="//div[hasclass('g-col-lg-3')]//h3" position="replace" mode="inner">
         Customized Event Planning
     </xpath>
     <xpath expr="//div[hasclass('g-col-lg-3')]//p" position="replace" mode="inner">
         Create unforgettable events with personalized planning services tailored to your specific needs and preferences.
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="//div[hasclass('g-col-lg-3')][4]//h3" position="replace" mode="inner">
         Themed Party Design
     </xpath>
     <xpath expr="//div[hasclass('g-col-lg-3')][4]//p" position="replace" mode="inner">
         Transform any venue with unique and creative themes that make your party stand out and impress your guests.
     </xpath>
-    <!-- Card 3 -->
     <xpath expr="//div[hasclass('g-col-lg-3')][6]//h3" position="replace" mode="inner">
         Complete Event Management
     </xpath>
@@ -458,41 +408,31 @@
     </xpath>
 </template>
 
-<!-- ======== UNVEIL ======== -->
 <template id="s_unveil" inherit_id="website.s_unveil">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc2" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Celebrate the moment
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p" position="replace" mode="inner">
         Experience unforgettable performances and vibrant atmospheres at our festival.
     </xpath>
 </template>
 
-<!-- ======== QUADRANT ======== -->
 <template id="s_quadrant" inherit_id="website.s_quadrant">
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Events &amp; Dining
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         Experience unforgettable moments at our events. From fine dining to live music, we create the perfect atmosphere for any occasion.<br/><br/> Let us make your event one to remember.
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]/t" position="replace" mode="inner">
         Plan an Event
     </xpath>
 </template>
 
-<!-- ======== KEY BENEFITS ======== -->
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Tailored Event Planning
     </xpath>
@@ -502,7 +442,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Experiences
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We create custom event experiences designed to match your vision, ensuring every detail aligns perfectly with your goals.
     </xpath>
@@ -514,9 +453,7 @@
     </xpath>
 </template>
 
-<!-- ======== PRICELIST BOXED ======== -->
 <template id="s_pricelist_boxed" inherit_id="website.s_pricelist_boxed" name="Monglia s_pricelist_boxed">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-scroll-background-ratio"/>
         <attribute name="class" add="o_cc o_cc2" remove="parallax s_parallax_is_fixed s_parallax_no_overflow_hidden" separator=" "/>
@@ -527,7 +464,6 @@
     </xpath>
     <xpath expr="//span[hasclass('s_parallax_bg')]" position="replace"/>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Upcoming Festivals
     </xpath>
@@ -614,51 +550,39 @@
     </xpath>
 </template>
 
-<!-- ======== COMPANY TEAM GRID ======== -->
 <template id="s_company_team_grid" inherit_id="website.s_company_team_grid">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Team #01 -->
     <xpath expr="(//div[hasclass('card')])[1]" position="attributes">
         <attribute name="class" add="o_cc3" remove="o_cc2" separator=" "/>
     </xpath>
-    <!-- Team #03 -->
     <xpath expr="(//div[hasclass('card')])[3]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc2" separator=" "/>
     </xpath>
-    <!-- Team #04 -->
     <xpath expr="(//div[hasclass('card')])[4]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc2" separator=" "/>
     </xpath>
-    <!-- Team #05 -->
     <xpath expr="(//div[hasclass('card')])[5]" position="attributes">
         <attribute name="class" add="o_cc3" remove="o_cc2" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== STRIPED CENTER TOP ======== -->
 <template id="s_striped_center_top" inherit_id="website.s_striped_center_top">
-    <!-- Title -->
     <xpath expr="//h1" position="replace" mode="inner">
         Savor the Night: Food, Fun, and Music
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         Experience unforgettable moments with our events, offering a blend of food, music, and entertainment to elevate your nights.
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]/t" position="replace" mode="inner">
         Plan Your Night Out
     </xpath>
-    <!-- Figcaption -->
     <xpath expr="//figcaption" position="replace" mode="inner">
         Where every moment counts
     </xpath>
 </template>
 
-<!-- ======== IMAGE TITLE ======== -->
 <template id="s_image_title" inherit_id="website.s_image_title">
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="oe_img_bg" separator=" "/>
@@ -677,9 +601,7 @@
     </xpath>
 </template>
 
-<!-- ======== KEY IMAGES ======== -->
 <template id="s_key_images" inherit_id="website.s_key_images" name="Monglia s_key_images">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Bold/18','colors':{'c5':'o-color-2'},'flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -687,7 +609,6 @@
         <div class="o_we_shape o_html_builder_Bold_18" style="background-image: url('/html_editor/shape/html_builder/Bold/18.svg?c5=o-color-2');"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Explore Our Exquisite Cocktail Collection
     </xpath>
@@ -707,7 +628,6 @@
         Discover your new favorite drink today
     </xpath>
 </template>
-<!-- ======== IMAGES MOSAIC ======== -->
 <template id="s_images_mosaic" inherit_id="website.s_images_mosaic">
     <xpath expr="//h2" position="replace" mode="inner">
         Experience Our New Festival Events
@@ -717,18 +637,14 @@
     </xpath>
 </template>
 
-<!-- ======== BIG NUMBER ======== -->
 <template id="s_big_number" inherit_id="website.s_big_number">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
         <attribute name="style">background-image: linear-gradient(60deg, var(--o-color-5) 0%, var(--o-color-1) 200%);</attribute>
     </xpath>
 
-    <!-- Shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 
-    <!-- Text -->
     <xpath expr="//h2/span" position="attributes">
         <attribute name="style" add="font-size: 7.75rem;" remove="font-size: 10.75rem;" separator=";"/>
     </xpath>
@@ -742,17 +658,13 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE FRAME ======== -->
 <template id="s_image_frame" inherit_id="website.s_image_frame">
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_quotes_carousel_demo_image_1</attribute>
     </xpath>
 </template>
 
-<!-- ===== WAVY GRID ======== -->
 <template id="s_wavy_grid" inherit_id="website.s_wavy_grid">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Wavy/08_001','flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -772,7 +684,6 @@
         <attribute name="class" add="h4-fs" remove="h5-fs" separator=" "/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         What we offer to our attendees
     </xpath>
@@ -801,62 +712,49 @@
         We bring cutting-edge ideas and interactive features to our events. Leveraging the latest trends, we create fun and engaging activities for all attendees.
     </xpath>
 </template>
-<!-- ======== CARD OFFSET ======== -->
 <template id="s_card_offset" inherit_id="website.s_card_offset">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Grid items -->
     <xpath expr="(//div[hasclass('o_grid_item')])[2]" position="attributes">
         <attribute name="style" add="--grid-item-padding-y: 48px;" remove="--grid-item-padding-y: 40px;" separator=";"/>
     </xpath>
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_carousel_default_image_3</attribute>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Unforgettable Events &amp; Entertainment
     </xpath>
-    <!-- Paragraph 1 -->
     <xpath expr="(//p[hasclass('lead')])[1]" position="replace" mode="inner">
         Experience unforgettable moments with our event services. From vibrant parties to intimate gatherings, we provide the perfect setting, food, and entertainment for every occasion.
     </xpath>
-    <!-- Paragraph 2 -->
     <xpath expr="(//p[hasclass('lead')])[2]" position="replace" mode="inner">
         Let’s make your event extraordinary.
     </xpath>
 </template>
 
-<!-- ======== CARDS GRID ======== -->
 <template id="s_cards_grid" inherit_id="website.s_cards_grid">
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Exquisite Cocktails to Elevate Your Experience
     </xpath>
-    <!-- Card 1 -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Berry Bliss Sangria
     </xpath>
     <xpath expr="(//p)[1]" position="replace" mode="inner">
         A delightful mix of red wine, fresh berries, orange juice, and a hint of brandy, served chilled for a refreshing, fruity experience with every sip.
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="(//h3)[2]" position="replace" mode="inner">
         Tropical Mojito
     </xpath>
     <xpath expr="(//p)[2]" position="replace" mode="inner">
         A refreshing mix of white rum, fresh mint, lime juice, and a splash of soda, perfect for a vibrant, tropical flavor that dances on the palate.
     </xpath>
-    <!-- Card 3 -->
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Spicy Margarita
     </xpath>
     <xpath expr="(//p)[3]" position="replace" mode="inner">
         A zesty blend of tequila, lime juice, and a hint of jalapeño, balanced with a touch of agave syrup for a fiery twist on a classic favorite.
     </xpath>
-    <!-- Card 4 -->
     <xpath expr="(//h3)[4]" position="replace" mode="inner">
         Smoky Old Fashioned
     </xpath>
@@ -865,22 +763,17 @@
     </xpath>
 </template>
 
-<!-- ======== SHAPE IMAGE ======== -->
 <template id="s_shape_image" inherit_id="website.s_shape_image">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc4 pt64 pb64" remove="pt32 pb32" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace">
         <h2>Group Experience Packages</h2>
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//p" position="replace" mode="inner">
         We offer curated festival experiences tailored just for your group. Whether you're planning a special group celebration, a corporate outing, or a custom VIP experience, our team is here to elevate your time at the festival. Let us handle all the details while you focus on enjoying the event, with exclusive access, personalized itineraries, and premium amenities.
     </xpath>
     <xpath expr="//p[2]" position="replace"/>
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/html_editor/image_shape/website.s_masonry_block_default_image_1/html_builder/panel/panel_duo_step.svg</attribute>
         <attribute name="data-shape">html_builder/panel/panel_duo_step</attribute>
@@ -890,51 +783,40 @@
     </xpath>
 </template>
 
-<!-- ======== TEXT COVER ======== -->
 <template id="s_text_cover" inherit_id="website.s_text_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc5" separator=" "/>
     </xpath>
     <xpath expr="//h1" position="replace" mode="inner">
         Plan Events. <br/>Effortlessly.
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         <br/>Organize and promote your events online with a user-friendly platform that streamlines all the steps, from setup to guest management, making it easy to create memorable experiences for your audience.<br/>
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]/t" position="replace" mode="inner">
         Get started
     </xpath>
 </template>
 
-<!-- ======== EMPOWERMENT ======== -->
 <template id="s_empowerment" inherit_id="website.s_empowerment">
-    <!-- Badge content -->
     <xpath expr="//span[hasclass('s_cta_badge')]" position="replace" mode="inner">
         <i class="fa fa-fw fa-info-circle o_not-animable" role="img"/>&#160;&#160;Memorable experiences&#160;&#160;&#160;&#160;
         <a href="#">See our event highlights&#160;&#160; <i class="fa fa-long-arrow-right" role="img"/></a>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h1" position="replace" mode="inner">
        Creating unforgettable moments<br/>with expert event planning
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//p" position="replace" mode="inner">
         <br/>Expertly crafted events tailored to your vision.<br/><br/>
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')][1]" position="replace" mode="inner">
         Our services
     </xpath>
-    <!-- Second Button -->
     <xpath expr="//a[hasclass('btn')][2]" position="replace" mode="inner">
         Schedule a call
     </xpath>
 </template>
 
-<!-- ======== COMPANY TEAM SHAPES ======== -->
 <template id="s_company_team_shapes" inherit_id="website.s_company_team_shapes">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc1" remove="o_cc2" separator=" "/>
@@ -945,7 +827,6 @@
     <xpath expr="//div[hasclass('o_container_small')]" position="attributes">
         <attribute name="class" add="container" remove="o_container_small" separator=" "/>
     </xpath>
-    <!-- Member 1 -->
     <xpath expr="//h3" position="replace">
         <h3 style="text-align: center;"><span class="o_text_highlight o_translate_inline o_text_highlight_bold o_text_highlight_fill" style="--text-highlight-width: 3px; --text-highlight-color: #AFF8C8;">Tony Fred</span></h3>
     </xpath>
@@ -956,7 +837,6 @@
         <attribute name="data-file-name">uiface_1.svg</attribute>
         <attribute name="data-shape-colors">;;;;</attribute>
     </xpath>
-    <!-- Member 2 -->
     <xpath expr="(//h3)[2]" position="replace">
         <h3 style="text-align: center;"><span class="o_text_highlight o_translate_inline o_text_highlight_bold_1 o_text_highlight_fill" style="--text-highlight-width: 3px;">Mich Stark</span></h3>
     </xpath>
@@ -968,7 +848,6 @@
         <attribute name="data-file-name">uiface_2.svg</attribute>
         <attribute name="data-shape-colors">;;;;</attribute>
     </xpath>
-    <!-- Member 3 -->
     <xpath expr="(//h3)[3]" position="replace">
         <h3 style="text-align: center;"><span class="o_text_highlight o_translate_inline o_text_highlight_bold_1 o_text_highlight_fill" style="--text-highlight-width: 3px; --text-highlight-color: #AFF8C8;">Aline Turner</span></h3>
     </xpath>
@@ -979,7 +858,6 @@
         <attribute name="data-file-name">uiface_3.svg</attribute>
         <attribute name="data-shape-colors">;;;;</attribute>
     </xpath>
-    <!-- Member 4 -->
     <xpath expr="(//h3)[4]" position="replace">
         <h3 style="text-align: center;"><span class="o_text_highlight o_translate_inline o_text_highlight_bold o_text_highlight_fill" style="--text-highlight-width: 3px;">Iris Joe</span></h3>
     </xpath>
@@ -990,7 +868,6 @@
         <attribute name="data-file-name">uiface_4.svg</attribute>
         <attribute name="data-shape-colors">;;;;</attribute>
     </xpath>
-    <!-- Member 5 -->
     <xpath expr="(//h3)[5]" position="replace">
         <h3 style="text-align: center;"><span class="o_text_highlight o_translate_inline o_text_highlight_bold o_text_highlight_fill" style="--text-highlight-width: 3px; --text-highlight-color: #AFF8C8;">Pete Bluestork</span></h3>
     </xpath>
@@ -1001,7 +878,6 @@
         <attribute name="data-file-name">uiface_5.svg</attribute>
         <attribute name="data-shape-colors">;;;;</attribute>
     </xpath>
-    <!-- Member 6 -->
     <xpath expr="(//h3)[6]" position="replace">
         <h3 style="text-align: center;"><span class="o_text_highlight o_translate_inline o_text_highlight_bold o_text_highlight_fill" style="--text-highlight-width: 3px;">Sophia Langston</span></h3>
     </xpath>
@@ -1014,7 +890,6 @@
     </xpath>
 </template>
 
-<!-- ======== FAQ COLLAPSE ======== -->
 <template id="s_faq_collapse" inherit_id="website.s_faq_collapse">
     <xpath expr="//div[hasclass('col-lg-4')]" position="attributes">
         <attribute name="class" add="col-lg-12 pb32" remove="col-lg-4" separator=" "/>
@@ -1033,65 +908,49 @@
     </xpath>
 </template>
 
-<!-- ======== REFERENCES ======== -->
 <template id="s_references" inherit_id="website.s_references">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt56 pb56" remove="pb80 pt80" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         OUR SPONSORS
     </xpath>
-    <!-- Remove Subtitle and Link -->
     <xpath expr="//p" position="replace"/>
     <xpath expr="//p" position="replace"/>
     <xpath expr="//p" position="replace"/>
 </template>
 
-<!-- ======== COMPARISONS HORIZONTAL ======== -->
 <template id="s_comparisons_horizontal" inherit_id="website.s_comparisons_horizontal">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc4" separator=" "/>
     </xpath>
-    <!-- Card 1 -->
     <xpath expr="//div[hasclass('s_card')]" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="(//div[hasclass('s_card')])[2]" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc1" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== COMPANY TEAM CARD ======== -->
 <template id="s_company_team_card" inherit_id="website.s_company_team_card" name="Monglia's s_company_team_card">
-    <!-- Team Member 1 -->
     <xpath expr="//div[hasclass('card')]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Team Member 2 -->
     <xpath expr="(//div[hasclass('card')])[2]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Team Member 3 -->
     <xpath expr="(//div[hasclass('card')])[3]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Team Member 4 -->
     <xpath expr="(//div[hasclass('card')])[4]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc1" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== SPLIT INTRO ======== -->
 <template id="s_split_intro" inherit_id="website.s_split_intro">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Left column -->
     <xpath expr="//h1" position="replace" mode="inner">
         Craft an amazing<br/>show
     </xpath>
@@ -1100,13 +959,10 @@
     </xpath>
 </template>
 
-<!-- ======== NUMBERS FRAMED ======== -->
 <template id="s_numbers_framed" inherit_id="website.s_numbers_framed">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc5" separator=" "/>
     </xpath>
-    <!-- KPI's -->
     <xpath expr="//div[hasclass('col-lg-4')][1]" position="attributes">
         <attribute name="class" add="o_cc3" remove="o_cc2" separator=" "/>
     </xpath>

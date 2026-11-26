@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc2" separator=" "/>
     </xpath>
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Personalized Property Searches
     </xpath>
@@ -16,7 +14,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Listings
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We offer customized property searches based on your specific preferences and needs, helping you find the perfect home or investment.
     </xpath>

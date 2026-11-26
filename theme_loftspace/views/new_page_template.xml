@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- About -->
 
 <template id="new_page_template_sections_about_personal" inherit_id="website.new_page_template_sections_about_personal">
     <xpath expr="//t[@t-snippet-call='website.new_page_template_about_personal_s_call_to_action_about']" position="attributes">
@@ -30,7 +29,6 @@
     </xpath>
 </template>
 
-<!-- Gallery -->
 
 <template id="new_page_template_gallery_s_banner" inherit_id="website.new_page_template_gallery_s_banner">
     <xpath expr="//h1" position="attributes">
@@ -38,47 +36,38 @@
     </xpath>
 </template>
 
-<!-- General customizations -->
 
 <template id="new_page_template_s_call_to_action" inherit_id="website.new_page_template_s_call_to_action">
-    <!-- Shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Airy/13_002","colors":{"c5":"rgba(0,0,0,0.25)","c3":"o-color-5"},"flip":[]}</attribute>
     </xpath>
-    <!-- Add shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Airy_13_002" style="background-image: url('/html_editor/shape/html_builder/Airy/13_002.svg?c5=rgba(0,0,0,0.25)&amp;c3=o-color-5');"/>
     </xpath>
 </template>
 
 <template id="new_page_template_s_call_to_action_about" inherit_id="website.new_page_template_s_call_to_action_about">
-    <!-- Shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Airy/13_002","colors":{"c5":"rgba(0,0,0,0.25)","c3":"o-color-5"},"flip":[]}</attribute>
     </xpath>
-    <!-- Add shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Airy_13_002" style="background-image: url('/html_editor/shape/html_builder/Airy/13_002.svg?c5=rgba(0,0,0,0.25)&amp;c3=o-color-5');"/>
     </xpath>
 </template>
 
 <template id="new_page_template_s_call_to_action_digital" inherit_id="website.new_page_template_s_call_to_action_digital">
-    <!-- Shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Airy/13_002","colors":{"c5":"rgba(0,0,0,0.25)","c3":"o-color-5"},"flip":[]}</attribute>
     </xpath>
-    <!-- Add shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Airy_13_002" style="background-image: url('/html_editor/shape/html_builder/Airy/13_002.svg?c5=rgba(0,0,0,0.25)&amp;c3=o-color-5');"/>
     </xpath>
 </template>
 
 <template id="new_page_template_s_call_to_action_menu" inherit_id="website.new_page_template_s_call_to_action_menu">
-    <!-- Shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Airy/13_002","colors":{"c5":"rgba(0,0,0,0.25)","c3":"o-color-5"},"flip":[]}</attribute>
     </xpath>
-    <!-- Add shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Airy_13_002" style="background-image: url('/html_editor/shape/html_builder/Airy/13_002.svg?c5=rgba(0,0,0,0.25)&amp;c3=o-color-5');"/>
     </xpath>
@@ -91,38 +80,29 @@
 </template>
 
 <template id="new_page_template_s_product_catalog" inherit_id="website.new_page_template_s_product_catalog">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization Basic Pages -->
 
 <template id="new_page_template_basic_s_image_text" inherit_id="website.new_page_template_basic_s_image_text">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
 <template id="new_page_template_basic_s_text_image" inherit_id="website.new_page_template_basic_s_text_image">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization About Pages -->
 
 <template id="new_page_template_about_s_banner" inherit_id="website.new_page_template_about_s_banner">
-    <!-- Text -->
     <xpath expr="//h1" position="attributes">
         <attribute name="style" add="text-align: center;" separator=";"/>
     </xpath>
@@ -132,7 +112,6 @@
 </template>
 
 <template id="new_page_template_about_s_cover" inherit_id="website.new_page_template_about_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
@@ -163,11 +142,9 @@
 </template>
 
 <template id="new_page_template_about_map_s_text_image" inherit_id="website.new_page_template_about_map_s_text_image">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
@@ -189,7 +166,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Landing Pages -->
 
 <template id="new_page_template_landing_s_text_image" inherit_id="website.new_page_template_landing_s_text_image">
     <xpath expr="//section" position="attributes">
@@ -204,50 +180,40 @@
 </template>
 
 <template id="new_page_template_landing_2_s_cover" inherit_id="website.new_page_template_landing_2_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization Gallery Pages -->
 
 <template id="new_page_template_gallery_s_cover" inherit_id="website.new_page_template_gallery_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
 </template>
 
 <template id="new_page_template_gallery_s_image_text" inherit_id="website.new_page_template_gallery_s_image_text">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
 <template id="new_page_template_gallery_s_image_text_2nd" inherit_id="website.new_page_template_gallery_s_image_text_2nd">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="pt48 pb56" separator=" "/>
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
 <template id="new_page_template_gallery_s_text_image" inherit_id="website.new_page_template_gallery_s_text_image">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization Services Pages -->
 
 <template id="new_page_template_services_s_image_text" inherit_id="website.new_page_template_services_s_image_text">
     <xpath expr="//section" position="attributes">
@@ -261,44 +227,35 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Pricing Pages -->
 
 <template id="new_page_template_pricing_s_cover" inherit_id="website.new_page_template_pricing_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
 </template>
 
 <template id="new_page_template_pricing_s_image_text" inherit_id="website.new_page_template_pricing_s_image_text">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
 <template id="new_page_template_pricing_s_image_text_2nd" inherit_id="website.new_page_template_pricing_s_image_text_2nd">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="pt48 pb56" separator=" "/>
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
 <template id="new_page_template_pricing_s_text_image" inherit_id="website.new_page_template_pricing_s_text_image">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization Team Pages -->
 
 <template id="new_page_template_team_s_text_block_h1" inherit_id="website.new_page_template_team_s_text_block_h1">
     <xpath expr="//section" position="attributes">

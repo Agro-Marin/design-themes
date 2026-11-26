@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_sidegrid" inherit_id="website.s_sidegrid">
-    <!-- Images -->
     <xpath expr="//img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
     </xpath>

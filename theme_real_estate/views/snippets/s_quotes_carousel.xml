@@ -8,7 +8,6 @@
     <xpath expr="//div[hasclass('s_quotes_carousel')]" position="attributes">
         <attribute name="class" remove="carousel-dark" separator=" "/>
     </xpath>
-    <!-- Quote 1 -->
     <xpath expr="(//blockquote)[1]" position="attributes">
         <attribute name="class" remove="s_blockquote_with_icon w-50" add="s_blockquote_with_line w-75" separator=" "/>
         <attribute name="style">border-radius: 0px !important;</attribute>
@@ -19,7 +18,6 @@
     <xpath expr="(//div[hasclass('s_blockquote_author')])[1]//span//span" position="replace" mode="inner">
         Customer, bought a house
     </xpath>
-    <!-- Quote 2 -->
     <xpath expr="(//blockquote)[2]" position="attributes">
         <attribute name="class" remove="s_blockquote_with_icon w-50" add="s_blockquote_with_line w-75" separator=" "/>
         <attribute name="style">border-radius: 0px !important;</attribute>
@@ -30,7 +28,6 @@
     <xpath expr="(//div[hasclass('s_blockquote_author')])[2]//span//span" position="replace" mode="inner">
         Customer, bought an appartement
     </xpath>
-    <!-- Quote 3 -->
     <xpath expr="(//blockquote)[3]" position="attributes">
         <attribute name="class" remove="s_blockquote_with_icon w-50" add="s_blockquote_with_line w-75" separator=" "/>
         <attribute name="style">border-radius: 0px !important;</attribute>

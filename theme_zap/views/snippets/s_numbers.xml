@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_numbers" inherit_id="website.s_numbers">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc2" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- First KPI -->
     <xpath expr="(//div[hasclass('col-lg-2')])[1]" position="attributes">
         <attribute name="class" add="o_cc o_cc1 rounded pt64 pb64" remove="pt24 pb24" separator=" "/>
         <attribute name="style" add="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px !important;" separator=";"/>
@@ -14,7 +12,6 @@
     <xpath expr="//span[hasclass('h5-fs')]" position="replace" mode="inner">
         <font class="text-o-color-1">Solutions</font>
     </xpath>
-    <!-- Second KPI -->
     <xpath expr="(//div[hasclass('col-lg-2')])[2]" position="attributes">
         <attribute name="class" add="o_cc o_cc1 rounded pt64 pb64" remove="pt24 pb24" separator=" "/>
         <attribute name="style" add="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px !important;" separator=";"/>
@@ -25,7 +22,6 @@
     <xpath expr="(//span[hasclass('h5-fs')])[2]" position="replace" mode="inner">
         <font class="text-o-color-1">Happy customers</font>
     </xpath>
-    <!-- Third KPI -->
     <xpath expr="(//div[hasclass('col-lg-2')])[3]" position="attributes">
         <attribute name="class" add="o_cc o_cc1 rounded pt64 pb64" remove="pt24 pb24" separator=" "/>
         <attribute name="style" add="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px !important;" separator=";"/>

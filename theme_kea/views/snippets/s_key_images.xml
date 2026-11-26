@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_images" inherit_id="website.s_key_images">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Blobs/02','flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -10,7 +9,6 @@
         <div class="o_we_shape o_html_builder_Blobs_02"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Immerse Yourself in Virtual Reality
     </xpath>

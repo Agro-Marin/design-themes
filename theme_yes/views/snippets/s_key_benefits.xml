@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Bespoke Wedding Plans
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Vendor Access
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We create personalized wedding plans that reflect your vision and style, ensuring every detail is crafted to perfection for your special day.
     </xpath>

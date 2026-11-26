@@ -11,7 +11,6 @@ patch(WebsiteSwitcherSystrayItem.prototype, {
 
         this.orm = useService('orm');
         this.tooltips = proxy({});
-        // Disable the notification service to avoid having a notification for each theme.
         this.notificationService = { add: () => () => null };
 
         onMounted(async () => {
@@ -28,7 +27,6 @@ patch(WebsiteSwitcherSystrayItem.prototype, {
     },
 
     getElements() {
-        // Add tooltip information
         const elements = super.getElements(...arguments);
         return elements.map((elem) => {
             elem.dataset = {

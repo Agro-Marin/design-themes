@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_quotes_carousel_minimal" inherit_id="website.s_quotes_carousel_minimal">
-    <!-- Layout -->
     <xpath expr="//div[hasclass('carousel')]" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Connections/06','colors':{'c5':'o-color-3'},'flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -10,7 +9,6 @@
         <div class="o_we_shape o_html_builder_Connections_06" style="background-image: url('/html_editor/shape/html_builder/Connections/06.svg?c5=o-color-3');"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//p[hasclass('s_blockquote_quote')]" position="replace" mode="inner">
         " Their dishes are a delight. Fresh, flavorful, and beautifully presented. "
     </xpath>

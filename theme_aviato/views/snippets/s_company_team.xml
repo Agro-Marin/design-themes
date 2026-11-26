@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_company_team" inherit_id="website.s_company_team">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt72 pb0" remove="pt48 pb48" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Meet our travel agents
     </xpath>
@@ -31,7 +29,6 @@
         Iris is responsible for creating cost-effective travel packages, ensuring clients can enjoy their adventures without compromising on quality.
     </xpath> 
 
-    <!-- Images -->
     <xpath expr="//img" position="attributes">
         <attribute name="class" add="rounded" remove="rounded-circle" separator=" "/>
     </xpath>

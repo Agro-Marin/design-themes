@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Custom Beauty Solutions
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Cosmetics Offers
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We provide custom pricing based on the unique needs of your project, ensuring you receive exceptional design services that fit your budget.
     </xpath>

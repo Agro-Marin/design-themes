@@ -1,28 +1,17 @@
-//------------------------------------------------------------------------------//
-// Presets
-//------------------------------------------------------------------------------//
 
-// append(..., comma) rather than a `((...),)` trailing comma: the two are
-// NOT the same value -- without that one comma this collapses from a list
-// of palettes into a bare map, and the website variable chain then fails
-// with "$map2: (...) is not a map". Formatters strip it (prettier does:
-// prettier/prettier#8002), so state the 1-element list explicitly.
 $o-website-values-palettes: append(
     (),
     (
         'color-palettes-name':              'nano-1',
 
-        // Header
         'header-font-size':                 1rem,
         'header-links-style':               'fill',
         'menu-border-radius':               0,
 
-        // Font
         'font':                             'Inter',
         'headings-font':                    'Manrope',
         'buttons-font':                     'Manrope',
 
-        // Buttons
         'btn-padding-y':                    .5rem,
         'btn-padding-x':                    1rem,
         'btn-padding-y-lg':                 1rem,
@@ -31,18 +20,13 @@ $o-website-values-palettes: append(
         'btn-border-radius-sm':             10rem,
         'btn-border-radius-lg':             10rem,
 
-        // Body
         'btn-ripple':                       true,
 
-        // Footer
         'footer-template':                  'descriptive',
     ),
     comma
 );
 
-//------------------------------------------------------------------------------//
-// Fonts
-//------------------------------------------------------------------------------//
 
 $o-theme-font-configs: (
     'Roboto': (
@@ -109,11 +93,9 @@ $o-theme-font-configs: (
     ),
 );
 
-// Headings
 
 $o-theme-headings-font-weight:              400;
 
-// Texts
 
 $o-theme-font-size-lg-multiplier:           1.25;
 $o-theme-font-size-sm-multiplier:           .875;
@@ -122,15 +104,10 @@ $o-theme-font-weight-light:                 300;
 $o-theme-font-weight-normal:                400;
 $o-theme-font-weight-bold:                  700;
 
-// Buttons
 
 $o-theme-btn-font-weight:                   400;
 
-//------------------------------------------------------------------------------//
-// Colors
-//------------------------------------------------------------------------------//
 
-// Compatibility
 $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     (
         'nano-1': (
@@ -206,8 +183,5 @@ $o-color-palettes-compatibility-indexes: (
     23: 'generic-17',
 );
 
-//------------------------------------------------------------------------------
-// Shapes
-//------------------------------------------------------------------------------
 
 $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Bold/12_001', (1: rgba(0, 0, 0, .5), 2: rgba(0, 0, 0, .25)));

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- Not used anymore by the editor: files and records kept for back-compatibility.
-Check in theme_loftspace's primary_variables.scss and theme.scss -->
 <record id="image_content_02" model="theme.ir.attachment">
     <field name="key">theme_common.image_content_02</field>
     <field name="name">theme_common.image_content_02</field>
@@ -39,7 +37,6 @@ Check in theme_loftspace's primary_variables.scss and theme.scss -->
     <field name="url">/theme_odoo_experts/static/src/img/content/content_img_12.webp</field>
 </record>
 
-<!-- SNIPPETS -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
     <field name="key">website.s_banner_default_image</field>
     <field name="name">website.s_banner_default_image</field>
@@ -381,7 +378,6 @@ Check in theme_loftspace's primary_variables.scss and theme.scss -->
     <field name="url">/theme_odoo_experts/static/src/img/snippets/s_mockup_image_default_image.jpg</field>
 </record>
 
-<!-- Use custom records to prevent some images from changing by the Configurator -->
 <record id="s_image_text_device" model="theme.ir.attachment">
     <field name="key">website.s_image_text_device</field>
     <field name="name">website.s_image_text_device</field>

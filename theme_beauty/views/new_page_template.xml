@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- General customizations -->
 
 <template id="new_page_template_s_call_to_action" inherit_id="website.new_page_template_s_call_to_action">
     <xpath expr="//section" position="attributes">
@@ -52,15 +51,12 @@
 </template>
 
 <template id="new_page_template_s_picture" inherit_id="website.new_page_template_s_picture">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization Basic Pages -->
 
 <template id="new_page_template_basic_2_s_text_block_h1" inherit_id="website.new_page_template_basic_2_s_text_block_h1">
     <xpath expr="//section" position="attributes">
@@ -68,7 +64,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization About Pages -->
 
 <template id="new_page_template_about_full_s_numbers" inherit_id="website.new_page_template_about_full_s_numbers">
     <xpath expr="//section" position="attributes">
@@ -88,7 +83,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Landing Pages -->
 
 <template id="new_page_template_landing_2_s_call_to_action" inherit_id="website.new_page_template_landing_2_s_call_to_action">
     <xpath expr="//section" position="attributes">
@@ -110,18 +104,13 @@
 
 <template id="new_page_template_landing_4_s_cover" inherit_id="website.new_page_template_landing_4_s_cover">
     <xpath expr="//section" position="attributes">
-        <!-- Added on all new page template s_cover by theme and on generic landing 4 -->
         <attribute name="class" add="o_half_screen_height" remove="o_half_screen_height" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization Gallery Pages -->
 
-<!-- Snippet customization Services Pages -->
 
-<!-- Snippet customization Pricing Pages -->
 
-<!-- Snippet customization Team Pages -->
 
 <template id="new_page_template_team_s_text_block_h1" inherit_id="website.new_page_template_team_s_text_block_h1">
     <xpath expr="//section" position="attributes">

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- General customizations -->
 
 <template id="new_page_template_s_picture_only" inherit_id="website.new_page_template_s_picture_only">
     <xpath expr="//section" position="attributes">
@@ -9,9 +8,7 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Basic Pages -->
 
-<!-- Snippet customization About Pages -->
 
 <template id="new_page_template_about_s_cover" inherit_id="website.new_page_template_about_s_cover">
     <xpath expr="//section" position="attributes">
@@ -52,7 +49,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Landing Pages -->
 
 <template id="new_page_template_landing_0_s_cover" inherit_id="website.new_page_template_landing_0_s_cover">
     <xpath expr="//section" position="attributes">
@@ -91,7 +87,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Gallery Pages -->
 
 <template id="new_page_template_gallery_s_cover" inherit_id="website.new_page_template_gallery_s_cover">
     <xpath expr="//section" position="attributes">
@@ -114,9 +109,7 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Services Pages -->
 
-<!-- Snippet customization Pricing Pages -->
 
 <template id="new_page_template_pricing_s_cover" inherit_id="website.new_page_template_pricing_s_cover">
     <xpath expr="//section" position="attributes">
@@ -133,7 +126,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Team Pages -->
 
 <template id="new_page_template_team_s_text_block_h1" inherit_id="website.new_page_template_team_s_text_block_h1">
     <xpath expr="//section" position="attributes">

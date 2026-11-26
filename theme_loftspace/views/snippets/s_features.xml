@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_features" inherit_id="website.s_features">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt72 pb128" remove="pt64 pb64" separator=" "/>
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="//div[hasclass('container')]/p" position="replace" mode="inner">
         Enjoy these added advantages with every purchase
     </xpath>
-    <!-- Column #01 -->
     <xpath expr="//div[hasclass('row')]/div[1]" position="replace">
         <div class="col-lg-3">
             <div class="s_hr pt-4 pb32">
@@ -25,7 +23,6 @@
             </div>
         </div>
     </xpath>
-    <!-- Column #02 -->
     <xpath expr="//div[hasclass('row')]/div[2]" position="replace">
         <div class="col-lg-3">
             <div class="s_hr pt-4 pb32">
@@ -38,7 +35,6 @@
             </div>
         </div>
     </xpath>
-    <!-- Column #03 -->
     <xpath expr="//div[hasclass('row')]/div[3]" position="replace">
         <div class="col-lg-3">
             <div class="s_hr pt-4 pb32">
@@ -51,7 +47,6 @@
             </div>
         </div>
     </xpath>
-    <!-- Column #04 -->
     <xpath expr="//div[hasclass('row')]/div[3]" position="after">
         <div class="col-lg-3">
             <div class="s_hr pt-4 pb32">

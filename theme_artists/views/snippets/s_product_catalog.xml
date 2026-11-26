@@ -2,23 +2,18 @@
 <odoo>
 
 <template id="s_product_catalog" inherit_id="website.s_product_catalog">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc5 pt0 pb40" remove="pb64 pt64" separator=" "/>
         <attribute name="style"/>
     </xpath>
-    <!-- Title container -->
     <xpath expr="//h2" position="replace">
         <h2 style="text-align: left !important;">Upcoming Exhibitions</h2>
     </xpath>
     <xpath expr="//p[hasclass('lead')]" position="replace">
         <p class="lead" style="text-align: left !important;">Artistic journey around the world</p>
     </xpath>
-    <!-- Remove filter -->
     <xpath expr="//div[hasclass('o_we_bg_filter')]" position="replace"/>
-    <!-- Title -->
     <xpath expr="//div[hasclass('col-lg-6')]/h3[hasclass('h4-fs')]" position="replace"/>
-    <!-- List -->
     <xpath expr="//div[hasclass('col-lg-6')]/ul[hasclass('list-unstyled')]" position="replace">
         <ul class="list-unstyled my-3">
             <t t-call="website.s_product_catalog_dish">
@@ -38,9 +33,7 @@
             </t>
         </ul>
     </xpath>
-    <!-- Title -->
     <xpath expr="//div[hasclass('col-lg-6')][2]/h3[hasclass('h4-fs')]" position="replace"/>
-    <!-- List -->
     <xpath expr="//div[hasclass('col-lg-6')][2]/ul[hasclass('list-unstyled')]" position="replace">
         <ul class="list-unstyled my-3">
             <t t-call="website.s_product_catalog_dish">

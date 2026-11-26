@@ -30,7 +30,6 @@ class Website(models.Model):
     def unlink(self):
         websites_themes = self.get_test_themes_websites()
         if self in websites_themes:
-            # Bypass foreign key constraint
             website_domain = [("website_id", "=", self.id)]
             self.env["ir.ui.view"].with_context(
                 active_test=False, _force_unlink=True

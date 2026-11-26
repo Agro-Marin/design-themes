@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_product_list" inherit_id="website.s_product_list">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc5 pb96" remove="pb64" separator=" "/>
     </xpath>
-    <!-- Item #1 -->
     <xpath expr="//div[hasclass('col-lg-2')]//h3/a" position="replace" mode="inner">
         View the book
     </xpath>
@@ -16,7 +14,6 @@
     <xpath expr="//div[hasclass('col-lg-2')]//figure" position="attributes">
         <attribute name="class" remove="ratio-4x3" add="ratio-1x1" separator=" "/>
     </xpath>
-    <!-- Item #2 -->
     <xpath expr="//div[hasclass('col-lg-2')][2]//h3/a" position="replace" mode="inner">
         View the book
     </xpath>
@@ -26,7 +23,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][2]//figure" position="attributes">
         <attribute name="class" remove="ratio-4x3" add="ratio-1x1" separator=" "/>
     </xpath>
-    <!-- Item #3 -->
     <xpath expr="//div[hasclass('col-lg-2')][3]//h3/a" position="replace" mode="inner">
         View the book
     </xpath>
@@ -36,7 +32,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][3]//figure" position="attributes">
         <attribute name="class" remove="ratio-4x3" add="ratio-1x1" separator=" "/>
     </xpath>
-    <!-- Item #4 -->
     <xpath expr="//div[hasclass('col-lg-2')][4]//h3/a" position="replace" mode="inner">
         View the book
     </xpath>
@@ -46,7 +41,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][4]//figure" position="attributes">
         <attribute name="class" remove="ratio-4x3" add="ratio-1x1" separator=" "/>
     </xpath>
-    <!-- Item #5 -->
     <xpath expr="//div[hasclass('col-lg-2')][5]//h3/a" position="replace" mode="inner">
         View the book
     </xpath>
@@ -56,7 +50,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][5]//figure" position="attributes">
         <attribute name="class" remove="ratio-4x3" add="ratio-1x1" separator=" "/>
     </xpath>
-    <!-- Item #6 -->
     <xpath expr="//div[hasclass('col-lg-2')][6]//h3/a" position="replace" mode="inner">
         View the book
     </xpath>

@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_three_columns" inherit_id="website.s_three_columns">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc4 pt80 pb120" remove="o_cc2 pt32 pb32" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//div[hasclass('row')]/." position="before">
         <div class="col-lg-12">
             <h2 style="text-align: center;">
@@ -17,7 +15,6 @@
             </p>
         </div>
     </xpath>
-    <!-- Card 1 -->
     <xpath expr="//div[hasclass('s_card')]" position="attributes">
         <attribute name="style" add="border-width: 0px !important;" separator=";"/>
     </xpath>
@@ -34,7 +31,6 @@
             <a class="btn btn-primary o_translate_inline" href="#">Get your tickets</a>
         </p>
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="(//div[hasclass('s_card')])[2]" position="attributes">
         <attribute name="style" add="border-width: 0px !important;" separator=";"/>
     </xpath>
@@ -54,7 +50,6 @@
             <a class="btn btn-primary o_translate_inline" href="#">Get your tickets</a>
         </p>
     </xpath>
-    <!-- Card 3 -->
     <xpath expr="(//div[hasclass('s_card')])[3]" position="attributes">
         <attribute name="style" add="border-width: 0px !important;" separator=";"/>
     </xpath>

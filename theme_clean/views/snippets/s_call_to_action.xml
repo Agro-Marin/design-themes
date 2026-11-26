@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_call_to_action" inherit_id="website.s_call_to_action">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt80 o_cc2" remove="pt64 o_cc5" separator=" "/>
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//div[hasclass('col-lg-9')]" position="attributes">
         <attribute name="class" add="pt16" separator=" "/>
     </xpath>

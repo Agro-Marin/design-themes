@@ -35,9 +35,7 @@ CONFLICTUAL_CLASSES = [
     ["text-center", "text-end", "text-start"],
 ]
 
-# For each RE, associates a whitelist
 CONFLICTUAL_CLASSES_RE = {
-    # Align
     re.compile(r"^align-(?!(self|items)-).+"): [],
     re.compile(r"^align-self-(?:start|center|end)$"): [],
     re.compile(r"^align-self-sm-(?:start|center|end)$"): [],
@@ -46,19 +44,15 @@ CONFLICTUAL_CLASSES_RE = {
     re.compile(r"^align-self-xl-(?:start|center|end)$"): [],
     re.compile(r"^align-self-xxl-(?:start|center|end)$"): [],
     re.compile(r"^align-items-.+"): [],
-    # BG
     re.compile(r"^bg(-|_)"): [
         "bg_option_menu_gradient",
     ],
-    # Col
     re.compile(r"^col-\d+$"): [],
     re.compile(r"^col-lg-.+"): [],
     re.compile(r"^offset-\d+$"): [],
     re.compile(r"^offset-lg-.+"): [],
-    # Display
     re.compile(r"^display-\d$"): [],
     re.compile(r"^display-\d-fs$"): [],
-    # Margin, padding
     re.compile(r"^m-(\d|auto)$"): [],
     re.compile(r"^m(x|s)-\d$"): [],
     re.compile(r"^m(x|e)-\d$"): [],
@@ -68,20 +62,13 @@ CONFLICTUAL_CLASSES_RE = {
     re.compile(r"^(p(x|s)-?\d+|padding-.+)$"): [],
     re.compile(r"^(p(x|e)-?\d+|padding-.+)$"): [],
     re.compile(r"^(p(y|t)-?\d+|padding-.+)$"): [],
-    # p0+pb32 appears in Bewise and Graphene
     re.compile(r"^(p(y|b)?-?\d+|padding-.+)$"): ["p0"],
-    # Font awesome
     re.compile(r"^fa-\dx$"): [],
     re.compile(r"^fa-(?:solid|regular|brands)$"): [],
-    # Whitelist workaround for s_social_media inner snippet Layout: None
     re.compile(r"^fa-...+"): ["fa-stack", "fa-solid", "fa-regular", "fa-brands"],
-    # Rounded
     re.compile(r"^rounded-.+"): [],
-    # Shadow
     re.compile(r"^shadow-.+"): [],
-    # Shapes
     re.compile(r"^o_html_builder_[A-Z].+"): [],
-    # Text
     re.compile(r"^text-(?!(center|end|start|bg-|lg-)).*$"): [
         "text-break",
         "text-decoration-none",
@@ -89,17 +76,9 @@ CONFLICTUAL_CLASSES_RE = {
     ],
     re.compile(r"^text-bg-.*$"): [],
     re.compile(r"^text-lg-.*$"): [],
-    # Width
     re.compile(r"^w-\d*$"): [],
 }
-# Special case for "s_" classes that respect our convention: classes that share
-# the same base and follow the naming pattern (s_some, s_some_button) are not
-# flagged as conflicting. Explicitly whitelist exceptions that don't follow the
-# pattern only.
-# TODO all these classes were processed but we might want to re-check them all
-# to minimize the list if possible.
 S_CLASSES_WHITELIST = [
-    # Classes that rightfully belong here at the moment
     "s_col_no_bgcolor",
     "s_col_no_resize",
     "s_allow_columns",
@@ -113,8 +92,6 @@ S_CLASSES_WHITELIST = [
     "s_blog_posts",
     "s_events",
     "s_appointments",
-    # Classes that should not be here... but are here by compatibility (not
-    # following our "s_" conventions correctly).
     "s_process_step",
     "s_process_step_svg_defs",
     "s_number",
@@ -158,7 +135,6 @@ S_CLASSES_WHITELIST = [
     "s_event_event_picture",
     "s_newsletter_subscribe_form",
     "s_carousel_indicators_hidden",
-    # FIXME those classes have no reason to be here... missing data-snippet?
     "s_hr",
     "s_accordion",
     "s_accordion_highlight",
@@ -230,7 +206,6 @@ class TestNewPageTemplates(TransactionCase):
         )
         self.assertFalse(errors, "No error should have been collected")
 
-    # TODO should handle the fact that grid items can't have padding classes
     def test_render_applied_templates(self):
         errors = []
         classes_inventory = set()
@@ -247,7 +222,6 @@ class TestNewPageTemplates(TransactionCase):
             )
         _logger.info("Tested %s views", view_count)
         self.assertGreater(view_count, 2900, "Test should have checked many views")
-        # Use this information to potentially update known possible conflicts.
         for known_classes in CONFLICTUAL_CLASSES:
             classes_inventory.difference_update(known_classes)
         for known_classes in CONFLICTUAL_CLASSES_RE.values():
@@ -300,16 +274,12 @@ class TestNewPageTemplates(TransactionCase):
             return len(views)
 
     def _check_applied_view(self, theme_name, view, classes_inventory, errors):
-        # TODO: Improve the perfs of the next line
-        #       Doesn't seem to be a way to avoid one RECURSIVE
-        #       SQL Query from `_get_views_inheriting` per view
         html_text = self.env["ir.qweb"]._render(view.id)
         if not html_text:
             return
         html_tree = html.fromstring(f"<wrap>{html_text}</wrap>")
         blocks_el = html_tree.xpath("//*[@id='o_scroll']")
         if blocks_el:
-            # Only look at blocks in website.snippets
             html_tree = blocks_el[0]
 
         for el in html_tree.xpath("//*[@class]"):
@@ -369,8 +339,6 @@ class TestNewPageTemplates(TransactionCase):
                 )
 
     def _check_s_classes(self, theme_name, view, el, classes, errors):
-        # Special handling for snippet classes following naming convention: if
-        # classes match the 's_snippet_name_*' pattern, they are allowed.
         non_whitelisted_s_classes = {
             cl
             for cl in classes
@@ -378,9 +346,6 @@ class TestNewPageTemplates(TransactionCase):
         }
         if not non_whitelisted_s_classes:
             return
-        # Check the element classes itself first: if there is a s_XXX class,
-        # s_something_XXX is automatically accepted as it indicates a variant
-        # of s_XXX (e.g. s_nice_popup being a variant of s_popup).
         non_whitelisted_s_classes = {
             cl
             for cl in non_whitelisted_s_classes
@@ -390,15 +355,8 @@ class TestNewPageTemplates(TransactionCase):
             )
         }
 
-        # Find all parent elements classes that start with 's_' (including on
-        # the current element) and only accept classes that are prefixed by a
-        # parent class (+ '_') (e.g. s_table_item would be accepted inside a
-        # s_table (as it is a sub-element of s_table), and s_table_xs would be
-        # accepted as an option of s_table)).
         all_parent_s_classes = set()
         parent_el = el
-        # This also looks for the presence of non-whitelisted 's_' classes in
-        # non-snippets.
         is_in_snippet = view.key.startswith("website.configurator_")
         while parent_el is not None:
             parent_classes = set(parent_el.attrib.get("class", "").split())

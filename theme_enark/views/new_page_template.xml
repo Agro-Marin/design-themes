@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- About -->
 
 <template id="new_page_template_sections_about_personal" inherit_id="website.new_page_template_sections_about_personal">
     <xpath expr="//t[@t-snippet-call='website.new_page_template_about_personal_s_call_to_action_about']" position="attributes">
@@ -9,7 +8,6 @@
     </xpath>
 </template>
 
-<!-- Landing -->
 
 <template id="new_page_template_sections_landing_1" inherit_id="website.new_page_template_sections_landing_1">
     <xpath expr="//t[@t-snippet-call='website.new_page_template_landing_1_s_call_to_action_digital']" position="attributes">
@@ -29,7 +27,6 @@
     </xpath>
 </template>
 
-<!-- Services -->
 
 <template id="new_page_template_sections_services_2" inherit_id="website.new_page_template_sections_services_2">
     <xpath expr="//t[@t-snippet-call='website.new_page_template_services_2_s_call_to_action_digital']" position="attributes">
@@ -37,9 +34,7 @@
     </xpath>
 </template>
 
-<!-- General customizations -->
 
-<!-- Snippet customization Basic Pages -->
 
 <template id="new_page_template_basic_2_s_text_block_h1" inherit_id="website.new_page_template_basic_2_s_text_block_h1">
     <xpath expr="//section" position="attributes">
@@ -47,7 +42,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization About Pages -->
 
 <template id="new_page_template_about_full_s_numbers" inherit_id="website.new_page_template_about_full_s_numbers">
     <xpath expr="//section" position="attributes">
@@ -63,12 +57,10 @@
 
 <template id="new_page_template_about_personal_s_numbers" inherit_id="website.new_page_template_about_personal_s_numbers">
     <xpath expr="//section" position="attributes">
-        <!-- pt0 is defined by both theme and new page template -->
         <attribute name="class" add="pt0" remove="o_cc1 pt0" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization Landing Pages -->
 
 <template id="new_page_template_landing_s_text_image" inherit_id="website.new_page_template_landing_s_text_image">
     <xpath expr="//section" position="attributes">
@@ -78,14 +70,11 @@
 
 <template id="new_page_template_landing_5_s_banner" inherit_id="website.new_page_template_landing_5_s_banner">
     <xpath expr="//section" position="attributes">
-        <!-- Defined by both theme and new page template -->
         <attribute name="class" add="o_full_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization Gallery Pages -->
 
-<!-- Snippet customization Services Pages -->
 
 <template id="new_page_template_services_s_text_image" inherit_id="website.new_page_template_services_s_text_image">
     <xpath expr="//section" position="attributes">
@@ -99,9 +88,7 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Pricing Pages -->
 
-<!-- Snippet customization Team Pages -->
 
 <template id="new_page_template_team_s_text_image" inherit_id="website.new_page_template_team_s_text_image">
     <xpath expr="//section" position="attributes">

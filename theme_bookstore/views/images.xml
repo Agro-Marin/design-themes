@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- Not used anymore by the editor: files and records kept for back-compatibility.
-Check in theme_loftspace's primary_variables.scss and theme.scss -->
 <record id="image_content_02" model="theme.ir.attachment">
     <field name="key">theme_common.image_content_02</field>
     <field name="name">theme_common.image_content_02</field>
@@ -39,7 +37,6 @@ Check in theme_loftspace's primary_variables.scss and theme.scss -->
     <field name="url">/theme_bookstore/static/src/img/content/content_img_12.webp</field>
 </record>
 
-<!-- SNIPPETS -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
     <field name="key">website.s_banner_default_image</field>
     <field name="name">website.s_banner_default_image</field>
@@ -357,7 +354,6 @@ Check in theme_loftspace's primary_variables.scss and theme.scss -->
     <field name="url">/theme_bookstore/static/src/img/snippets/s_unveil_3.webp</field>
 </record>
 
-<!-- Quadrant -->
 <record id="s_quadrant_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_quadrant_default_image_1</field>
     <field name="name">website.s_quadrant_default_image_1</field>
@@ -439,7 +435,6 @@ Check in theme_loftspace's primary_variables.scss and theme.scss -->
     <field name="url">/theme_bookstore/static/src/img/snippets/s_empowerment_default_image.webp</field>
 </record>
 
-<!-- Text Cover -->
 <record id="s_text_cover_default_image" model="theme.ir.attachment">
     <field name="key">website.s_text_cover_default_image</field>
     <field name="name">website.s_text_cover_default_image</field>

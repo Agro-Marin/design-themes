@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_wavy_grid" inherit_id="website.s_wavy_grid">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Blobs/17','colors':{'c5':'o-color-3'},'flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -10,7 +9,6 @@
         <div class="o_we_shape o_html_builder_Blobs_17" style="background-image: url('/html_editor/shape/html_builder/Blobs/17.svg?c5=o-color-3');"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         What we offer to our clients
     </xpath>

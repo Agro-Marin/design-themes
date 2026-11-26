@@ -2,20 +2,16 @@
 <odoo>
 
 <template id="s_numbers_list" inherit_id="website.s_numbers_list">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc3" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Key milestones in our environmental impact
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p" position="replace" mode="inner">
         <br/>
         From carbon footprint reduction to renewable energy adoption and biodiversity preservation, our key milestones reflect our commitment to creating a sustainable future for all.
     </xpath>
-    <!-- Numbers -->
     <xpath expr="(//p)[2]" position="replace" mode="inner">
         <span class="h2-fs">45%</span><br/>
         Reduction in carbon emissions

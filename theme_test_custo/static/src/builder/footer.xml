@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
-<!-- Theme Footer - Option -->
+
 <t t-name="theme_test_custo.FooterTemplateOption" t-inherit="website.FooterTemplateOption" t-inherit-mode="extension">
     <xpath expr="//BuilderSelect[@action=&quot;'websiteConfigFooter'&quot;]" position="inside">
         <BuilderSelectItem title.translate="Custom Theme"

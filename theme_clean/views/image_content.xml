@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- Website Builder Custom Images -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
     <field name="key">website.s_banner_default_image</field>
     <field name="name">website.s_banner_default_image</field>

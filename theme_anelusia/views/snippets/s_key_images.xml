@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_images" inherit_id="website.s_key_images">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc3" separator=" "/>
     </xpath>
@@ -21,7 +20,6 @@
         <attribute name="data-shape-colors">;;;;</attribute>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Discover Our Latest Fashion Collection
     </xpath>

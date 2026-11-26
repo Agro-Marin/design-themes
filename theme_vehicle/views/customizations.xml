@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- ======== COVER ======== -->
 <template id="s_cover" inherit_id="website.s_cover" name="Vehicle s_cover">
     <xpath expr="section" position="attributes">
         <attribute name="class" remove="s_parallax_is_fixed o_full_screen_height pt232 pb232" add="o_half_screen_height pt0 pb0" separator=" "/>
@@ -20,19 +19,15 @@
 </template>
 
 <template id="s_striped_top" inherit_id="website.s_striped_top">
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_picture_default_image</attribute>
     </xpath>
 </template>
 
-<!-- ======== FRAMED INTRO ======== -->
 <template id="s_framed_intro" inherit_id="website.s_framed_intro">
-    <!-- Title -->
     <xpath expr="//h1" position="replace" mode="inner">
         Drive Your Dream: Quality Cars for Every Journey
     </xpath>
-    <!-- Image -->
     <xpath expr="//div[hasclass('col-lg-5')]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc2" separator=" "/>
     </xpath>
@@ -41,7 +36,6 @@
     </xpath>
 </template>
 
-<!-- ======== TITLE ======== -->
 <template id="s_title" inherit_id="website.s_title">
     <xpath expr="//h2" position="replace">
         <h2 style="text-align: left;">All our models</h2>
@@ -54,7 +48,6 @@
     </xpath>
 </template>
 
-<!-- ======== TEXT - IMAGE ======== -->
 <template id="s_text_image" inherit_id="website.s_text_image" name="Vehicle s_text_image">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pb24 pt56 o_cc o_cc1" remove="pt80 pb80" separator=" "/>
@@ -83,7 +76,6 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE - TEXT ======== -->
 <template id="s_image_text" inherit_id="website.s_image_text" name="Vehicle s_image_text">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pb56 pt24 o_cc o_cc1" remove="pt80 pb80" separator=" "/>
@@ -103,31 +95,25 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE HEXAGONAL ======== -->
 <template id="s_image_hexagonal" inherit_id="website.s_image_hexagonal">
-    <!-- Title -->
     <xpath expr="(//img)[2]" position="attributes">
         <attribute name="src">/web/image/website.s_cover_default_image</attribute>
     </xpath>
 </template>
 
-<!-- ======== FEATURES WALL ======== -->
 <template id="s_features_wall" inherit_id="website.s_features_wall">
-    <!-- Card 1 -->
     <xpath expr="//div[hasclass('g-col-lg-3')]//h3" position="replace" mode="inner">
         Wide Vehicle Selection
     </xpath>
     <xpath expr="//div[hasclass('g-col-lg-3')]//p" position="replace" mode="inner">
         Explore our extensive inventory of new and pre-owned cars to find the perfect vehicle that fits your needs and budget.
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="//div[hasclass('g-col-lg-3')][4]//h3" position="replace" mode="inner">
         Flexible Financing Options
     </xpath>
     <xpath expr="//div[hasclass('g-col-lg-3')][4]//p" position="replace" mode="inner">
         Benefit from competitive financing plans and leasing options designed to make your car purchase as affordable as possible.
     </xpath>
-    <!-- Card 3 -->
     <xpath expr="//div[hasclass('g-col-lg-3')][6]//h3" position="replace" mode="inner">
         Expert Vehicle Service
     </xpath>
@@ -136,27 +122,21 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE PUNCHY ======== -->
 <template id="s_image_punchy" inherit_id="website.s_image_punchy">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="o_cc2" add="o_cc3" separator=" "/>
     </xpath>
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_carousel_default_image_2</attribute>
     </xpath>
 </template>
 
-<!-- ======== NUMBERS ======== -->
 <template id="s_numbers" inherit_id="website.s_numbers">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc4 pt48 pb48" remove="o_cc1 pt80 pb80" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== REFERENCES ======== -->
 <template id="s_references" inherit_id="website.s_references" name="Vehicle s_references">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt120 pb112" remove="pt80 pb80" separator=" "/>
@@ -167,18 +147,14 @@
     <xpath expr="//p" position="replace"/>
 </template>
 
-<!-- ======== CALL TO ACTION ======== -->
 <template id="s_call_to_action" inherit_id="website.s_call_to_action" name="Vehicle s_call_to_action">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt96" remove="pt64" separator=" "/>
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Floats/09","flip":[]}</attribute>
     </xpath>
-    <!-- Shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Floats_09"/>
     </xpath>
-    <!-- Content -->
     <xpath expr="//h2" position="replace" mode="inner">
         <b>50,000 pre-orders</b> already registered.
     </xpath>
@@ -196,49 +172,37 @@
     </xpath>
 </template>
 
-<!-- ======== CTA Box ======== -->
 <template id="s_cta_box" inherit_id="website.s_cta_box">
-    <!-- Card -->
     <xpath expr="//div[hasclass('card')]" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc4" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
        The best car dealer<br/>in your local area
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//p" position="replace" mode="inner">
         Looking for a leasing plan or a brand new car ? We got you covered<br/><br/>
     </xpath>
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/theme_vehicle/static/src/img/content/content_img_02.webp</attribute>
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]" position="replace" mode="inner">
         Contact us
     </xpath>
 </template>
 
-<!-- ======== PICTURE ======== -->
 <template id="s_picture" inherit_id="website.s_picture" name="Vehicle s_picture">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc5" separator=" "/>
     </xpath>
-    <!-- Container -->
     <xpath expr="//section/div[hasclass('o_container_small')]" position="attributes">
         <attribute name="class" add="container" remove="o_container_small" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace">
         <h2 class="text-center">View the all-new KORAN in 3D wherever you are</h2>
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p" position="replace" mode="inner">
         Bring the KORAN to life on your smartphone or tablet so you can visualise it for yourself
     </xpath>
-    <!-- Image + Shape -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_picture_default_image</attribute>
         <attribute name="data-file-name">01.svg</attribute>
@@ -246,15 +210,12 @@
     <xpath expr="//figcaption" position="replace" mode="inner">
         <span class="text-o-color-3">Our uniquely designed LED headlights are not only gorgeous but powerfully light your way.</span>
     </xpath>
-    <!-- Filter -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_bg_filter bg-black-50"/>
     </xpath>
 </template>
 
-<!-- ======== SIDEGRID ======== -->
 <template id="s_sidegrid" inherit_id="website.s_sidegrid">
-    <!-- Images -->
     <xpath expr="//img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
     </xpath>
@@ -269,23 +230,19 @@
     </xpath>
 </template>
 
-<!-- ======== THREE COLUMNS ======== -->
 <template id="s_three_columns" inherit_id="website.s_three_columns">
-    <!-- Column 1 -->
     <xpath expr="//h2" position="replace" mode="inner">
         Koran Mini
     </xpath>
         <xpath expr="//p[hasclass('card-text')]" position="replace" mode="inner">
         Unleashing power with elegance, the Koran Mini blends advanced engineering with classic design, delivering a thrilling ride that’s both swift and smooth.
     </xpath>
-    <!-- Column 2 -->
     <xpath expr="(//h2)[2]" position="replace" mode="inner">
         Koran X
     </xpath>
         <xpath expr="(//p[hasclass('card-text')])[2]" position="replace" mode="inner">
         A bold statement in every detail, the Koran X captures the spirit of modern adventure. Built for those who refuse to compromise on performance and style.
     </xpath>
-    <!-- Column 3 -->
     <xpath expr="(//h2)[3]" position="replace" mode="inner">
         Koran GT
     </xpath>
@@ -298,21 +255,18 @@
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt0 pb64" remove="pt32 pb32" separator=" "/>
     </xpath>
-    <!-- Column 1 -->
     <xpath expr="//p[hasclass('card-text')]" position="after">
         <p><a href="#" class="btn btn-primary btn-block mb-0 o_cc o_cc4 o_translate_inline">Configure</a></p>
     </xpath>
     <xpath expr="//p[hasclass('card-text')]" position="after">
         <span class="d-inline-block mb-4"><b>From $14,000</b></span>
     </xpath>
-    <!-- Column 2 -->
     <xpath expr="(//p[hasclass('card-text')])[2]" position="after">
         <p><a href="#" class="btn btn-primary btn-block mb-0 o_cc o_cc4 o_translate_inline">Configure</a></p>
     </xpath>
     <xpath expr="(//p[hasclass('card-text')])[2]" position="after">
         <span class="d-inline-block mb-4"><b>From $19,000</b></span>
     </xpath>
-    <!-- Column 3 -->
     <xpath expr="(//p[hasclass('card-text')])[3]" position="after">
         <p><a href="#" class="btn btn-primary btn-block mb-0 o_cc o_cc4 o_translate_inline">Configure</a></p>
     </xpath>
@@ -321,80 +275,60 @@
     </xpath>
 </template>
 
-<!-- ======== FEATURES ======== -->
 <template id="s_features" inherit_id="website.s_features">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc1" remove="pt64 pb64" separator=" "/>
     </xpath>
-    <!-- Left block -->
-    <!-- Icon -->
     <xpath expr="//i" position="attributes">
         <attribute name="class" add="fa-solid fa-car" remove="fa-regular fa-paper-plane" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//div[hasclass('row')]/div[1]/div/h3" position="replace" mode="inner">
         Top Speed
     </xpath>
-    <!-- Center block -->
-    <!-- Icon -->
     <xpath expr="(//i)[2]" position="attributes">
         <attribute name="class" add="fa-solid fa-battery-full" remove="fa-regular fa-credit-card" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//div[hasclass('row')]/div[2]/div/h3" position="replace" mode="inner">
         Long Range
     </xpath>
-    <!-- Right block -->
-    <!-- Icon -->
     <xpath expr="(//i)[3]" position="attributes">
         <attribute name="class" add="fa-solid fa-cog" remove="fa-regular fa-flag" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//div[hasclass('row')]/div[3]/div/h3" position="replace" mode="inner">
         Dual Motor
     </xpath>
 </template>
 
-<!-- ======== FEATURES GRID ======== -->
 <template id="s_features_grid" inherit_id="website.s_features_grid">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc1" separator=" "/>
     </xpath>
-    <!-- Left Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Your advantages
     </xpath>
-    <!-- Right Title -->
     <xpath expr="(//h2)[2]" position="replace" mode="inner">
         Our web store
     </xpath>
-    <!-- Item #1 -->
     <xpath expr="//i" position="attributes">
         <attribute name="class" add="text-o-color-1" separator=" "/>
     </xpath>
-    <!-- Item #2 -->
     <xpath expr="(//i)[2]" position="attributes">
         <attribute name="class" add="text-o-color-1" separator=" "/>
     </xpath>
-        <!-- Item #3 -->
     <xpath expr="(//i)[3]" position="attributes">
         <attribute name="class" add="text-o-color-1" separator=" "/>
     </xpath>
-    <!-- Item #4 -->
     <xpath expr="(//i)[4]" position="attributes">
         <attribute name="class" add="text-o-color-1" separator=" "/>
     </xpath>
-    <!-- Item #5 -->
     <xpath expr="(//i)[5]" position="attributes">
         <attribute name="class" add="text-o-color-1" separator=" "/>
     </xpath>
-    <!-- Item #6 -->
     <xpath expr="(//i)[6]" position="attributes">
         <attribute name="class" add="text-o-color-1" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== PRODUCT LIST ======== -->
 <template id="s_product_list" inherit_id="website.s_product_list">
     <xpath expr="//div[hasclass('col-lg-2')]//h3" position="replace" mode="inner">
         Brakes #1
@@ -416,7 +350,6 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE WALL ======== -->
 <template id="s_images_wall" inherit_id="website.s_images_wall">
     <xpath expr="//img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
@@ -438,65 +371,49 @@
     </xpath>
 </template>
 
-<!-- ======== FREE GRID ======== -->
 <template id="s_freegrid" inherit_id="website.s_freegrid">
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Reliable Vehicle Services and Maintenance
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         Keep your vehicle in top condition with our comprehensive repair and maintenance services. From cars to motorbikes, we offer expert solutions to ensure safe and smooth rides.
     </xpath>
-    <!-- Button -->
     <xpath expr="//a" position="replace" mode="inner">
         Book a Service
     </xpath>
 </template>
 
-<!-- ==== MOTTO ===== -->
 <template id="s_motto" inherit_id="website.s_motto">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="o_cc o_cc1" add="o_cc o_cc5" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== UNVEIL ======== -->
 <template id="s_unveil" inherit_id="website.s_unveil">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc2" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Drive your Passion
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p" position="replace" mode="inner">
         Explore our exceptional range of cars designed for performance and luxury.
     </xpath>
 </template>
 
-<!-- ======== QUADRANT ======== -->
 <template id="s_quadrant" inherit_id="website.s_quadrant">
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Vehicle Services
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         Keep your vehicle in top condition with our expert repair and maintenance services. From cars to motorbikes, we’ve got you covered.<br/><br/> Drive with confidence and style.
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]/t" position="replace" mode="inner">
         Book a Service
     </xpath>
 </template>
 
-<!-- ======== KEY BENEFITS ======== -->
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Custom Vehicle Options
     </xpath>
@@ -506,7 +423,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Features
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We offer personalized vehicle configurations to match your preferences and needs, ensuring you get the perfect fit for your lifestyle.
     </xpath>
@@ -518,7 +434,6 @@
     </xpath>
 </template>
 
-<!-- ======== CAROUSEL ======== -->
 <template id="s_carousel" inherit_id="website.s_carousel">
     <xpath expr="(//div[hasclass('carousel-item')])[2]" position="attributes">
         <attribute name="class" add="o_cc o_cc5" separator=" "/>
@@ -531,7 +446,6 @@
     </xpath>
 </template>
 
-<!-- ======== CAROUSEL INTRO ======== -->
 <template id="s_carousel_intro" inherit_id="website.s_carousel_intro" name="Vehicle s_carousel_intro">
     <xpath expr="//div[hasclass('carousel-item')][2]//div[hasclass('o_grid_item')][2]" position="attributes">
         <attribute name="class" add="g-height-3" remove="g-height-2" separator=" "/>
@@ -557,14 +471,11 @@
     </xpath>
 </template>
 
-<!-- ======== PRICELIST BOXED ======== -->
 <template id="s_pricelist_boxed" inherit_id="website.s_pricelist_boxed">
-    <!-- Layout -->
     <xpath expr="//div[hasclass('col-lg-8')]" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Our Luxury Vehicle Services
     </xpath>
@@ -633,27 +544,21 @@
     </xpath>
 </template>
 
-<!-- ======== STRIPED CENTER TOP ======== -->
 <template id="s_striped_center_top" inherit_id="website.s_striped_center_top">
-    <!-- Title -->
     <xpath expr="//h1" position="replace" mode="inner">
         Drive with Confidence and Style
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         Keep your vehicles running smoothly with our expert repair and maintenance services, designed for performance and reliability.
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')]/t" position="replace" mode="inner">
         Book a Service
     </xpath>
-    <!-- Figcaption -->
     <xpath expr="//figcaption" position="replace" mode="inner">
         Precision in every detail
     </xpath>
 </template>
 
-<!-- ======== IMAGE TITLE ======== -->
 <template id="s_image_title" inherit_id="website.s_image_title">
     <xpath expr="//div[hasclass('o_we_bg_filter')]" position="attributes">
         <attribute name="class" add="bg-black-75" remove="bg-black-50" separator=" "/>
@@ -669,7 +574,6 @@
     </xpath>
 </template>
 
-<!-- ======== KEY IMAGES ======== -->
 <template id="s_key_images" inherit_id="website.s_key_images" name="Vehicle s_key_images">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pb0" remove="pb72" separator=" "/>
@@ -694,7 +598,6 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGES MOSAIC ======== -->
 <template id="s_images_mosaic" inherit_id="website.s_images_mosaic">
     <xpath expr="//h2" position="replace" mode="inner">
         Our Luxury Vehicle Services
@@ -704,19 +607,15 @@
     </xpath>
 </template>
 
-<!-- ======== BIG NUMBER ======== -->
 <template id="s_big_number" inherit_id="website.s_big_number">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Bold/01_001","colors":{"c5":"o-color-1"}}</attribute>
     </xpath>
 
-    <!-- Shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace">
         <div class="o_we_shape o_html_builder_Bold_01_001" style="background-image: url('/html_editor/shape/html_builder/Bold/01_001.svg?c5=o-color-1');"/>
     </xpath>
 
-    <!-- Text -->
     <xpath expr="//h2/span" position="replace" mode="inner">
         <font class="text-gradient" style="background-image: linear-gradient(0deg, var(--o-color-5) 0%, var(--o-color-4) 90%);">
             87%
@@ -727,47 +626,36 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGE FRAME ======== -->
 <template id="s_image_frame" inherit_id="website.s_image_frame">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="o_cc1" add="o_cc5" separator=" "/>
     </xpath>
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.library_image_05</attribute>
     </xpath>
 </template>
 
-<!-- ======== CARD OFFSET ======== -->
 <template id="s_card_offset" inherit_id="website.s_card_offset">
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.library_image_05</attribute>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Reliable Vehicle Services &amp; Repairs
     </xpath>
-    <!-- Paragraph 1 -->
     <xpath expr="(//p[hasclass('lead')])[1]" position="replace" mode="inner">
         Keep your vehicle in top condition with our comprehensive repair and maintenance services. From cars to motorbikes, we offer expert solutions to ensure safe and smooth rides.
     </xpath>
-    <!-- Paragraph 2 -->
     <xpath expr="(//p[hasclass('lead')])[2]" position="replace" mode="inner">
         Drive with confidence.
     </xpath>
 </template>
 
-<!-- ===== WAVY GRID ======== -->
 <template id="s_wavy_grid" inherit_id="website.s_wavy_grid">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         What we offer to our clients
     </xpath>
@@ -797,34 +685,28 @@
     </xpath>
 </template>
 
-<!-- ======== CARDS GRID ======== -->
 <template id="s_cards_grid" inherit_id="website.s_cards_grid">
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Unleash the Power of Our Sports Cars
     </xpath>
-    <!-- Card 1 -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         High-Performance Engine
     </xpath>
     <xpath expr="(//p)[1]" position="replace" mode="inner">
         Experience thrilling acceleration and top speeds with our sports car’s high-performance engine, designed for an exhilarating driving experience on both the track and the road.
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="(//h3)[2]" position="replace" mode="inner">
         Sporty Interior
     </xpath>
     <xpath expr="(//p)[2]" position="replace" mode="inner">
         Immerse yourself in a driver-focused cockpit with sport seats, intuitive controls, and premium materials, all crafted to enhance your driving pleasure and comfort.
     </xpath>
-    <!-- Card 3 -->
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Precision Handling
     </xpath>
     <xpath expr="(//p)[3]" position="replace" mode="inner">
         Enjoy exceptional control and responsiveness with advanced suspension systems and precise steering, offering unmatched agility and cornering capabilities.
     </xpath>
-    <!-- Card 4 -->
     <xpath expr="(//h3)[4]" position="replace" mode="inner">
         Aerodynamic Design
     </xpath>
@@ -833,9 +715,7 @@
     </xpath>
 </template>
 
-<!-- ===== QUOTES MINIMAL ======== -->
 <template id="s_quotes_carousel_minimal" inherit_id="website.s_quotes_carousel_minimal" name="Vehicle s_quotes_carousel_minimal">
-    <!-- Layout -->
     <xpath expr="//div[hasclass('carousel')]" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Origins/09_001','colors':{'c3': 'o-color-3'},'flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -843,7 +723,6 @@
         <div class="o_we_shape o_html_builder_Origins_09_001" style="background-image: url('/html_editor/shape/html_builder/Origins/09_001.svg?c3=o-color-3');"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//p[hasclass('s_blockquote_quote')]" position="replace" mode="inner">
         " Their service is exceptional. <br/>Premium care, top-notch quality, and unparalleled attention to detail. "
     </xpath>
@@ -855,40 +734,31 @@
     </xpath>
 </template>
 
-<!-- ======== IMAGES CONSTELLATION ======== -->
 <template id="s_images_constellation" inherit_id="website.s_images_constellation">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc1" remove="o_cc5" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== EMPOWERMENT ======== -->
 <template id="s_empowerment" inherit_id="website.s_empowerment">
-    <!-- Badge content -->
     <xpath expr="//span[hasclass('s_cta_badge')]" position="replace" mode="inner">
         <i class="fa fa-fw fa-info-circle o_not-animable" role="img"/>&#160;&#160;Top-rated vehicles&#160;&#160;&#160;&#160;
         <a href="#">Browse our inventory&#160;&#160; <i class="fa fa-long-arrow-right" role="img"/></a>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h1" position="replace" mode="inner">
        Find your perfect ride<br/>with premium car sales
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//p" position="replace" mode="inner">
         <br/>Offering a wide selection of quality cars to suit every need and budget.<br/><br/>
     </xpath>
-    <!-- Button -->
     <xpath expr="//a[hasclass('btn')][1]" position="replace" mode="inner">
         Our cars
     </xpath>
-    <!-- Second Button -->
     <xpath expr="//a[hasclass('btn')][2]" position="replace" mode="inner">
         Book a test drive
     </xpath>
 </template>
 
-<!-- ======== NUMBERS CHARTS ======== -->
 <template id="s_numbers_charts" inherit_id="website.s_numbers_charts" name="Vehicle s_numbers_charts">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt88 pb88" remove="pt48 pb48" separator=" "/>
@@ -916,7 +786,6 @@
     </xpath>
 </template>
 
-<!-- ======== MEDIA LIST ======== -->
 <template id="s_media_list" inherit_id="website.s_media_list" name="Vehicle s_media_list">
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt72 pb72 o_cc5" remove="pt32 pb32 o_cc2" separator=" "/>
@@ -929,21 +798,16 @@
     </xpath>
 </template>
 
-<!-- ======== COMPARISONS HORIZONTAL ======== -->
 <template id="s_comparisons_horizontal" inherit_id="website.s_comparisons_horizontal">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc5" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== SPLIT INTRO ======== -->
 <template id="s_split_intro" inherit_id="website.s_split_intro">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc5" remove="o_cc1" separator=" "/>
     </xpath>
-    <!-- Left column -->
     <xpath expr="//h1" position="replace" mode="inner">
         Drive away in<br/>your dream car
     </xpath>
@@ -952,21 +816,16 @@
     </xpath>
 </template>
 
-<!-- ======== FORM ASIDE ======== -->
 <template id="s_form_aside" inherit_id="website.s_form_aside">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc5" separator=" "/>
     </xpath>
 </template>
 
-<!-- ======== NUMBERS FRAMED ======== -->
 <template id="s_numbers_framed" inherit_id="website.s_numbers_framed">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc5" separator=" "/>
     </xpath>
-    <!-- KPI's -->
     <xpath expr="//div[hasclass('col-lg-4')][1]" position="attributes">
         <attribute name="class" add="o_cc4" remove="o_cc2" separator=" "/>
     </xpath>

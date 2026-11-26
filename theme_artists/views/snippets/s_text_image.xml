@@ -2,22 +2,18 @@
 <odoo>
 
 <template id="s_text_image" inherit_id="website.s_text_image">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc5 pb128" remove="pb80" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Let yourself <br/>be transported
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//p" position="replace" mode="inner">
         <br/>
     </xpath>
     <xpath expr="//p[2]" position="replace" mode="inner">
         Welcome to my online home. I invite you to come in, learn more about me and my work, and stop to embrace the slow pleasure of art and beauty.
     </xpath>
-    <!-- Picture -->
     <xpath expr="//div[hasclass('col-lg-6')]" position="attributes">
         <attribute name="class" add="col-lg-5" remove="col-lg-6" separator=" "/>
     </xpath>
@@ -31,11 +27,9 @@
 </template>
 
 <template id="configurator_s_text_image" inherit_id="website.configurator_s_text_image">
-    <!-- Shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Wavy/04"}</attribute>
     </xpath>
-    <!-- Shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Wavy_04" />
     </xpath>

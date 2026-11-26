@@ -6,7 +6,6 @@
     <t t-call="website.layout">
         <div id="wrap" class="oe_structure">
 
-            <!-- Image Shape -->
             <section class="s_text_image pt80 pb80">
                 <div class="container">
                     <div class="row align-items-center">
@@ -23,7 +22,6 @@
                 </div>
             </section>
 
-            <!-- Background Shape -->
             <section class="s_text_block pt80 pb200" data-name="Text" data-oe-shape-data="{'shape': 'theme_test_custo/curves/01','flip':[]}">
                 <div class="o_we_shape o_theme_test_custo_curves_01"/>
                 <div class="s_allow_columns container">

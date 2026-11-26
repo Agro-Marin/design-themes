@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_product_list" inherit_id="website.s_product_list">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt96 pb96" remove="pt64 pb64" separator=" "/>
     </xpath>
-    <!-- Item #1 -->
     <xpath expr="//div[hasclass('col-lg-2')]//img" position="attributes">
         <attribute name="class" add="rounded-circle" separator=" "/>
     </xpath>
@@ -19,7 +17,6 @@
     <xpath expr="//div[hasclass('col-lg-2')]//div[hasclass('card')]" position="attributes">
         <attribute name="style">border-width: 0px !important;</attribute>
     </xpath>
-    <!-- Item #2 -->
     <xpath expr="//div[hasclass('col-lg-2')][2]//img" position="attributes">
         <attribute name="class" add="rounded-circle" separator=" "/>
     </xpath>
@@ -32,7 +29,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][2]//div[hasclass('card')]" position="attributes">
         <attribute name="style">border-width: 0px !important;</attribute>
     </xpath>
-    <!-- Item #3 -->
     <xpath expr="//div[hasclass('col-lg-2')][3]//img" position="attributes">
         <attribute name="class" add="rounded-circle" separator=" "/>
     </xpath>
@@ -45,7 +41,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][3]//div[hasclass('card')]" position="attributes">
         <attribute name="style">border-width: 0px !important;</attribute>
     </xpath>
-    <!-- Item #4 -->
     <xpath expr="//div[hasclass('col-lg-2')][4]//img" position="attributes">
         <attribute name="class" add="rounded-circle" separator=" "/>
     </xpath>
@@ -58,7 +53,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][4]//div[hasclass('card')]" position="attributes">
         <attribute name="style">border-width: 0px !important;</attribute>
     </xpath>
-    <!-- Item #5 -->
     <xpath expr="//div[hasclass('col-lg-2')][5]//img" position="attributes">
         <attribute name="class" add="rounded-circle" separator=" "/>
     </xpath>
@@ -71,7 +65,6 @@
     <xpath expr="//div[hasclass('col-lg-2')][5]//div[hasclass('card')]" position="attributes">
         <attribute name="style">border-width: 0px !important;</attribute>
     </xpath>
-    <!-- Item #6 -->
     <xpath expr="//div[hasclass('col-lg-2')][6]//img" position="attributes">
         <attribute name="class" add="rounded-circle" separator=" "/>
     </xpath>

@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Titles -->
     <xpath expr="//h2" position="attributes">
         <attribute name="class" add="display-4" remove="display-3" separator=" "/>
     </xpath>
@@ -15,7 +14,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         <h5>Exclusive Experiences</h5>
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We craft custom travel plans that suit your interests and needs, ensuring every trip is unique and unforgettable.
     </xpath>

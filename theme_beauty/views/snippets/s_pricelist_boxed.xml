@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_pricelist_boxed" inherit_id="website.s_pricelist_boxed">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="pt0 pb0" remove="pt72 pb72" separator=" "/>
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Bold/14','colors':{'c5':'o-color-4', 'c1':'o-color-4'},'flip':[],'showOnMobile':true,'shapeAnimationSpeed':'0'}</attribute>
@@ -15,7 +14,6 @@
         <attribute name="style">border-width: 16px !important; border-color: rgb(255, 255, 255) !important;</attribute>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Our Beauty Collection
     </xpath>

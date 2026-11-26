@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_image_punchy" inherit_id="website.s_image_punchy">
-    <!-- Image -->
     <xpath expr="//img" position="attributes">
         <attribute name="src">/web/image/website.s_carousel_default_image_3</attribute>
     </xpath>

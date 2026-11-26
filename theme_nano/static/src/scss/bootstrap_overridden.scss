@@ -1,8 +1,4 @@
-//------------------------------------------------------------------------------//
-// TODO ideally this should be done in primary variables if it was possible.
-//------------------------------------------------------------------------------//
 
-// Headings
 @if nth($o-theme-headings-font, 1) == 'Roboto' {
     $o-theme-headings-font-weight:          500;
 }
@@ -16,7 +12,6 @@
     $o-theme-headings-font-weight:          600;
 }
 
-// Body
 @if o-website-value('font') == 'Roboto' {
     $o-theme-font-weight-bold:              500;
 }
@@ -42,7 +37,6 @@
     $o-theme-font-weight-bold:              600;
 }
 
-// Buttons
 @if nth($o-theme-buttons-font, 1) == 'Roboto' {
     $o-theme-btn-font-weight:               500;
 }
@@ -59,13 +53,7 @@
     $o-theme-btn-font-weight:               600;
 }
 
-//------------------------------------------------------------------------------//
-// Bootstrap
-//------------------------------------------------------------------------------//
 
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
 
 $font-size-lg:                              o-website-value('font-size-base') * $o-theme-font-size-lg-multiplier !default;
 $font-size-sm:                              o-website-value('font-size-base') * $o-theme-font-size-sm-multiplier !default;
@@ -76,9 +64,6 @@ $font-weight-bold:                          $o-theme-font-weight-bold !default;
 
 $headings-font-weight:                      $o-theme-headings-font-weight !default;
 
-// Buttons + Forms
-//
-// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-focus-width:                     0 !default;
 $input-focus-border-color:                  o-color('primary') !default;
@@ -89,5 +74,4 @@ $btn-box-shadow:                            none !default;
 $input-color:                               o-color('o-cc1-text') !default;
 $input-placeholder-color:                   o-color('500') !default;
 
-// Cards
 $card-border-width:                         0 !default;

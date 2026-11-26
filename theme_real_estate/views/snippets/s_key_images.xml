@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_images" inherit_id="website.s_key_images">
-    <!-- Layout -->
     <xpath expr="//img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
     </xpath>
@@ -16,7 +15,6 @@
         <attribute name="class" remove="rounded" separator=" "/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Discover Your Dream Property with Us
     </xpath>

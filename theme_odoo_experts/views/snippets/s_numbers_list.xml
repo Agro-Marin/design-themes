@@ -5,15 +5,12 @@
     <xpath expr="//div[hasclass('col-lg-5')]" position="attributes">
         <attribute name="class" add="col-lg-6" remove="col-lg-5" separator=" "/>
     </xpath>
-    <!-- Title -->
     <xpath expr="//h2" position="replace">
         <p class="o_small">SOME NUMBERS</p>
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p" position="replace">
         <h2 class="h3-fs">Over the last decade, we've help many businesses to grow.</h2>
     </xpath>
-    <!-- KPI's -->
     <xpath expr="//div[hasclass('col-lg-3')]" position="replace">
         <div class="col-12 col-lg-4 offset-lg-2">
             <p>
@@ -39,7 +36,6 @@
             </div>
         </div>
     </xpath>
-    <!-- Remove 2nd KPI's column -->
     <xpath expr="//div[hasclass('col-lg-3')]" position="replace"/>
 </template>
 

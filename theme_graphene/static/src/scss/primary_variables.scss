@@ -1,9 +1,9 @@
 
 //------------------------------------------------------------------------------
-// Colors
+
 //------------------------------------------------------------------------------
 
-// Theme colors
+
 $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     (
         'graphene-1': (
@@ -53,7 +53,7 @@ $o-theme-color-palettes: map-merge($o-theme-color-palettes,
 );
 
 //------------------------------------------------------------------------------
-// Fonts
+
 //------------------------------------------------------------------------------
 
 $o-theme-h1-font-size-multiplier: (62 / 16);
@@ -88,14 +88,14 @@ $o-theme-font-configs: (
 
 
 //------------------------------------------------------------------------------
-// Website customizations
+
 //------------------------------------------------------------------------------
 
-// append(..., comma) rather than a `((...),)` trailing comma: the two are
-// NOT the same value -- without that one comma this collapses from a list
-// of palettes into a bare map, and the website variable chain then fails
-// with "$map2: (...) is not a map". Formatters strip it (prettier does:
-// prettier/prettier#8002), so state the 1-element list explicitly.
+
+
+
+
+
 $o-website-values-palettes: append(
     (),
     (
@@ -147,7 +147,7 @@ $o-color-palettes-compatibility-indexes: (
 );
 
 //------------------------------------------------------------------------------
-// Shapes
+
 //------------------------------------------------------------------------------
 
 $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Origins/02_001', (4: 2, 5: rgba(0, 0, 0, 0)));

@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_features" inherit_id="website.s_features">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc o_cc2 pt80 pb80" remove="pt64 pb64" separator=" "/>
     </xpath>
-    <!-- Column #01 -->
     <xpath expr="//*[hasclass('row')]/*[1]" position="attributes">
         <attribute name="class" add="o_cc o_cc1 pt32 pb32 rounded text-center" separator=" "/>
         <attribute name="style" add="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px !important;" separator=";"/>
@@ -21,7 +19,6 @@
     <xpath expr="//div[hasclass('row')]/div[1]/div/p" position="replace" mode="inner">
         We keep you safe <br/>in the cloud.
     </xpath>
-    <!-- Column #02 -->
     <xpath expr="//*[hasclass('row')]/*[2]" position="attributes">
         <attribute name="class" add="o_cc o_cc1 pt32 pb32 rounded text-center" separator=" "/>
         <attribute name="style" add="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px !important;" separator=";"/>
@@ -36,7 +33,6 @@
     <xpath expr="//div[hasclass('row')]/div[2]/div/p" position="replace" mode="inner">
         All types of files <br/>are allowed.
     </xpath>
-    <!-- Column #03 -->
     <xpath expr="//*[hasclass('row')]/*[3]" position="attributes">
         <attribute name="class" add="o_cc o_cc1 pt32 pb32 rounded text-center" separator=" "/>
         <attribute name="style" add="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px !important;" separator=";"/>

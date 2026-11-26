@@ -2,11 +2,9 @@
 <odoo>
 
 <template id="s_features" inherit_id="website.s_features">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_cc2 pt48" remove="pt64" separator=" "/>
     </xpath>
-    <!-- Column #01 -->
     <xpath expr="//div[hasclass('row')]/div[1]/i" position="replace">
         <i class="s_features_icon fa fa-image mb-3 rounded" role="img"/>
     </xpath>
@@ -16,7 +14,6 @@
     <xpath expr="//div[hasclass('row')]/div[1]/div/p" position="replace" mode="inner">
         Tell what's the value for the customer for this feature.
     </xpath>
-    <!-- Column #02 -->
     <xpath expr="//div[hasclass('row')]/div[2]/i" position="replace">
         <i class="s_features_icon fa fa-eye mb-3 rounded" role="img"/>
     </xpath>
@@ -26,7 +23,6 @@
     <xpath expr="//div[hasclass('row')]/div[2]/div/p" position="replace" mode="inner">
         Write what the customer would like to know, not what you want to show.
     </xpath>
-    <!-- Column #03 -->
     <xpath expr="//div[hasclass('row')]/div[3]/i" position="attributes">
         <attribute name="class" add="fa-solid fa-microphone" remove="fa-regular fa-flag" separator=" "/>
     </xpath>

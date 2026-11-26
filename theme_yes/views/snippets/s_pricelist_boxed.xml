@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_pricelist_boxed" inherit_id="website.s_pricelist_boxed">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Floats/12','flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0','animated':'true'}</attribute>
     </xpath>
@@ -14,7 +13,6 @@
         <attribute name="class" remove="rounded" separator=" "/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h2" position="replace" mode="inner">
         Our Wedding Services
     </xpath>

@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_image_title" inherit_id="website.s_image_title">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="parallax" separator=" "/>
         <attribute name="style"/>
@@ -12,7 +11,6 @@
         <span class="s_parallax_bg oe_img_bg o_bg_img_center" style="background-image: url('/web/image/website.s_image_title_default_image') !important;"/>
     </xpath>
 
-    <!-- Texts -->
     <xpath expr="//h1" position="replace" mode="inner">
         A Deep Dive into Flavor and Innovation
     </xpath>

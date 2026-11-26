@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_carousel" inherit_id="website.s_carousel">
-    <!-- Titles -->
     <xpath expr="//h2" position="replace" mode="inner">
         Personal adviser
     </xpath>
@@ -14,7 +13,6 @@
     </xpath>
     <xpath expr="//div[hasclass('carousel-item')][3]//p" position="replace"/>
 
-    <!-- Paragraphs -->
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         At any moment, you may contact our advisor through the in-app video meeting system.
     </xpath>
@@ -25,7 +23,6 @@
         We integrate digital tools and solutions for better insights, enabling data-driven planning.
     </xpath>
 
-    <!-- Filter -->
     <xpath expr="(//div[hasclass('container')])[2]" position="before">
         <div class="o_we_bg_filter bg-white-50"/>
     </xpath>
@@ -33,7 +30,6 @@
         <div class="o_we_bg_filter bg-black-50"/>
     </xpath>
 
-    <!-- Background -->
     <xpath expr="//div[hasclass('carousel-item')]" position="attributes">
         <attribute name="style" add="background-position: 50% 10%;" separator=";"/>
     </xpath>

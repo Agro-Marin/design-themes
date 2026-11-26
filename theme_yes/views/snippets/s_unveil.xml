@@ -2,11 +2,9 @@
 <odoo>
     
 <template id="s_unveil" inherit_id="website.s_unveil">
-    <!-- Title -->
     <xpath expr="//h2" position="replace" mode="inner">
         Your perfect day awaits
     </xpath>
-    <!-- Paragraph -->
     <xpath expr="//p" position="replace" mode="inner">
         Celebrate love with unforgettable moments and exquisite details.
     </xpath>

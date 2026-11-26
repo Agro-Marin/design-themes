@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_features_wall" inherit_id="website.s_features_wall">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data">{'shape':'html_builder/Airy/10_001','flip':[],'showOnMobile':false,'shapeAnimationSpeed':'0'}</attribute>
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="//div[hasclass('o_grid_mode')]" position="attributes">
         <attribute name="style">gap: 0px 16px;</attribute>
     </xpath>
-    <!-- Intro -->
     <xpath expr="//div[hasclass('o_grid_item')]" position="attributes">
         <attribute name="style">z-index: 1; --grid-item-padding-y: 0px; --grid-item-padding-x: 0px; grid-area: 1 / 8 / 22 / 13;</attribute>
     </xpath>
@@ -26,7 +24,6 @@
     <xpath expr="//p[hasclass('lead')]" position="replace" mode="inner">
         Discover our latest collection: sustainable, innovative designs that blend modern elegance with timeless architectural beauty.
     </xpath>
-    <!-- Card 1 -->
     <xpath expr="//div[hasclass('o_grid_item_image')]" position="attributes">
         <attribute name="class" add="g-height-8" remove="g-height-6" separator=" "/>
         <attribute name="style">z-index: 2; --grid-item-padding-y: 0px; --grid-item-padding-x: 0px; grid-area: 2 / 1 / 10 / 4;</attribute>
@@ -40,7 +37,6 @@
     <xpath expr="(//div[hasclass('o_grid_item')])[3]//p" position="replace" mode="inner">
         Transform your vision into reality with cutting-edge architectural designs tailored to your unique needs and aesthetic preferences.
     </xpath>
-    <!-- Card 2 -->
     <xpath expr="(//div[hasclass('o_grid_item_image')])[2]" position="attributes">
         <attribute name="class" add="g-height-3" remove="g-height-6" separator=" "/>
         <attribute name="style">z-index: 4; --grid-item-padding-y: 0px; --grid-item-padding-x: 0px; grid-area: 1 / 4 / 4 / 7;</attribute>
@@ -54,7 +50,6 @@
     <xpath expr="(//div[hasclass('o_grid_item')])[5]//p" position="replace" mode="inner">
         Embrace eco-friendly architecture with sustainable design solutions that reduce environmental impact.
     </xpath>
-    <!-- Card 3 -->
     <xpath expr="(//div[hasclass('o_grid_item_image')])[3]" position="attributes">
         <attribute name="class" add="g-height-4" remove="g-height-6" separator=" "/>
         <attribute name="style">z-index: 6; --grid-item-padding-y: 0px; --grid-item-padding-x: 0px; grid-area: 8 / 4 / 12 / 7;</attribute>

@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_features" inherit_id="website.s_features">
-    <!-- Column #01 -->
     <xpath expr="//i" position="replace">
         <i class="fa fa-coffee rounded bg-primary mb-3" role="img"/>
     </xpath>
@@ -12,7 +11,6 @@
     <xpath expr="//div[hasclass('row')]//p" position="replace" mode="inner">
         Help you start your morning right.<br/><small>From <b>7:30 am</b> to <b>10:30 am</b></small>
     </xpath>
-    <!-- Column #02 -->
     <xpath expr="(//i)[2]" position="replace">
         <i class="fa fa-cutlery rounded bg-primary mb-3" role="img"/>
     </xpath>
@@ -22,7 +20,6 @@
     <xpath expr="//div[hasclass('row')]/div[2]/div/p" position="replace" mode="inner">
         Take a break from your busy schedule.<br/><small>From <b>11:30 am</b> to <b>2:30 pm</b></small>
     </xpath>
-    <!-- Column #03 -->
     <xpath expr="(//i)[3]" position="replace">
         <i class="fa fa-glass rounded bg-primary mb-3" role="img"/>
     </xpath>

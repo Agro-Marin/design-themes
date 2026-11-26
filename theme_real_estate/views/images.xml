@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- Not used anymore by the editor: files and records kept for back-compatibility.
-Check in theme_monglia's primary_variables.scss, theme.scss and theme_common's mixins.scss -->
 <record id="image_content_02" model="theme.ir.attachment">
     <field name="key">theme_common.image_content_02</field>
     <field name="name">theme_common.image_content_02</field>
@@ -39,7 +37,6 @@ Check in theme_monglia's primary_variables.scss, theme.scss and theme_common's m
     <field name="url">/theme_real_estate/static/src/img/content/content_img_12.webp</field>
 </record>
 
-<!-- SNIPPETS -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
     <field name="key">website.s_banner_default_image</field>
     <field name="name">website.s_banner_default_image</field>
@@ -85,7 +82,6 @@ Check in theme_monglia's primary_variables.scss, theme.scss and theme_common's m
     <field name="name">website.library_image_07</field>
     <field name="url">/theme_real_estate/static/src/img/snippets/library_image_07.webp</field>
 </record>
-<!-- Gallery Wall -->
 <record id="library_image_03" model="theme.ir.attachment">
     <field name="key">website.library_image_03</field>
     <field name="name">website.library_image_03</field>

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- Not used anymore by the editor: files and records kept for back-compatibility.
-Check in primary_variables.scss and theme.scss -->
 <record id="image_content_02" model="theme.ir.attachment">
     <field name="key">theme_common.image_content_02</field>
     <field name="name">theme_common.image_content_02</field>
@@ -39,7 +37,6 @@ Check in primary_variables.scss and theme.scss -->
     <field name="url">/theme_loftspace/static/src/img/content/content_img_12.webp</field>
 </record>
 
-<!-- Website Builder Custom Images -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
     <field name="key">website.s_banner_default_image</field>
     <field name="name">website.s_banner_default_image</field>

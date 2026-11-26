@@ -2,17 +2,14 @@
 <odoo>
 
 <template id="s_quotes_carousel" inherit_id="website.s_quotes_carousel">
-    <!-- Change carousel style -->
     <xpath expr="//div[hasclass('s_quotes_carousel')]" position="attributes">
         <attribute name="class" add="s_carousel_default" remove="s_carousel_boxed" separator=" "/>
     </xpath>
 
-    <!-- Hide indicators -->
     <xpath expr="//div[hasclass('carousel-indicators')]" position="attributes">
         <attribute name="class" add="s_carousel_indicators_hidden" remove="s_carousel_indicators_dots" separator=" "/>
     </xpath>
 
-    <!-- Quote 1 -->
     <xpath expr="//div[hasclass('carousel-item')]" position="attributes">
         <attribute name="class" add="pt168" remove="pt80" separator=" "/>
         <attribute name="style"/>
@@ -28,7 +25,6 @@
     </xpath>
     <xpath expr="(//div[hasclass('s_blockquote_author')])[1]//span//span" position="replace"/>
 
-    <!-- Quote 2 -->
     <xpath expr="(//*[hasclass('carousel-item')])[2]" position="attributes">
         <attribute name="class" add="pt168" remove="pt80" separator=" "/>
         <attribute name="style"/>
@@ -44,7 +40,6 @@
     </xpath>
     <xpath expr="(//div[hasclass('s_blockquote_author')])[2]//span//span" position="replace"/>
 
-    <!-- Quote 3 -->
     <xpath expr="(//*[hasclass('carousel-item')])[3]" position="attributes">
         <attribute name="class" add="pt168" remove="pt80" separator=" "/>
         <attribute name="style"/>

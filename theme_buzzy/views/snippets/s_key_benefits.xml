@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_benefits" inherit_id="website.s_key_benefits">
-    <!-- Layout -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
@@ -24,7 +23,6 @@
         <attribute name="class" add="text-o-color-5" remove="text-o-color-1" separator=" "/>
     </xpath>
 
-    <!-- Titles -->
     <xpath expr="(//h3)[1]" position="replace" mode="inner">
         Strategic Solutions
     </xpath>
@@ -34,7 +32,6 @@
     <xpath expr="(//h3)[3]" position="replace" mode="inner">
         Exclusive Partnerships
     </xpath>
-    <!-- Paragraphs -->
     <xpath expr="//div[hasclass('col-lg-4')][1]/p" position="replace" mode="inner">
         We offer tailored strategies that align with your business goals, driving growth and maximizing efficiency.
     </xpath>

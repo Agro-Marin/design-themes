@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- About -->
 
 <template id="new_page_template_sections_about_personal" inherit_id="website.new_page_template_sections_about_personal">
     <xpath expr="//t[@t-snippet-call='website.new_page_template_about_personal_s_call_to_action_about']" position="attributes">
@@ -9,7 +8,6 @@
     </xpath>
 </template>
 
-<!-- General customizations -->
 
 <template id="new_page_template_s_comparisons" inherit_id="website.new_page_template_s_comparisons">
     <xpath expr="//section" position="attributes">
@@ -21,26 +19,20 @@
 </template>
 
 <template id="new_page_template_s_picture_only" inherit_id="website.new_page_template_s_picture_only">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization Basic Pages -->
 
 <template id="new_page_template_basic_s_picture" inherit_id="website.new_page_template_basic_s_picture">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 
-<!-- Snippet customization About Pages -->
 
 <template id="new_page_template_about_s_company_team" inherit_id="website.new_page_template_about_s_company_team">
     <xpath expr="//section" position="attributes">
@@ -118,7 +110,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Landing Pages -->
 
 <template id="new_page_template_landing_s_text_image" inherit_id="website.new_page_template_landing_s_text_image">
     <xpath expr="//section" position="attributes">
@@ -145,7 +136,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Gallery Pages -->
 
 <template id="new_page_template_gallery_s_cover" inherit_id="website.new_page_template_gallery_s_cover">
     <xpath expr="//section" position="attributes">
@@ -156,7 +146,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Services Pages -->
 
 <template id="new_page_template_services_s_text_image" inherit_id="website.new_page_template_services_s_text_image">
     <xpath expr="//section" position="attributes">
@@ -164,7 +153,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Pricing Pages -->
 
 <template id="new_page_template_pricing_s_cover" inherit_id="website.new_page_template_pricing_s_cover">
     <xpath expr="//section" position="attributes">
@@ -196,14 +184,11 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Team Pages -->
 
 <template id="new_page_template_team_s_picture" inherit_id="website.new_page_template_team_s_picture">
-    <!-- Remove shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="data-oe-shape-data"/>
     </xpath>
-    <!-- Remove shape -->
     <xpath expr="//div[hasclass('o_we_shape')]" position="replace"/>
 </template>
 

@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_key_images" inherit_id="website.s_key_images">
-    <!-- Texts -->
     <xpath expr="//h2" position="before">
         <p class="o_small">
             New in Store
@@ -13,7 +12,6 @@
     </xpath>
     <xpath expr="//p[hasclass('lead')]" position="replace"/>
 
-    <!-- First col -->
     <xpath expr="//div[hasclass('col-lg-3')]//p" position="replace"/>
     <xpath expr="//div[hasclass('col-lg-3')]/p/img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
@@ -25,7 +23,6 @@
         <p class="lead">$80.00</p>
     </xpath>
 
-    <!-- Second col -->
     <xpath expr="//div[hasclass('col-lg-3')][2]//p" position="replace"/>
     <xpath expr="//div[hasclass('col-lg-3')][2]/p/img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
@@ -37,7 +34,6 @@
         <p class="lead">$184.00</p>
     </xpath>
 
-    <!-- Third col -->
     <xpath expr="//div[hasclass('col-lg-3')][3]//p" position="replace"/>
     <xpath expr="//div[hasclass('col-lg-3')][3]/p/img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>
@@ -49,7 +45,6 @@
         <p class="lead">$349.00</p>
     </xpath>
 
-    <!-- Last col -->
     <xpath expr="//div[hasclass('col-lg-3')][4]//p" position="replace"/>
     <xpath expr="//div[hasclass('col-lg-3')][4]//p/img" position="attributes">
         <attribute name="class" remove="rounded" separator=" "/>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- Backgrounds -->
 <record id="bg_img_01" model="theme.ir.attachment">
     <field name="key">theme_treehouse.bg_img_01</field>
     <field name="name">background_img_01.webp</field>
@@ -83,7 +82,6 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/16.webp</field>
 </record>
 
-<!-- Patterns -->
 <record id="bg_pattern_01" model="theme.ir.attachment">
     <field name="key">theme_treehouse.bg_pattern_01</field>
     <field name="name">background_pattern_01.png</field>
@@ -130,14 +128,12 @@
     <field name="url">/theme_treehouse/static/src/img/patterns/09.png</field>
 </record>
 
-<!-- Cover -->
 <record id="s_cover_default_image" model="theme.ir.attachment">
     <field name="key">website.s_cover_default_image</field>
     <field name="name">website.s_cover_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/cover.webp</field>
 </record>
 
-<!-- Banner -->
 <record id="s_banner_default_image" model="theme.ir.attachment">
     <field name="key">website.s_banner_default_image</field>
     <field name="name">website.s_banner_default_image</field>
@@ -154,21 +150,18 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/18.webp</field>
 </record>
 
-<!-- Text-Image -->
 <record id="s_text_image_default_image" model="theme.ir.attachment">
     <field name="key">website.s_text_image_default_image</field>
     <field name="name">website.s_text_image_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/text_image.webp</field>
 </record>
 
-<!-- Image-Text -->
 <record id="s_image_text_default_image" model="theme.ir.attachment">
     <field name="key">website.s_image_text_default_image</field>
     <field name="name">website.s_image_text_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/image_text.webp</field>
 </record>
 
-<!-- Three Columns -->
 <record id="s_three_columns_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_three_columns_default_image_1</field>
     <field name="name">website.s_three_columns_default_image_1</field>
@@ -185,21 +178,18 @@
     <field name="url">/theme_treehouse/static/src/img/content/three_columns_03.webp</field>
 </record>
 
-<!-- Picture -->
 <record id="s_picture_default_image" model="theme.ir.attachment">
     <field name="key">website.s_picture_default_image</field>
     <field name="name">website.s_picture_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/backgrounds/01.webp</field>
 </record>
 
-<!-- Masonry -->
 <record id="s_masonry_block_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_masonry_block_default_image_1</field>
     <field name="name">website.s_masonry_block_default_image_1</field>
     <field name="url">/theme_treehouse/static/src/img/content/masonry_block.webp</field>
 </record>
 
-<!-- Carousel -->
 <record id="s_carousel_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_carousel_default_image_1</field>
     <field name="name">website.s_carousel_default_image_1</field>
@@ -216,7 +206,6 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/03.webp</field>
 </record>
 
-<!-- Carousel Intro -->
 <record id="s_carousel_intro_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_carousel_intro_default_image_1</field>
     <field name="name">website.s_carousel_intro_default_image_1</field>
@@ -233,7 +222,6 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/02.webp</field>
 </record>
 
-<!-- Carousel Cards -->
 <record id="s_carousel_cards_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_carousel_cards_default_image_1</field>
     <field name="name">website.s_carousel_cards_default_image_1</field>
@@ -250,7 +238,6 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/03.webp</field>
 </record>
 
-<!-- Media List -->
 <record id="s_media_list_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_media_list_default_image_1</field>
     <field name="name">website.s_media_list_default_image_1</field>
@@ -267,7 +254,6 @@
     <field name="url">/theme_treehouse/static/src/img/content/media_list_03.webp</field>
 </record>
 
-<!-- Company Team -->
 <record id="s_company_team_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_company_team_image_1</field>
     <field name="name">website.s_company_team_image_1</field>
@@ -299,7 +285,6 @@
     <field name="url">/theme_treehouse/static/src/img/content/company_team_06.webp</field>
 </record>
 
-<!-- Quotes Carousel -->
 <record id="s_quotes_carousel_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_quotes_carousel_default_image_1</field>
     <field name="name">website.s_quotes_carousel_default_image_1</field>
@@ -321,7 +306,6 @@
     <field name="url">/theme_treehouse/static/src/img/content/company_team_04.webp</field>
 </record>
 
-<!-- Image Gallery -->
 <record id="library_image_08" model="theme.ir.attachment">
     <field name="key">website.library_image_08</field>
     <field name="name">website.library_image_08</field>
@@ -353,7 +337,6 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/02.webp</field>
 </record>
 
-<!-- Key Images -->
 <record id="s_key_images_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_key_images_default_image_1</field>
     <field name="name">website.s_key_images_default_image_1</field>
@@ -375,14 +358,12 @@
     <field name="url">/theme_treehouse/static/src/img/content/three_columns_02.webp</field>
 </record>
 
-<!-- Kickoff -->
 <record id="s_kickoff_default_image" model="theme.ir.attachment">
     <field name="key">website.s_kickoff_default_image</field>
     <field name="name">website.s_kickoff_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/s_kickoff_default_image.webp</field>
 </record>
 
-<!-- Quadrant -->
 <record id="s_quadrant_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_quadrant_default_image_1</field>
     <field name="name">website.s_quadrant_default_image_1</field>
@@ -419,7 +400,6 @@
     <field name="url">/theme_treehouse/static/src/img/content/s_empowerment_default_image.webp</field>
 </record>
 
-<!-- Wavy Grid -->
 <record id="s_wavy_grid_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_wavy_grid_default_image_1</field>
     <field name="name">website.s_wavy_grid_default_image_1</field>
@@ -440,7 +420,6 @@
     <field name="name">website.s_wavy_grid_default_image_4</field>
     <field name="url">/theme_treehouse/static/src/img/backgrounds/16.webp</field>
 </record>
-<!-- Images Mosaic -->
 <record id="s_images_mosaic_default_image_1" model="theme.ir.attachment">
     <field name="key">website.s_images_mosaic_default_image_1</field>
     <field name="name">website.s_images_mosaic_default_image_1</field>
@@ -467,13 +446,11 @@
     <field name="url">/theme_treehouse/static/src/img/content/s_images_mosaic_default_image_5.webp</field>
 </record>
 
-<!-- Shape Image -->
 <record id="s_shape_image_default_image" model="theme.ir.attachment">
     <field name="key">website.s_shape_image_default_image</field>
     <field name="name">website.s_shape_image_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/s_shape_image_default_image.webp</field>
 </record>
-<!-- Images Constellations -->
 <record id="s_images_constellation_default_image" model="theme.ir.attachment">
     <field name="key">website.s_images_constellation_default_image</field>
     <field name="name">website.s_images_constellation_default_image</field>
@@ -490,7 +467,6 @@
     <field name="url">/theme_treehouse/static/src/img/content/s_images_constellation_default_image_2.webp</field>
 </record>
 
-<!-- Text Cover -->
 <record id="s_text_cover_default_image" model="theme.ir.attachment">
     <field name="key">website.s_text_cover_default_image</field>
     <field name="name">website.s_text_cover_default_image</field>
@@ -571,7 +547,6 @@
     <field name="name">website.s_faq_horizontal_default_image_1</field>
     <field name="url">/theme_treehouse/static/src/img/backgrounds/15.webp</field>
 </record>
-<!-- Tabs Images -->
 <record id="s_tabs_images_default_image_4" model="theme.ir.attachment">
     <field name="key">website.s_tabs_images_default_image_4</field>
     <field name="name">website.s_tabs_images_default_image_4</field>
@@ -583,21 +558,18 @@
     <field name="url">/theme_treehouse/static/src/img/backgrounds/10.webp</field>
 </record>
 
-<!-- Website Form Overlay -->
 <record id="s_website_form_overlay_default_image" model="theme.ir.attachment">
     <field name="key">website.s_website_form_overlay_default_image</field>
     <field name="name">website.s_website_form_overlay_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/cover.webp</field>
 </record>
 
-<!-- Website Form Cover -->
 <record id="s_website_form_cover_default_image" model="theme.ir.attachment">
     <field name="key">website.s_website_form_cover_default_image</field>
     <field name="name">website.s_website_form_cover_default_image</field>
     <field name="url">/theme_treehouse/static/src/img/content/masonry_block.webp</field>
 </record>
 
-<!-- Split Intro -->
 <record id="s_split_intro_default_image" model="theme.ir.attachment">
     <field name="key">website.s_split_intro_default_image</field>
     <field name="name">website.s_split_intro_default_image</field>

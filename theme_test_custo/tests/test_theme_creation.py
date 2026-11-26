@@ -1,8 +1,6 @@
 from odoo.tests import HttpCase, tagged
 
 
-# TODO: `test_themes` tag should not be there, runbot config should be adapted
-#       to test this module too. There is a special config for the theme repo.
 @tagged("post_install", "-at_install", "test_themes")
 class Crawler(HttpCase):
     def test_01_menu_hierarchies(self):

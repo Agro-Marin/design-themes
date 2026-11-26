@@ -1,28 +1,17 @@
-//------------------------------------------------------------------------------//
-// Presets
-//------------------------------------------------------------------------------//
 
-// append(..., comma) rather than a `((...),)` trailing comma: the two are
-// NOT the same value -- without that one comma this collapses from a list
-// of palettes into a bare map, and the website variable chain then fails
-// with "$map2: (...) is not a map". Formatters strip it (prettier does:
-// prettier/prettier#8002), so state the 1-element list explicitly.
 $o-website-values-palettes: append(
     (),
     (
         'color-palettes-name':              'default-22',
 
-        // Header
         'header-template':                  'vertical',
         'hamburger-position':               'right',
         'logo-height':                      3rem,
         'fixed-logo-height':                2rem,
         'header-links-style':               'pills',
 
-        // Font
         'font':                             'Poppins',
 
-        // Buttons
         'btn-padding-y':                    .5rem,
         'btn-padding-x':                    1.35rem,
         'btn-padding-y-sm':                 .3rem,
@@ -38,7 +27,6 @@ $o-website-values-palettes: append(
         'input-padding-y-sm':               .3rem,
         'input-padding-y-lg':               .6rem,
 
-        // Footer
         'footer-template':                  'default',
         'footer-effect':                    'slideout_slide_hover',
         'footer-scrolltop':                 true,
@@ -50,9 +38,6 @@ $default-22: map-get($o-color-palettes, 'default-22');
 $default-22: map-merge($default-22, ('footer': 5));
 $o-color-palettes: map-merge($o-color-palettes, ('default-22': $default-22));
 
-//------------------------------------------------------------------------------
-// Fonts
-//------------------------------------------------------------------------------
 
 $o-theme-font-configs: (
     'Abel': (
@@ -103,7 +88,6 @@ $o-theme-font-configs: (
     ),
 );
 
-// Headings
 
 $o-theme-h4-font-size-multiplier:           1.75;
 $o-theme-h5-font-size-multiplier:           1.5;
@@ -111,7 +95,6 @@ $o-theme-h6-font-size-multiplier:           1.25;
 
 $o-theme-headings-font-weight:              400;
 
-// Texts
 
 $o-theme-font-size-lg-multiplier:           1.25;
 $o-theme-font-size-sm-multiplier:           .875;
@@ -120,13 +103,9 @@ $o-theme-font-weight-light:                 300;
 $o-theme-font-weight-normal:                400;
 $o-theme-font-weight-bold:                  700;
 
-// Buttons
 
 $o-theme-btn-font-weight:                   400;
 
-//------------------------------------------------------------------------------//
-// Colors
-//------------------------------------------------------------------------------//
 
 $o-theme-color-palettes: map-merge($o-theme-color-palettes,
     (
@@ -201,9 +180,6 @@ $o-color-palettes-compatibility-indexes: (
     23: 'generic-17',
 );
 
-//------------------------------------------------------------------------------//
-// Shapes
-//------------------------------------------------------------------------------//
 
 $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Origins/04_001', (3: 5));
 $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Origins/09_001', (3: 3));

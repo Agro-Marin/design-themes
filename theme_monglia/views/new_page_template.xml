@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!-- About -->
 
 <template id="new_page_template_sections_about_personal" inherit_id="website.new_page_template_sections_about_personal">
     <xpath expr="//t[@t-snippet-call='website.new_page_template_about_personal_s_call_to_action_about']" position="attributes">
@@ -9,7 +8,6 @@
     </xpath>
 </template>
 
-<!-- General customizations -->
 
 <template id="new_page_template_s_text_block_h2_contact" inherit_id="website.new_page_template_s_text_block_h2_contact">
     <xpath expr="//section" position="attributes">
@@ -26,16 +24,13 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Basic Pages -->
 
 <template id="new_page_template_basic_2_s_text_block_h1" inherit_id="website.new_page_template_basic_2_s_text_block_h1">
     <xpath expr="//section" position="attributes">
-        <!-- o_cc2 is added by both theme and new page template -->
         <attribute name="class" add="o_cc2" remove="o_cc2 o_cc5" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization About Pages -->
 
 <template id="new_page_template_about_s_banner" inherit_id="website.new_page_template_about_s_banner">
     <xpath expr="//section" position="attributes">
@@ -44,7 +39,6 @@
 </template>
 
 <template id="new_page_template_about_s_cover" inherit_id="website.new_page_template_about_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
@@ -82,7 +76,6 @@
 
 <template id="new_page_template_about_full_s_text_image" inherit_id="website.new_page_template_about_full_s_text_image">
     <xpath expr="//section" position="attributes">
-        <!-- pt56 added by both theme and new page template -->
         <attribute name="class" add="pt56" remove="pt56 pb40" separator=" "/>
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Blocks/04","flip":["y"]}</attribute>
     </xpath>
@@ -99,16 +92,13 @@
 
 <template id="new_page_template_about_personal_s_text_block_h2" inherit_id="website.new_page_template_about_personal_s_text_block_h2">
     <xpath expr="//section" position="attributes">
-        <!-- o_cc3 is added by both theme and new page template -->
         <attribute name="class" add="o_cc3" remove="o_cc3 o_cc5" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization Landing Pages -->
 
 <template id="new_page_template_landing_s_text_image" inherit_id="website.new_page_template_landing_s_text_image">
     <xpath expr="//section" position="attributes">
-        <!-- pt56 is added by both theme and new page template -->
         <attribute name="class" add="pt56" remove="pt56 pb40" separator=" "/>
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Blocks/04","flip":["y"]}</attribute>
     </xpath>
@@ -118,7 +108,6 @@
 </template>
 
 <template id="new_page_template_landing_2_s_cover" inherit_id="website.new_page_template_landing_2_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
@@ -138,12 +127,10 @@
 
 <template id="new_page_template_landing_5_s_banner" inherit_id="website.new_page_template_landing_5_s_banner">
     <xpath expr="//section" position="attributes">
-        <!-- Added both by theme and new page template -->
         <attribute name="class" add="o_full_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
 </template>
 
-<!-- Snippet customization Gallery Pages -->
 
 <template id="new_page_template_gallery_s_banner" inherit_id="website.new_page_template_gallery_s_banner">
     <xpath expr="//section" position="attributes">
@@ -152,7 +139,6 @@
 </template>
 
 <template id="new_page_template_gallery_s_cover" inherit_id="website.new_page_template_gallery_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
@@ -164,7 +150,6 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Services Pages -->
 
 <template id="new_page_template_services_s_text_image" inherit_id="website.new_page_template_services_s_text_image">
     <xpath expr="//section" position="attributes">
@@ -183,10 +168,8 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Pricing Pages -->
 
 <template id="new_page_template_pricing_s_cover" inherit_id="website.new_page_template_pricing_s_cover">
-    <!-- Section -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" add="o_half_screen_height" remove="o_full_screen_height" separator=" "/>
     </xpath>
@@ -198,15 +181,12 @@
     </xpath>
 </template>
 
-<!-- Snippet customization Team Pages -->
 
 <template id="new_page_template_team_s_text_image" inherit_id="website.new_page_template_team_s_text_image">
-    <!-- Shape option -->
     <xpath expr="//section" position="attributes">
         <attribute name="class" remove="pt56 pb56" separator=" "/>
         <attribute name="data-oe-shape-data">{"shape":"html_builder/Floats/13","flip":["y"]}</attribute>
     </xpath>
-    <!-- Shape -->
     <xpath expr="//div[hasclass('container')]" position="before">
         <div class="o_we_shape o_html_builder_Floats_13" style="background-image: url('/html_editor/shape/html_builder/Floats/13.svg?c1=o-color-1&amp;c2=o-color-2&amp;c5=o-color-5&amp;flip=y'); background-position: 50% 50%;"/>
     </xpath>

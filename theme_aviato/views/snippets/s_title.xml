@@ -2,7 +2,6 @@
 <odoo>
 
 <template id="s_title" inherit_id="website.s_title">
-    <!-- Title -->
     <xpath expr="//h2" position="replace">
         <h2 class="text-align: left;">Top Destinations</h2>
     </xpath>
