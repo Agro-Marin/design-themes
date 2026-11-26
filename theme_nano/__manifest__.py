@@ -7,7 +7,7 @@
     "description": "Apply the Nano colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
-        "static/description/nano_cover.gif",
+        "static/description/nano_cover.webp",
         "static/description/nano_screenshot.webp",
     ],
     "images_preview_theme": {

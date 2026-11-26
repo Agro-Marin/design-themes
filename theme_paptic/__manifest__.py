@@ -7,7 +7,7 @@
     "description": "Apply the Paptic colour and typography presets to a website. Supplies theme styling and image presets for the website editor.",
     "author": "Odoo S.A.",
     "images": [
-        "static/description/paptic_poster.webp",
+        "static/description/paptic_poster.png",
         "static/description/paptic_screenshot.webp",
     ],
     "license": "LGPL-3",

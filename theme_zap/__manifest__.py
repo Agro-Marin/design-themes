@@ -7,7 +7,7 @@
     "description": "Apply the Zap colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
-        "static/description/zap_cover.gif",
+        "static/description/zap_cover.png",
         "static/description/zap_screenshot.webp",
     ],
     "images_preview_theme": {

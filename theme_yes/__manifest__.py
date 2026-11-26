@@ -7,7 +7,7 @@
     "description": "Apply the Yes colour and typography presets to a website. Supplies theme-specific snippet templates and images for the website editor.",
     "author": "Odoo S.A.",
     "images": [
-        "static/description/yes_description.png",
+        "static/description/yes_description.webp",
         "static/description/yes_screenshot.webp",
     ],
     "images_preview_theme": {

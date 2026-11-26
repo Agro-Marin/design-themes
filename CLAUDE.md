@@ -64,7 +64,7 @@ The fork carries `19.0` and `19.0-marin`, and both local branches track it. That
 is new as of 2026-08-15: until then the fork held `19.0` alone and the active
 line had never been pushed at all, which is not a theoretical exposure. The
 `theme_common` snippet port that `odoo`'s `6a7e4c38dd8` recorded in its JS
-surface pins (design-themes `b76c148db`) is in this repository's history, its
+surface pins (a design-themes commit of 2026-08-12 at the latest) is in this repository's history, its
 reflog, `git fsck` and the fork — in none of them. It was lost precisely because
 the branch holding it lived on one disk. **Push `19.0-marin` as you go**; nothing
 here is generated or recoverable from another checkout.
