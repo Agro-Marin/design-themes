@@ -1,14 +1,3 @@
-"""Delete the asset rows of the legacy stylesheets the themes no longer ship.
-
-Dropping a theme's `<asset>` records lets `_process_end` delete the
-`theme.ir.asset` templates, but not the per-website `ir.asset` copies: their
-`theme_template_id` is set to NULL and they survive until the theme is next
-loaded on that website. Rows the saas-11.4 upgrade converted from views never
-had a template, so nothing ever sweeps them. A row left pointing at a deleted
-file breaks its bundle the moment it is active, so they go by path, in both
-tables, with their ir.model.data.
-"""
-
 import logging
 
 from odoo.tools import SQL
